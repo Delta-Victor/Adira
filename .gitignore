@@ -1,0 +1,4 @@
+node_modules/
+.env
+adira-keys.txt
+*.pdf

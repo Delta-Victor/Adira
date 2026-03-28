@@ -1,0 +1,25 @@
+{
+  "name": "adira",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
+    "@aws-sdk/client-dynamodb": "^3.1019.0",
+    "@aws-sdk/client-s3": "^3.1019.0",
+    "@aws-sdk/client-secrets-manager": "^3.1019.0",
+    "@aws-sdk/client-sqs": "^3.1019.0",
+    "@aws-sdk/s3-request-presigner": "^3.1019.0",
+    "@qdrant/js-client-rest": "^1.17.0",
+    "axios": "^1.14.0",
+    "dotenv": "^17.3.1",
+    "pdf-lib": "^1.17.1"
+  }
+}
