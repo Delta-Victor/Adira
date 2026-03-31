@@ -1,4 +1,4 @@
-const { SQSClient, DeleteMessageCommand } = require("@aws-sdk/client-sqs");
+const { SQSClient } = require("@aws-sdk/client-sqs");
 const { DynamoDBClient, UpdateItemCommand, GetItemCommand } = require("@aws-sdk/client-dynamodb");
 const { S3Client, PutObjectCommand, GetObjectCommand } = require("@aws-sdk/client-s3");
 const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
@@ -6,36 +6,34 @@ const { sendMessage, sendDocument } = require("../utils/whatsapp");
 const { generateLessonPlan } = require("../prompts/lessonPlan");
 const { generateWorksheet } = require("../prompts/worksheet");
 const { generateQuestionPaper } = require("../prompts/questionPaper");
+const { checkSubscription, getBlockMessage, PLANS } = require("../utils/payments");
 const { PDFDocument, StandardFonts, rgb } = require("pdf-lib");
 require("dotenv").config();
 
-const sqs = new SQSClient({ region: process.env.AWS_REGION || "ap-south-1" });
 const dynamo = new DynamoDBClient({ region: process.env.AWS_REGION || "ap-south-1" });
 const s3 = new S3Client({ region: process.env.AWS_REGION || "ap-south-1" });
 
-// Free plan limit
-const FREE_PLAN_LIMIT = 10;
-
 // ─────────────────────────────────────────
 // MAIN HANDLER
-// Triggered by SQS — processes each job
+// Triggered by SQS
 // ─────────────────────────────────────────
 async function handler(event) {
-  // SQS can send multiple messages at once
-  // We process each one
   for (const record of event.Records) {
     try {
       const job = JSON.parse(record.body);
       console.log(`⚙️ Processing job for ${job.teacherPhone}`);
       await processJob(job);
     } catch (error) {
-      console.error("❌ Job processing error:", error.message);
-      // Send error message to teacher
-      const job = JSON.parse(record.body);
-      await sendMessage(
-        job.teacherPhone,
-        `❌ Sorry, something went wrong while creating your document.\n\nPlease try again or send your request in this format:\n\n_"lesson plan class 7 science chapter 3"_`
-      );
+      console.error("❌ Job error:", error.message);
+      try {
+        const job = JSON.parse(record.body);
+        await sendMessage(
+          job.teacherPhone,
+          `❌ Sorry, something went wrong while creating your document.\n\nPlease try again:\n_"lesson plan class 7 science chapter 3"_`
+        );
+      } catch(e) {
+        console.error("❌ Could not send error message:", e.message);
+      }
     }
   }
 }
@@ -46,20 +44,17 @@ async function handler(event) {
 async function processJob(job) {
   const { teacherPhone, intent } = job;
 
-  // ── Step 1: Check usage limit ──
+  // ── Step 1: Get teacher & check subscription ──
   const teacher = await getTeacher(teacherPhone);
-  const usage = parseInt(teacher?.generationsThisMonth?.N || "0");
+  const subCheck = await checkSubscription(teacher);
 
-  if (usage >= FREE_PLAN_LIMIT) {
-    await sendMessage(
-      teacherPhone,
-      `⚠️ *Monthly Limit Reached*\n\nYou have used all ${FREE_PLAN_LIMIT} free generations this month.\n\n💎 *Upgrade to Pro* for unlimited generations:\n📞 Contact us to upgrade\n\nYour limit resets on the 1st of next month.`
-    );
+  if (!subCheck.allowed) {
+    await sendMessage(teacherPhone, getBlockMessage(subCheck.reason, subCheck.plan));
     return;
   }
 
-  // ── Step 2: Generate content using AI ──
-  console.log(`🤖 Generating ${intent.task} for Class ${intent.class} ${intent.subject} Ch${intent.chapter}`);
+  // ── Step 2: Generate content ──
+  console.log(`🤖 Generating ${intent.task} — Class ${intent.class} ${intent.subject} Ch${intent.chapter}`);
   let generatedContent = "";
 
   if (intent.task === "Lesson Plan") {
@@ -70,12 +65,12 @@ async function processJob(job) {
     generatedContent = await generateQuestionPaper(intent);
   }
 
-  // ── Step 3: Convert to PDF ──
-  console.log("📄 Converting to PDF...");
+  // ── Step 3: Create PDF ──
+  console.log("📄 Creating PDF...");
   const pdfBytes = await createPDF(generatedContent, intent);
 
   // ── Step 4: Upload PDF to S3 ──
-  const filename = `Class${intent.class}_${intent.subject}_Ch${intent.chapter}_${intent.task.replace(" ", "")}_${Date.now()}.pdf`;
+  const filename = `Class${intent.class}_${intent.subject}_Ch${intent.chapter}_${intent.task.replace(/\s+/g, "")}_${Date.now()}.pdf`;
   const s3Key = `outputs/${teacherPhone}/${filename}`;
 
   await s3.send(new PutObjectCommand({
@@ -85,8 +80,7 @@ async function processJob(job) {
     ContentType: "application/pdf"
   }));
 
-  // ── Step 5: Generate download link ──
-  // Link is valid for 24 hours
+  // ── Step 5: Generate download URL ──
   const downloadUrl = await getSignedUrl(
     s3,
     new GetObjectCommand({
@@ -97,35 +91,57 @@ async function processJob(job) {
   );
 
   // ── Step 6: Send PDF to teacher ──
-  await sendDocument(
-    teacherPhone,
-    downloadUrl,
-    filename,
-    `✅ *Your ${intent.task} is ready!*\n\n📚 Class ${intent.class} | ${intent.subject} | Chapter ${intent.chapter}\n\n_Generated by Adira — AI Powered Teacher's Assistant_`
-  );
+  const plan = teacher?.plan?.S || "trial";
+  const caption = buildCaption(intent, plan, subCheck.remaining);
 
-  // ── Step 7: Update usage count in database ──
-  await updateUsage(teacherPhone, usage + 1);
+  await sendDocument(teacherPhone, downloadUrl, filename, caption);
 
-  // ── Step 8: Send follow up message ──
-  const remaining = FREE_PLAN_LIMIT - (usage + 1);
-  await sendMessage(
-    teacherPhone,
-    `📊 *Generations remaining this month: ${remaining}/${FREE_PLAN_LIMIT}*\n\nSend another request anytime! 😊\n\n_Try: "worksheet class ${intent.class} ${intent.subject} chapter ${intent.chapter} 20 questions"_`
-  );
+  // ── Step 7: Update usage ──
+  const currentUsage = parseInt(teacher?.generationsThisMonth?.N || "0");
+  await updateUsage(teacherPhone, currentUsage + 1);
 
-  console.log(`✅ Job completed for ${teacherPhone}`);
+  console.log(`✅ Job complete for ${teacherPhone}`);
 }
 
 // ─────────────────────────────────────────
-// CREATE PDF FROM GENERATED TEXT
+// BUILD CAPTION
+// Message shown with PDF on WhatsApp
+// ─────────────────────────────────────────
+function buildCaption(intent, plan, remaining) {
+  const taskEmojis = {
+    "Lesson Plan": "📝",
+    "Worksheet": "📋",
+    "Question Paper": "📄"
+  };
+  const emoji = taskEmojis[intent.task] || "📄";
+  const remainingText = plan === "pro"
+    ? "Unlimited"
+    : `${remaining} remaining this month`;
+
+  return `${emoji} *Your ${intent.task} is Ready!*
+
+📚 Class ${intent.class} | ${intent.subject} | Chapter ${intent.chapter}
+✨ CBSE aligned | NCERT based
+
+📊 Generations: ${remainingText}
+
+*Need changes?*
+Reply with what to change:
+_"add 5 more questions on photosynthesis"_
+_"make it bilingual Hindi+English"_
+${plan !== "free" ? '_"send word file"_ for editable version' : ""}
+
+_Generated by Adira — AI Powered Teacher's Assistant_`;
+}
+
+// ─────────────────────────────────────────
+// CREATE PDF
 // ─────────────────────────────────────────
 async function createPDF(content, intent) {
   const pdfDoc = await PDFDocument.create();
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
-  // Page settings — A4 size
   const pageWidth = 595;
   const pageHeight = 842;
   const margin = 50;
@@ -135,77 +151,54 @@ async function createPDF(content, intent) {
   let page = pdfDoc.addPage([pageWidth, pageHeight]);
   let y = pageHeight - margin;
 
-  // ── Header ──
+  // Header
   page.drawText("ADIRA — AI Powered Teacher's Assistant", {
-    x: margin,
-    y: y,
-    size: 12,
-    font: boldFont,
-    color: rgb(0.15, 0.39, 0.92)
+    x: margin, y: y, size: 12,
+    font: boldFont, color: rgb(0.15, 0.39, 0.92)
   });
   y -= 20;
 
-  page.drawText(`Class ${intent.class} | ${intent.subject} | Chapter ${intent.chapter} | ${intent.task}`, {
-    x: margin,
-    y: y,
-    size: 10,
-    font: font,
-    color: rgb(0.4, 0.4, 0.4)
-  });
+  page.drawText(
+    `Class ${intent.class} | ${intent.subject} | Chapter ${intent.chapter} | ${intent.task}`,
+    { x: margin, y: y, size: 10, font: font, color: rgb(0.4, 0.4, 0.4) }
+  );
   y -= 10;
 
-  // ── Divider line ──
   page.drawLine({
     start: { x: margin, y: y },
     end: { x: pageWidth - margin, y: y },
-    thickness: 1,
-    color: rgb(0.15, 0.39, 0.92)
+    thickness: 1, color: rgb(0.15, 0.39, 0.92)
   });
   y -= 20;
 
-  // ── Content ──
-  // Split content into lines and draw each one
+  // Content
   const lines = content.split("\n");
-
   for (const line of lines) {
-    // Check if we need a new page
     if (y < margin + 40) {
       page = pdfDoc.addPage([pageWidth, pageHeight]);
       y = pageHeight - margin;
     }
 
-    // Detect headings (lines with ━━━ are section dividers)
-    const isHeading = line.includes("━━━") || 
-                      (line.trim().startsWith("*") && line.trim().endsWith("*"));
     const isDivider = line.includes("━━━");
-
     if (isDivider) {
-      // Draw a subtle line for section dividers
       page.drawLine({
         start: { x: margin, y: y },
         end: { x: pageWidth - margin, y: y },
-        thickness: 0.5,
-        color: rgb(0.8, 0.8, 0.8)
+        thickness: 0.5, color: rgb(0.8, 0.8, 0.8)
       });
       y -= lineHeight;
       continue;
     }
 
-    // Clean the line text
-    const cleanLine = line
-      .replace(/\*/g, "")
-      .replace(/━/g, "")
-      .trim();
+    const cleanLine = line.replace(/\*/g, "").replace(/━/g, "").trim();
+    if (!cleanLine) { y -= lineHeight / 2; continue; }
 
-    if (!cleanLine) {
-      y -= lineHeight / 2;
-      continue;
-    }
+    const isHeading = line.trim().startsWith("**") || 
+                      line.toUpperCase() === line && line.length > 3;
 
-    // Wrap long lines so they don't go off page
     const words = cleanLine.split(" ");
     let currentLine = "";
-    const maxWidth = pageWidth - (margin * 2);
+    const maxWidth = pageWidth - margin * 2;
 
     for (const word of words) {
       const testLine = currentLine + (currentLine ? " " : "") + word;
@@ -213,15 +206,12 @@ async function createPDF(content, intent) {
         .widthOfTextAtSize(testLine, fontSize);
 
       if (testWidth > maxWidth && currentLine) {
-        // Draw current line and start new one
         if (y < margin + 40) {
           page = pdfDoc.addPage([pageWidth, pageHeight]);
           y = pageHeight - margin;
         }
         page.drawText(currentLine, {
-          x: margin,
-          y: y,
-          size: fontSize,
+          x: margin, y: y, size: fontSize,
           font: isHeading ? boldFont : font,
           color: isHeading ? rgb(0.15, 0.39, 0.92) : rgb(0, 0, 0)
         });
@@ -232,16 +222,13 @@ async function createPDF(content, intent) {
       }
     }
 
-    // Draw remaining text
     if (currentLine) {
       if (y < margin + 40) {
         page = pdfDoc.addPage([pageWidth, pageHeight]);
         y = pageHeight - margin;
       }
       page.drawText(currentLine, {
-        x: margin,
-        y: y,
-        size: fontSize,
+        x: margin, y: y, size: fontSize,
         font: isHeading ? boldFont : font,
         color: isHeading ? rgb(0.15, 0.39, 0.92) : rgb(0, 0, 0)
       });
@@ -249,18 +236,12 @@ async function createPDF(content, intent) {
     }
   }
 
-  // ── Footer on every page ──
+  // Footer on every page
   const pages = pdfDoc.getPages();
   pages.forEach((p, i) => {
     p.drawText(
       `Generated by Adira | Page ${i + 1} of ${pages.length} | ${new Date().toLocaleDateString("en-IN")}`,
-      {
-        x: margin,
-        y: 30,
-        size: 8,
-        font: font,
-        color: rgb(0.6, 0.6, 0.6)
-      }
+      { x: margin, y: 30, size: 8, font: font, color: rgb(0.6, 0.6, 0.6) }
     );
   });
 
@@ -268,7 +249,7 @@ async function createPDF(content, intent) {
 }
 
 // ─────────────────────────────────────────
-// GET TEACHER FROM DATABASE
+// GET TEACHER
 // ─────────────────────────────────────────
 async function getTeacher(phone) {
   try {
@@ -276,7 +257,7 @@ async function getTeacher(phone) {
       TableName: process.env.DYNAMODB_TABLE || "adira-teachers",
       Key: { phone: { S: phone } }
     }));
-    return result.Item;
+    return result.Item || null;
   } catch (error) {
     console.error("❌ Get teacher error:", error.message);
     return null;
@@ -284,7 +265,7 @@ async function getTeacher(phone) {
 }
 
 // ─────────────────────────────────────────
-// UPDATE TEACHER USAGE COUNT
+// UPDATE USAGE COUNT
 // ─────────────────────────────────────────
 async function updateUsage(phone, newCount) {
   try {
@@ -294,7 +275,7 @@ async function updateUsage(phone, newCount) {
       UpdateExpression: "SET generationsThisMonth = :count, lastActive = :date",
       ExpressionAttributeValues: {
         ":count": { N: newCount.toString() },
-        ":date": { S: new Date().toISOString() }
+        ":date":  { S: new Date().toISOString() }
       }
     }));
   } catch (error) {
