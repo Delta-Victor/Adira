@@ -1,4 +1,5 @@
 const { QdrantClient } = require("@qdrant/js-client-rest");
+const axios = require("axios");
 const { getSecrets } = require("./secrets");
 require("dotenv").config();
 
@@ -74,9 +75,13 @@ async function storeChunk(chunk) {
 
 // ─────────────────────────────────────────
 // SEARCH NCERT CONTENT
+// Uses direct REST API for filter support
 // ─────────────────────────────────────────
 async function searchNCERT(query, classNum, subject, chapter, topK = 5) {
-  const client = await getQdrantClient();
+  const secrets = await getSecrets();
+  const qdrantUrl = secrets.QDRANT_URL || process.env.QDRANT_URL;
+  const qdrantKey = secrets.QDRANT_API_KEY || process.env.QDRANT_API_KEY;
+
   const embedding = generateSimpleEmbedding(query);
 
   // Build filter conditions
@@ -103,27 +108,42 @@ async function searchNCERT(query, classNum, subject, chapter, topK = 5) {
     });
   }
 
-  const searchParams = {
+  const searchBody = {
     vector: embedding,
     limit: topK,
     with_payload: true
   };
 
-  // Only add filter if we have conditions
   if (mustFilters.length > 0) {
-    searchParams.filter = { must: mustFilters };
+    searchBody.filter = { must: mustFilters };
   }
 
   try {
-    const results = await client.search(COLLECTION_NAME, searchParams);
+    const response = await axios.post(
+      `${qdrantUrl}/collections/${COLLECTION_NAME}/points/search`,
+      searchBody,
+      {
+        headers: {
+          "api-key": qdrantKey,
+          "Content-Type": "application/json"
+        }
+      }
+    );
+
+    const results = response.data.result || [];
+    console.log(`✅ Qdrant search returned ${results.length} results`);
+
     return results.map(r => ({
       topic: r.payload.topic,
       text: r.payload.text,
       score: r.score
     }));
+
   } catch (error) {
-    console.error("Qdrant search error:", error.message);
-    // Return empty — Claude will use general CBSE knowledge
+    console.error(
+      "Qdrant search error:",
+      error.response?.data?.status?.error || error.message
+    );
     return [];
   }
 }
