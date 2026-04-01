@@ -1,0 +1,1725 @@
+{
+  "D:\\Everything\\Businesses\\Adira\\adira\\serverless.yml": {
+    "versionFramework": "4.33.0",
+    "servicePath": "D:\\Everything\\Businesses\\Adira\\adira\\serverless.yml",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "adira",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "region": "ap-south-1",
+        "memorySize": 512,
+        "timeout": 120,
+        "environment": {
+          "AWS_ACCOUNT_ID": "951921971513",
+          "DYNAMODB_TABLE": "adira-teachers",
+          "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+          "S3_OUTPUTS_BUCKET": "adira-outputs",
+          "S3_RAW_BUCKET": "adira-ncert-raw",
+          "VERIFY_TOKEN": "<REDACTED>"
+        },
+        "iam": {
+          "role": {
+            "statements": [
+              {
+                "Effect": "Allow",
+                "Action": [
+                  "dynamodb:GetItem",
+                  "dynamodb:PutItem",
+                  "dynamodb:UpdateItem",
+                  "dynamodb:DeleteItem",
+                  "dynamodb:Query",
+                  "dynamodb:Scan"
+                ],
+                "Resource": "arn:aws:dynamodb:ap-south-1:*:table/adira-teachers"
+              },
+              {
+                "Effect": "Allow",
+                "Action": [
+                  "s3:GetObject",
+                  "s3:PutObject",
+                  "s3:DeleteObject",
+                  "s3:ListBucket"
+                ],
+                "Resource": [
+                  "arn:aws:s3:::adira-outputs",
+                  "arn:aws:s3:::adira-outputs/*",
+                  "arn:aws:s3:::adira-ncert-raw",
+                  "arn:aws:s3:::adira-ncert-raw/*"
+                ]
+              },
+              {
+                "Effect": "Allow",
+                "Action": [
+                  "sqs:SendMessage",
+                  "sqs:ReceiveMessage",
+                  "sqs:DeleteMessage",
+                  "sqs:GetQueueAttributes"
+                ],
+                "Resource": "arn:aws:sqs:ap-south-1:*:adira-jobs"
+              },
+              {
+                "Effect": "Allow",
+                "Action": [
+                  "secretsmanager:GetSecretValue"
+                ],
+                "Resource": "arn:aws:secretsmanager:ap-south-1:*:secret:adira/*"
+              }
+            ]
+          }
+        },
+        "stage": "prod",
+        "versionFunctions": true,
+        "compiledCloudFormationTemplate": {
+          "AWSTemplateFormatVersion": "2010-09-09",
+          "Description": "The AWS CloudFormation template for this Serverless application",
+          "Resources": {
+            "WebhookLogGroup": {
+              "Type": "AWS::Logs::LogGroup",
+              "Properties": {
+                "LogGroupName": "/aws/lambda/adira-prod-webhook"
+              }
+            },
+            "ProcessorLogGroup": {
+              "Type": "AWS::Logs::LogGroup",
+              "Properties": {
+                "LogGroupName": "/aws/lambda/adira-prod-processor"
+              }
+            },
+            "IamRoleLambdaExecution": {
+              "Type": "AWS::IAM::Role",
+              "Properties": {
+                "AssumeRolePolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                      "Effect": "Allow",
+                      "Principal": {
+                        "Service": [
+                          "lambda.amazonaws.com"
+                        ]
+                      },
+                      "Action": [
+                        "sts:AssumeRole"
+                      ]
+                    }
+                  ]
+                },
+                "Policies": [
+                  {
+                    "PolicyName": {
+                      "Fn::Join": [
+                        "-",
+                        [
+                          "adira",
+                          "prod",
+                          "lambda"
+                        ]
+                      ]
+                    },
+                    "PolicyDocument": {
+                      "Version": "2012-10-17",
+                      "Statement": [
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "logs:CreateLogStream",
+                            "logs:CreateLogGroup",
+                            "logs:TagResource"
+                          ],
+                          "Resource": [
+                            {
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/adira-prod*:*"
+                            }
+                          ]
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "logs:PutLogEvents"
+                          ],
+                          "Resource": [
+                            {
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/adira-prod*:*:*"
+                            }
+                          ]
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "dynamodb:GetItem",
+                            "dynamodb:PutItem",
+                            "dynamodb:UpdateItem",
+                            "dynamodb:DeleteItem",
+                            "dynamodb:Query",
+                            "dynamodb:Scan"
+                          ],
+                          "Resource": "arn:aws:dynamodb:ap-south-1:*:table/adira-teachers"
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "s3:GetObject",
+                            "s3:PutObject",
+                            "s3:DeleteObject",
+                            "s3:ListBucket"
+                          ],
+                          "Resource": [
+                            "arn:aws:s3:::adira-outputs",
+                            "arn:aws:s3:::adira-outputs/*",
+                            "arn:aws:s3:::adira-ncert-raw",
+                            "arn:aws:s3:::adira-ncert-raw/*"
+                          ]
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "sqs:SendMessage",
+                            "sqs:ReceiveMessage",
+                            "sqs:DeleteMessage",
+                            "sqs:GetQueueAttributes"
+                          ],
+                          "Resource": "arn:aws:sqs:ap-south-1:*:adira-jobs"
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "secretsmanager:GetSecretValue"
+                          ],
+                          "Resource": "arn:aws:secretsmanager:ap-south-1:*:secret:adira/*"
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "sqs:ReceiveMessage",
+                            "sqs:DeleteMessage",
+                            "sqs:GetQueueAttributes"
+                          ],
+                          "Resource": [
+                            "arn:aws:sqs:ap-south-1:951921971513:adira-jobs"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "Path": "/",
+                "RoleName": {
+                  "Fn::Join": [
+                    "-",
+                    [
+                      "adira",
+                      "prod",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      "lambdaRole"
+                    ]
+                  ]
+                }
+              }
+            },
+            "WebhookLambdaFunction": {
+              "Type": "AWS::Lambda::Function",
+              "Properties": {
+                "Code": {
+                  "S3Bucket": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+                  "S3Key": "serverless/adira/prod/1775001847374-2026-04-01T00:04:07.374Z/adira.zip"
+                },
+                "Handler": "src/lambdas/webhook.handler",
+                "Runtime": "nodejs18.x",
+                "FunctionName": "adira-prod-webhook",
+                "MemorySize": 256,
+                "Timeout": 10,
+                "Environment": {
+                  "Variables": {
+                    "AWS_ACCOUNT_ID": "951921971513",
+                    "DYNAMODB_TABLE": "adira-teachers",
+                    "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+                    "S3_OUTPUTS_BUCKET": "adira-outputs",
+                    "S3_RAW_BUCKET": "adira-ncert-raw",
+                    "VERIFY_TOKEN": "<REDACTED>"
+                  }
+                },
+                "Role": {
+                  "Fn::GetAtt": [
+                    "IamRoleLambdaExecution",
+                    "Arn"
+                  ]
+                }
+              },
+              "DependsOn": [
+                "WebhookLogGroup"
+              ]
+            },
+            "ProcessorLambdaFunction": {
+              "Type": "AWS::Lambda::Function",
+              "Properties": {
+                "Code": {
+                  "S3Bucket": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+                  "S3Key": "serverless/adira/prod/1775001847374-2026-04-01T00:04:07.374Z/adira.zip"
+                },
+                "Handler": "src/lambdas/processor.handler",
+                "Runtime": "nodejs18.x",
+                "FunctionName": "adira-prod-processor",
+                "MemorySize": 1024,
+                "Timeout": 120,
+                "Environment": {
+                  "Variables": {
+                    "AWS_ACCOUNT_ID": "951921971513",
+                    "DYNAMODB_TABLE": "adira-teachers",
+                    "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+                    "S3_OUTPUTS_BUCKET": "adira-outputs",
+                    "S3_RAW_BUCKET": "adira-ncert-raw",
+                    "VERIFY_TOKEN": "<REDACTED>"
+                  }
+                },
+                "Role": {
+                  "Fn::GetAtt": [
+                    "IamRoleLambdaExecution",
+                    "Arn"
+                  ]
+                }
+              },
+              "DependsOn": [
+                "ProcessorLogGroup"
+              ]
+            },
+            "WebhookLambdaVersionyfJaA4l2zslnMClQO6BQC8g9TA4iT4ccw4nHeZOp59Q": {
+              "Type": "AWS::Lambda::Version",
+              "DeletionPolicy": "Retain",
+              "Properties": {
+                "FunctionName": {
+                  "Ref": "WebhookLambdaFunction"
+                },
+                "CodeSha256": "jJhHnJyo6Ji6CdeEHFLvwMLke5Q4l33+0MKh9vnCSuQ="
+              }
+            },
+            "WebhookLambdaFunctionUrl": {
+              "Type": "AWS::Lambda::Url",
+              "Properties": {
+                "AuthType": "NONE",
+                "TargetFunctionArn": {
+                  "Fn::GetAtt": [
+                    "WebhookLambdaFunction",
+                    "Arn"
+                  ]
+                }
+              }
+            },
+            "WebhookLambdaPermissionFnUrl": {
+              "Type": "AWS::Lambda::Permission",
+              "Properties": {
+                "FunctionName": {
+                  "Fn::GetAtt": [
+                    "WebhookLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "Action": "lambda:InvokeFunctionUrl",
+                "Principal": "*",
+                "FunctionUrlAuthType": "NONE"
+              }
+            },
+            "WebhookLambdaPermissionFnUrlInvokeFunction": {
+              "Type": "AWS::Lambda::Permission",
+              "Properties": {
+                "FunctionName": {
+                  "Fn::GetAtt": [
+                    "WebhookLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "*",
+                "InvokedViaFunctionUrl": true
+              }
+            },
+            "ProcessorLambdaVersioniDdcJ9rbvBc1hpvs4j0bIz8ZdUH7BnTxT8heVyrcY8Y": {
+              "Type": "AWS::Lambda::Version",
+              "DeletionPolicy": "Retain",
+              "Properties": {
+                "FunctionName": {
+                  "Ref": "ProcessorLambdaFunction"
+                },
+                "CodeSha256": "jJhHnJyo6Ji6CdeEHFLvwMLke5Q4l33+0MKh9vnCSuQ="
+              }
+            },
+            "ProcessorEventSourceMappingSQSAdirajobs": {
+              "Type": "AWS::Lambda::EventSourceMapping",
+              "DependsOn": [
+                "IamRoleLambdaExecution"
+              ],
+              "Properties": {
+                "BatchSize": 1,
+                "EventSourceArn": "arn:aws:sqs:ap-south-1:951921971513:adira-jobs",
+                "FunctionName": {
+                  "Fn::GetAtt": [
+                    "ProcessorLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "Enabled": true
+              }
+            },
+            "HttpApi": {
+              "Type": "AWS::ApiGatewayV2::Api",
+              "Properties": {
+                "Name": "prod-adira",
+                "ProtocolType": "HTTP"
+              }
+            },
+            "HttpApiStage": {
+              "Type": "AWS::ApiGatewayV2::Stage",
+              "Properties": {
+                "ApiId": {
+                  "Ref": "HttpApi"
+                },
+                "StageName": "$default",
+                "AutoDeploy": true,
+                "DefaultRouteSettings": {
+                  "DetailedMetricsEnabled": false
+                }
+              }
+            },
+            "WebhookLambdaPermissionHttpApi": {
+              "Type": "AWS::Lambda::Permission",
+              "Properties": {
+                "FunctionName": {
+                  "Fn::GetAtt": [
+                    "WebhookLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "apigateway.amazonaws.com",
+                "SourceArn": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":execute-api:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":",
+                      {
+                        "Ref": "HttpApi"
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              }
+            },
+            "HttpApiIntegrationWebhook": {
+              "Type": "AWS::ApiGatewayV2::Integration",
+              "Properties": {
+                "ApiId": {
+                  "Ref": "HttpApi"
+                },
+                "IntegrationType": "AWS_PROXY",
+                "IntegrationUri": {
+                  "Fn::GetAtt": [
+                    "WebhookLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "PayloadFormatVersion": "2.0",
+                "TimeoutInMillis": 30000
+              }
+            },
+            "HttpApiRouteGetWebhook": {
+              "Type": "AWS::ApiGatewayV2::Route",
+              "Properties": {
+                "ApiId": {
+                  "Ref": "HttpApi"
+                },
+                "RouteKey": "GET /webhook",
+                "Target": {
+                  "Fn::Join": [
+                    "/",
+                    [
+                      "integrations",
+                      {
+                        "Ref": "HttpApiIntegrationWebhook"
+                      }
+                    ]
+                  ]
+                }
+              },
+              "DependsOn": "HttpApiIntegrationWebhook"
+            },
+            "HttpApiRoutePostWebhook": {
+              "Type": "AWS::ApiGatewayV2::Route",
+              "Properties": {
+                "ApiId": {
+                  "Ref": "HttpApi"
+                },
+                "RouteKey": "POST /webhook",
+                "Target": {
+                  "Fn::Join": [
+                    "/",
+                    [
+                      "integrations",
+                      {
+                        "Ref": "HttpApiIntegrationWebhook"
+                      }
+                    ]
+                  ]
+                }
+              },
+              "DependsOn": "HttpApiIntegrationWebhook"
+            }
+          },
+          "Outputs": {
+            "ServerlessDeploymentBucketName": {
+              "Value": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+              "Export": {
+                "Name": "sls-adira-prod-ServerlessDeploymentBucketName"
+              }
+            },
+            "WebhookLambdaFunctionQualifiedArn": {
+              "Description": "Current Lambda function version",
+              "Value": {
+                "Ref": "WebhookLambdaVersionyfJaA4l2zslnMClQO6BQC8g9TA4iT4ccw4nHeZOp59Q"
+              },
+              "Export": {
+                "Name": "sls-adira-prod-WebhookLambdaFunctionQualifiedArn"
+              }
+            },
+            "WebhookLambdaFunctionUrl": {
+              "Description": "Lambda Function URL",
+              "Value": {
+                "Fn::GetAtt": [
+                  "WebhookLambdaFunctionUrl",
+                  "FunctionUrl"
+                ]
+              },
+              "Export": {
+                "Name": "sls-adira-prod-WebhookLambdaFunctionUrl"
+              }
+            },
+            "ProcessorLambdaFunctionQualifiedArn": {
+              "Description": "Current Lambda function version",
+              "Value": {
+                "Ref": "ProcessorLambdaVersioniDdcJ9rbvBc1hpvs4j0bIz8ZdUH7BnTxT8heVyrcY8Y"
+              },
+              "Export": {
+                "Name": "sls-adira-prod-ProcessorLambdaFunctionQualifiedArn"
+              }
+            },
+            "HttpApiId": {
+              "Description": "Id of the HTTP API",
+              "Value": {
+                "Ref": "HttpApi"
+              },
+              "Export": {
+                "Name": "sls-adira-prod-HttpApiId"
+              }
+            },
+            "HttpApiUrl": {
+              "Description": "URL of the HTTP API",
+              "Value": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "https://",
+                    {
+                      "Ref": "HttpApi"
+                    },
+                    ".execute-api.",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ".",
+                    {
+                      "Ref": "AWS::URLSuffix"
+                    }
+                  ]
+                ]
+              },
+              "Export": {
+                "Name": "sls-adira-prod-HttpApiUrl"
+              }
+            }
+          }
+        },
+        "vpc": {}
+      },
+      "functions": {
+        "webhook": {
+          "handler": "src/lambdas/webhook.handler",
+          "memorySize": 256,
+          "timeout": 10,
+          "url": true,
+          "events": [
+            {
+              "httpApi": {
+                "path": "/webhook",
+                "method": "GET"
+              },
+              "resolvedMethod": "GET",
+              "resolvedPath": "/webhook"
+            },
+            {
+              "httpApi": {
+                "path": "/webhook",
+                "method": "POST"
+              },
+              "resolvedMethod": "POST",
+              "resolvedPath": "/webhook"
+            }
+          ],
+          "name": "adira-prod-webhook",
+          "package": {},
+          "memory": 256,
+          "runtime": "nodejs18.x",
+          "vpc": {},
+          "versionLogicalId": "WebhookLambdaVersionyfJaA4l2zslnMClQO6BQC8g9TA4iT4ccw4nHeZOp59Q"
+        },
+        "processor": {
+          "handler": "src/lambdas/processor.handler",
+          "memorySize": 1024,
+          "timeout": 120,
+          "events": [
+            {
+              "sqs": {
+                "arn": "arn:aws:sqs:ap-south-1:951921971513:adira-jobs",
+                "batchSize": 1
+              }
+            }
+          ],
+          "name": "adira-prod-processor",
+          "package": {},
+          "memory": 1024,
+          "runtime": "nodejs18.x",
+          "vpc": {},
+          "versionLogicalId": "ProcessorLambdaVersioniDdcJ9rbvBc1hpvs4j0bIz8ZdUH7BnTxT8heVyrcY8Y"
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ],
+      "package": {
+        "exclude": [
+          "node_modules/pdf2json/**",
+          "ncert-data/**",
+          ".git/**",
+          "test*.js",
+          "process_ncert.js",
+          "scan.js",
+          "rename_ncert.js",
+          "fix_*.js"
+        ],
+        "artifactsS3KeyDirname": "serverless/adira/prod/code-artifacts",
+        "deploymentBucket": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+        "artifact": "D:\\Everything\\Businesses\\Adira\\adira\\.serverless\\adira.zip",
+        "artifactDirectoryName": "serverless/adira/prod/1775001847374-2026-04-01T00:04:07.374Z"
+      }
+    },
+    "provider": {
+      "name": "aws",
+      "runtime": "nodejs18.x",
+      "region": "ap-south-1",
+      "memorySize": 512,
+      "timeout": 120,
+      "environment": {
+        "AWS_ACCOUNT_ID": "951921971513",
+        "DYNAMODB_TABLE": "adira-teachers",
+        "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+        "S3_OUTPUTS_BUCKET": "adira-outputs",
+        "S3_RAW_BUCKET": "adira-ncert-raw",
+        "VERIFY_TOKEN": "<REDACTED>"
+      },
+      "iam": {
+        "role": {
+          "statements": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:GetItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:Query",
+                "dynamodb:Scan"
+              ],
+              "Resource": "arn:aws:dynamodb:ap-south-1:*:table/adira-teachers"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+              ],
+              "Resource": [
+                "arn:aws:s3:::adira-outputs",
+                "arn:aws:s3:::adira-outputs/*",
+                "arn:aws:s3:::adira-ncert-raw",
+                "arn:aws:s3:::adira-ncert-raw/*"
+              ]
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "sqs:SendMessage",
+                "sqs:ReceiveMessage",
+                "sqs:DeleteMessage",
+                "sqs:GetQueueAttributes"
+              ],
+              "Resource": "arn:aws:sqs:ap-south-1:*:adira-jobs"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "secretsmanager:GetSecretValue"
+              ],
+              "Resource": "arn:aws:secretsmanager:ap-south-1:*:secret:adira/*"
+            }
+          ]
+        }
+      },
+      "stage": "prod",
+      "versionFunctions": true,
+      "compiledCloudFormationTemplate": {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Description": "The AWS CloudFormation template for this Serverless application",
+        "Resources": {
+          "WebhookLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/adira-prod-webhook"
+            }
+          },
+          "ProcessorLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/adira-prod-processor"
+            }
+          },
+          "IamRoleLambdaExecution": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+              "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Effect": "Allow",
+                    "Principal": {
+                      "Service": [
+                        "lambda.amazonaws.com"
+                      ]
+                    },
+                    "Action": [
+                      "sts:AssumeRole"
+                    ]
+                  }
+                ]
+              },
+              "Policies": [
+                {
+                  "PolicyName": {
+                    "Fn::Join": [
+                      "-",
+                      [
+                        "adira",
+                        "prod",
+                        "lambda"
+                      ]
+                    ]
+                  },
+                  "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "logs:CreateLogStream",
+                          "logs:CreateLogGroup",
+                          "logs:TagResource"
+                        ],
+                        "Resource": [
+                          {
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/adira-prod*:*"
+                          }
+                        ]
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "logs:PutLogEvents"
+                        ],
+                        "Resource": [
+                          {
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/adira-prod*:*:*"
+                          }
+                        ]
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "dynamodb:GetItem",
+                          "dynamodb:PutItem",
+                          "dynamodb:UpdateItem",
+                          "dynamodb:DeleteItem",
+                          "dynamodb:Query",
+                          "dynamodb:Scan"
+                        ],
+                        "Resource": "arn:aws:dynamodb:ap-south-1:*:table/adira-teachers"
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "s3:GetObject",
+                          "s3:PutObject",
+                          "s3:DeleteObject",
+                          "s3:ListBucket"
+                        ],
+                        "Resource": [
+                          "arn:aws:s3:::adira-outputs",
+                          "arn:aws:s3:::adira-outputs/*",
+                          "arn:aws:s3:::adira-ncert-raw",
+                          "arn:aws:s3:::adira-ncert-raw/*"
+                        ]
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "sqs:SendMessage",
+                          "sqs:ReceiveMessage",
+                          "sqs:DeleteMessage",
+                          "sqs:GetQueueAttributes"
+                        ],
+                        "Resource": "arn:aws:sqs:ap-south-1:*:adira-jobs"
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "secretsmanager:GetSecretValue"
+                        ],
+                        "Resource": "arn:aws:secretsmanager:ap-south-1:*:secret:adira/*"
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "sqs:ReceiveMessage",
+                          "sqs:DeleteMessage",
+                          "sqs:GetQueueAttributes"
+                        ],
+                        "Resource": [
+                          "arn:aws:sqs:ap-south-1:951921971513:adira-jobs"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Path": "/",
+              "RoleName": {
+                "Fn::Join": [
+                  "-",
+                  [
+                    "adira",
+                    "prod",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "lambdaRole"
+                  ]
+                ]
+              }
+            }
+          },
+          "WebhookLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+                "S3Key": "serverless/adira/prod/1775001847374-2026-04-01T00:04:07.374Z/adira.zip"
+              },
+              "Handler": "src/lambdas/webhook.handler",
+              "Runtime": "nodejs18.x",
+              "FunctionName": "adira-prod-webhook",
+              "MemorySize": 256,
+              "Timeout": 10,
+              "Environment": {
+                "Variables": {
+                  "AWS_ACCOUNT_ID": "951921971513",
+                  "DYNAMODB_TABLE": "adira-teachers",
+                  "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+                  "S3_OUTPUTS_BUCKET": "adira-outputs",
+                  "S3_RAW_BUCKET": "adira-ncert-raw",
+                  "VERIFY_TOKEN": "<REDACTED>"
+                }
+              },
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              }
+            },
+            "DependsOn": [
+              "WebhookLogGroup"
+            ]
+          },
+          "ProcessorLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+                "S3Key": "serverless/adira/prod/1775001847374-2026-04-01T00:04:07.374Z/adira.zip"
+              },
+              "Handler": "src/lambdas/processor.handler",
+              "Runtime": "nodejs18.x",
+              "FunctionName": "adira-prod-processor",
+              "MemorySize": 1024,
+              "Timeout": 120,
+              "Environment": {
+                "Variables": {
+                  "AWS_ACCOUNT_ID": "951921971513",
+                  "DYNAMODB_TABLE": "adira-teachers",
+                  "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+                  "S3_OUTPUTS_BUCKET": "adira-outputs",
+                  "S3_RAW_BUCKET": "adira-ncert-raw",
+                  "VERIFY_TOKEN": "<REDACTED>"
+                }
+              },
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              }
+            },
+            "DependsOn": [
+              "ProcessorLogGroup"
+            ]
+          },
+          "WebhookLambdaVersionyfJaA4l2zslnMClQO6BQC8g9TA4iT4ccw4nHeZOp59Q": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "WebhookLambdaFunction"
+              },
+              "CodeSha256": "jJhHnJyo6Ji6CdeEHFLvwMLke5Q4l33+0MKh9vnCSuQ="
+            }
+          },
+          "WebhookLambdaFunctionUrl": {
+            "Type": "AWS::Lambda::Url",
+            "Properties": {
+              "AuthType": "NONE",
+              "TargetFunctionArn": {
+                "Fn::GetAtt": [
+                  "WebhookLambdaFunction",
+                  "Arn"
+                ]
+              }
+            }
+          },
+          "WebhookLambdaPermissionFnUrl": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+              "FunctionName": {
+                "Fn::GetAtt": [
+                  "WebhookLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "Action": "lambda:InvokeFunctionUrl",
+              "Principal": "*",
+              "FunctionUrlAuthType": "NONE"
+            }
+          },
+          "WebhookLambdaPermissionFnUrlInvokeFunction": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+              "FunctionName": {
+                "Fn::GetAtt": [
+                  "WebhookLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "Action": "lambda:InvokeFunction",
+              "Principal": "*",
+              "InvokedViaFunctionUrl": true
+            }
+          },
+          "ProcessorLambdaVersioniDdcJ9rbvBc1hpvs4j0bIz8ZdUH7BnTxT8heVyrcY8Y": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "ProcessorLambdaFunction"
+              },
+              "CodeSha256": "jJhHnJyo6Ji6CdeEHFLvwMLke5Q4l33+0MKh9vnCSuQ="
+            }
+          },
+          "ProcessorEventSourceMappingSQSAdirajobs": {
+            "Type": "AWS::Lambda::EventSourceMapping",
+            "DependsOn": [
+              "IamRoleLambdaExecution"
+            ],
+            "Properties": {
+              "BatchSize": 1,
+              "EventSourceArn": "arn:aws:sqs:ap-south-1:951921971513:adira-jobs",
+              "FunctionName": {
+                "Fn::GetAtt": [
+                  "ProcessorLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "Enabled": true
+            }
+          },
+          "HttpApi": {
+            "Type": "AWS::ApiGatewayV2::Api",
+            "Properties": {
+              "Name": "prod-adira",
+              "ProtocolType": "HTTP"
+            }
+          },
+          "HttpApiStage": {
+            "Type": "AWS::ApiGatewayV2::Stage",
+            "Properties": {
+              "ApiId": {
+                "Ref": "HttpApi"
+              },
+              "StageName": "$default",
+              "AutoDeploy": true,
+              "DefaultRouteSettings": {
+                "DetailedMetricsEnabled": false
+              }
+            }
+          },
+          "WebhookLambdaPermissionHttpApi": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+              "FunctionName": {
+                "Fn::GetAtt": [
+                  "WebhookLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "Action": "lambda:InvokeFunction",
+              "Principal": "apigateway.amazonaws.com",
+              "SourceArn": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":execute-api:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "HttpApi"
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            }
+          },
+          "HttpApiIntegrationWebhook": {
+            "Type": "AWS::ApiGatewayV2::Integration",
+            "Properties": {
+              "ApiId": {
+                "Ref": "HttpApi"
+              },
+              "IntegrationType": "AWS_PROXY",
+              "IntegrationUri": {
+                "Fn::GetAtt": [
+                  "WebhookLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "PayloadFormatVersion": "2.0",
+              "TimeoutInMillis": 30000
+            }
+          },
+          "HttpApiRouteGetWebhook": {
+            "Type": "AWS::ApiGatewayV2::Route",
+            "Properties": {
+              "ApiId": {
+                "Ref": "HttpApi"
+              },
+              "RouteKey": "GET /webhook",
+              "Target": {
+                "Fn::Join": [
+                  "/",
+                  [
+                    "integrations",
+                    {
+                      "Ref": "HttpApiIntegrationWebhook"
+                    }
+                  ]
+                ]
+              }
+            },
+            "DependsOn": "HttpApiIntegrationWebhook"
+          },
+          "HttpApiRoutePostWebhook": {
+            "Type": "AWS::ApiGatewayV2::Route",
+            "Properties": {
+              "ApiId": {
+                "Ref": "HttpApi"
+              },
+              "RouteKey": "POST /webhook",
+              "Target": {
+                "Fn::Join": [
+                  "/",
+                  [
+                    "integrations",
+                    {
+                      "Ref": "HttpApiIntegrationWebhook"
+                    }
+                  ]
+                ]
+              }
+            },
+            "DependsOn": "HttpApiIntegrationWebhook"
+          }
+        },
+        "Outputs": {
+          "ServerlessDeploymentBucketName": {
+            "Value": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+            "Export": {
+              "Name": "sls-adira-prod-ServerlessDeploymentBucketName"
+            }
+          },
+          "WebhookLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "WebhookLambdaVersionyfJaA4l2zslnMClQO6BQC8g9TA4iT4ccw4nHeZOp59Q"
+            },
+            "Export": {
+              "Name": "sls-adira-prod-WebhookLambdaFunctionQualifiedArn"
+            }
+          },
+          "WebhookLambdaFunctionUrl": {
+            "Description": "Lambda Function URL",
+            "Value": {
+              "Fn::GetAtt": [
+                "WebhookLambdaFunctionUrl",
+                "FunctionUrl"
+              ]
+            },
+            "Export": {
+              "Name": "sls-adira-prod-WebhookLambdaFunctionUrl"
+            }
+          },
+          "ProcessorLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "ProcessorLambdaVersioniDdcJ9rbvBc1hpvs4j0bIz8ZdUH7BnTxT8heVyrcY8Y"
+            },
+            "Export": {
+              "Name": "sls-adira-prod-ProcessorLambdaFunctionQualifiedArn"
+            }
+          },
+          "HttpApiId": {
+            "Description": "Id of the HTTP API",
+            "Value": {
+              "Ref": "HttpApi"
+            },
+            "Export": {
+              "Name": "sls-adira-prod-HttpApiId"
+            }
+          },
+          "HttpApiUrl": {
+            "Description": "URL of the HTTP API",
+            "Value": {
+              "Fn::Join": [
+                "",
+                [
+                  "https://",
+                  {
+                    "Ref": "HttpApi"
+                  },
+                  ".execute-api.",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ".",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  }
+                ]
+              ]
+            },
+            "Export": {
+              "Name": "sls-adira-prod-HttpApiUrl"
+            }
+          }
+        }
+      },
+      "vpc": {}
+    },
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "serviceRawFile": "service: adira\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: ap-south-1\r\n  memorySize: 512\r\n  timeout: 120\r\n  environment:\r\n    AWS_ACCOUNT_ID: ${env:AWS_ACCOUNT_ID}\r\n    DYNAMODB_TABLE: adira-teachers\r\n    SQS_QUEUE_URL: https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs\r\n    S3_OUTPUTS_BUCKET: adira-outputs\r\n    S3_RAW_BUCKET: adira-ncert-raw\r\n    VERIFY_TOKEN: adira_secret_2026\r\n  iam:\r\n    role:\r\n      statements:\r\n        - Effect: Allow\r\n          Action:\r\n            - dynamodb:GetItem\r\n            - dynamodb:PutItem\r\n            - dynamodb:UpdateItem\r\n            - dynamodb:DeleteItem\r\n            - dynamodb:Query\r\n            - dynamodb:Scan\r\n          Resource: arn:aws:dynamodb:ap-south-1:*:table/adira-teachers\r\n        - Effect: Allow\r\n          Action:\r\n            - s3:GetObject\r\n            - s3:PutObject\r\n            - s3:DeleteObject\r\n            - s3:ListBucket\r\n          Resource:\r\n            - arn:aws:s3:::adira-outputs\r\n            - arn:aws:s3:::adira-outputs/*\r\n            - arn:aws:s3:::adira-ncert-raw\r\n            - arn:aws:s3:::adira-ncert-raw/*\r\n        - Effect: Allow\r\n          Action:\r\n            - sqs:SendMessage\r\n            - sqs:ReceiveMessage\r\n            - sqs:DeleteMessage\r\n            - sqs:GetQueueAttributes\r\n          Resource: arn:aws:sqs:ap-south-1:*:adira-jobs\r\n        - Effect: Allow\r\n          Action:\r\n            - secretsmanager:GetSecretValue\r\n          Resource: arn:aws:secretsmanager:ap-south-1:*:secret:adira/*\r\n\r\nfunctions:\r\n  webhook:\r\n    handler: src/lambdas/webhook.handler\r\n    memorySize: 256\r\n    timeout: 10\r\n    url: true\r\n    events:\r\n      - httpApi:\r\n          path: /webhook\r\n          method: GET\r\n      - httpApi:\r\n          path: /webhook\r\n          method: POST\r\n\r\n  processor:\r\n    handler: src/lambdas/processor.handler\r\n    memorySize: 1024\r\n    timeout: 120\r\n    events:\r\n      - sqs:\r\n          arn: arn:aws:sqs:ap-south-1:951921971513:adira-jobs\r\n          batchSize: 1\r\n\r\nplugins:\r\n  - serverless-offline\r\n\r\npackage:\r\n  exclude:\r\n    - node_modules/pdf2json/**\r\n    - ncert-data/**\r\n    - .git/**\r\n    - test*.js\r\n    - process_ncert.js\r\n    - scan.js\r\n    - rename_ncert.js\r\n    - fix_*.js\r\n",
+    "command": [
+      "deploy"
+    ],
+    "options": {
+      "stage": "prod"
+    },
+    "orgId": "a192c1e5-bc48-4079-a2b0-e3d62401f083",
+    "orgName": "adira",
+    "userId": "3FDlwjCXccMkStrB9b",
+    "userName": "adira",
+    "serviceProviderAwsAccountId": "951921971513",
+    "serviceProviderAwsCfStackName": "adira-prod",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:ap-south-1:951921971513:stack/adira-prod/c101df40-2cee-11f1-88cd-067e0782f2eb",
+    "serviceProviderAwsCfStackCreated": "2026-03-31T10:45:38.451Z",
+    "serviceProviderAwsCfStackUpdated": "2026-03-31T14:59:49.011Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "ProcessorLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:ap-south-1:951921971513:function:adira-prod-processor:6",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-adira-prod-ProcessorLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "WebhookLambdaFunctionUrl",
+        "OutputValue": "https://spy2cmrfqko2nlhiy66u2dynfu0lxjik.lambda-url.ap-south-1.on.aws/",
+        "Description": "Lambda Function URL",
+        "ExportName": "sls-adira-prod-WebhookLambdaFunctionUrl"
+      },
+      {
+        "OutputKey": "WebhookLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:ap-south-1:951921971513:function:adira-prod-webhook:8",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-adira-prod-WebhookLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "HttpApiId",
+        "OutputValue": "16uurkqny4",
+        "Description": "Id of the HTTP API",
+        "ExportName": "sls-adira-prod-HttpApiId"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+        "ExportName": "sls-adira-prod-ServerlessDeploymentBucketName"
+      },
+      {
+        "OutputKey": "HttpApiUrl",
+        "OutputValue": "https://16uurkqny4.execute-api.ap-south-1.amazonaws.com",
+        "Description": "URL of the HTTP API",
+        "ExportName": "sls-adira-prod-HttpApiUrl"
+      }
+    ],
+    "compiledCloudFormationTemplate": {
+      "AWSTemplateFormatVersion": "2010-09-09",
+      "Description": "The AWS CloudFormation template for this Serverless application",
+      "Resources": {
+        "WebhookLogGroup": {
+          "Type": "AWS::Logs::LogGroup",
+          "Properties": {
+            "LogGroupName": "/aws/lambda/adira-prod-webhook"
+          }
+        },
+        "ProcessorLogGroup": {
+          "Type": "AWS::Logs::LogGroup",
+          "Properties": {
+            "LogGroupName": "/aws/lambda/adira-prod-processor"
+          }
+        },
+        "IamRoleLambdaExecution": {
+          "Type": "AWS::IAM::Role",
+          "Properties": {
+            "AssumeRolePolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Principal": {
+                    "Service": [
+                      "lambda.amazonaws.com"
+                    ]
+                  },
+                  "Action": [
+                    "sts:AssumeRole"
+                  ]
+                }
+              ]
+            },
+            "Policies": [
+              {
+                "PolicyName": {
+                  "Fn::Join": [
+                    "-",
+                    [
+                      "adira",
+                      "prod",
+                      "lambda"
+                    ]
+                  ]
+                },
+                "PolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "logs:CreateLogStream",
+                        "logs:CreateLogGroup",
+                        "logs:TagResource"
+                      ],
+                      "Resource": [
+                        {
+                          "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/adira-prod*:*"
+                        }
+                      ]
+                    },
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "logs:PutLogEvents"
+                      ],
+                      "Resource": [
+                        {
+                          "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/adira-prod*:*:*"
+                        }
+                      ]
+                    },
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "dynamodb:GetItem",
+                        "dynamodb:PutItem",
+                        "dynamodb:UpdateItem",
+                        "dynamodb:DeleteItem",
+                        "dynamodb:Query",
+                        "dynamodb:Scan"
+                      ],
+                      "Resource": "arn:aws:dynamodb:ap-south-1:*:table/adira-teachers"
+                    },
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "s3:GetObject",
+                        "s3:PutObject",
+                        "s3:DeleteObject",
+                        "s3:ListBucket"
+                      ],
+                      "Resource": [
+                        "arn:aws:s3:::adira-outputs",
+                        "arn:aws:s3:::adira-outputs/*",
+                        "arn:aws:s3:::adira-ncert-raw",
+                        "arn:aws:s3:::adira-ncert-raw/*"
+                      ]
+                    },
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "sqs:SendMessage",
+                        "sqs:ReceiveMessage",
+                        "sqs:DeleteMessage",
+                        "sqs:GetQueueAttributes"
+                      ],
+                      "Resource": "arn:aws:sqs:ap-south-1:*:adira-jobs"
+                    },
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "secretsmanager:GetSecretValue"
+                      ],
+                      "Resource": "arn:aws:secretsmanager:ap-south-1:*:secret:adira/*"
+                    },
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "sqs:ReceiveMessage",
+                        "sqs:DeleteMessage",
+                        "sqs:GetQueueAttributes"
+                      ],
+                      "Resource": [
+                        "arn:aws:sqs:ap-south-1:951921971513:adira-jobs"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "Path": "/",
+            "RoleName": {
+              "Fn::Join": [
+                "-",
+                [
+                  "adira",
+                  "prod",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  "lambdaRole"
+                ]
+              ]
+            }
+          }
+        },
+        "WebhookLambdaFunction": {
+          "Type": "AWS::Lambda::Function",
+          "Properties": {
+            "Code": {
+              "S3Bucket": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+              "S3Key": "serverless/adira/prod/1775001847374-2026-04-01T00:04:07.374Z/adira.zip"
+            },
+            "Handler": "src/lambdas/webhook.handler",
+            "Runtime": "nodejs18.x",
+            "FunctionName": "adira-prod-webhook",
+            "MemorySize": 256,
+            "Timeout": 10,
+            "Environment": {
+              "Variables": {
+                "AWS_ACCOUNT_ID": "951921971513",
+                "DYNAMODB_TABLE": "adira-teachers",
+                "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+                "S3_OUTPUTS_BUCKET": "adira-outputs",
+                "S3_RAW_BUCKET": "adira-ncert-raw",
+                "VERIFY_TOKEN": "<REDACTED>"
+              }
+            },
+            "Role": {
+              "Fn::GetAtt": [
+                "IamRoleLambdaExecution",
+                "Arn"
+              ]
+            }
+          },
+          "DependsOn": [
+            "WebhookLogGroup"
+          ]
+        },
+        "ProcessorLambdaFunction": {
+          "Type": "AWS::Lambda::Function",
+          "Properties": {
+            "Code": {
+              "S3Bucket": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+              "S3Key": "serverless/adira/prod/1775001847374-2026-04-01T00:04:07.374Z/adira.zip"
+            },
+            "Handler": "src/lambdas/processor.handler",
+            "Runtime": "nodejs18.x",
+            "FunctionName": "adira-prod-processor",
+            "MemorySize": 1024,
+            "Timeout": 120,
+            "Environment": {
+              "Variables": {
+                "AWS_ACCOUNT_ID": "951921971513",
+                "DYNAMODB_TABLE": "adira-teachers",
+                "SQS_QUEUE_URL": "https://sqs.ap-south-1.amazonaws.com/951921971513/adira-jobs",
+                "S3_OUTPUTS_BUCKET": "adira-outputs",
+                "S3_RAW_BUCKET": "adira-ncert-raw",
+                "VERIFY_TOKEN": "<REDACTED>"
+              }
+            },
+            "Role": {
+              "Fn::GetAtt": [
+                "IamRoleLambdaExecution",
+                "Arn"
+              ]
+            }
+          },
+          "DependsOn": [
+            "ProcessorLogGroup"
+          ]
+        },
+        "WebhookLambdaVersionyfJaA4l2zslnMClQO6BQC8g9TA4iT4ccw4nHeZOp59Q": {
+          "Type": "AWS::Lambda::Version",
+          "DeletionPolicy": "Retain",
+          "Properties": {
+            "FunctionName": {
+              "Ref": "WebhookLambdaFunction"
+            },
+            "CodeSha256": "jJhHnJyo6Ji6CdeEHFLvwMLke5Q4l33+0MKh9vnCSuQ="
+          }
+        },
+        "WebhookLambdaFunctionUrl": {
+          "Type": "AWS::Lambda::Url",
+          "Properties": {
+            "AuthType": "NONE",
+            "TargetFunctionArn": {
+              "Fn::GetAtt": [
+                "WebhookLambdaFunction",
+                "Arn"
+              ]
+            }
+          }
+        },
+        "WebhookLambdaPermissionFnUrl": {
+          "Type": "AWS::Lambda::Permission",
+          "Properties": {
+            "FunctionName": {
+              "Fn::GetAtt": [
+                "WebhookLambdaFunction",
+                "Arn"
+              ]
+            },
+            "Action": "lambda:InvokeFunctionUrl",
+            "Principal": "*",
+            "FunctionUrlAuthType": "NONE"
+          }
+        },
+        "WebhookLambdaPermissionFnUrlInvokeFunction": {
+          "Type": "AWS::Lambda::Permission",
+          "Properties": {
+            "FunctionName": {
+              "Fn::GetAtt": [
+                "WebhookLambdaFunction",
+                "Arn"
+              ]
+            },
+            "Action": "lambda:InvokeFunction",
+            "Principal": "*",
+            "InvokedViaFunctionUrl": true
+          }
+        },
+        "ProcessorLambdaVersioniDdcJ9rbvBc1hpvs4j0bIz8ZdUH7BnTxT8heVyrcY8Y": {
+          "Type": "AWS::Lambda::Version",
+          "DeletionPolicy": "Retain",
+          "Properties": {
+            "FunctionName": {
+              "Ref": "ProcessorLambdaFunction"
+            },
+            "CodeSha256": "jJhHnJyo6Ji6CdeEHFLvwMLke5Q4l33+0MKh9vnCSuQ="
+          }
+        },
+        "ProcessorEventSourceMappingSQSAdirajobs": {
+          "Type": "AWS::Lambda::EventSourceMapping",
+          "DependsOn": [
+            "IamRoleLambdaExecution"
+          ],
+          "Properties": {
+            "BatchSize": 1,
+            "EventSourceArn": "arn:aws:sqs:ap-south-1:951921971513:adira-jobs",
+            "FunctionName": {
+              "Fn::GetAtt": [
+                "ProcessorLambdaFunction",
+                "Arn"
+              ]
+            },
+            "Enabled": true
+          }
+        },
+        "HttpApi": {
+          "Type": "AWS::ApiGatewayV2::Api",
+          "Properties": {
+            "Name": "prod-adira",
+            "ProtocolType": "HTTP"
+          }
+        },
+        "HttpApiStage": {
+          "Type": "AWS::ApiGatewayV2::Stage",
+          "Properties": {
+            "ApiId": {
+              "Ref": "HttpApi"
+            },
+            "StageName": "$default",
+            "AutoDeploy": true,
+            "DefaultRouteSettings": {
+              "DetailedMetricsEnabled": false
+            }
+          }
+        },
+        "WebhookLambdaPermissionHttpApi": {
+          "Type": "AWS::Lambda::Permission",
+          "Properties": {
+            "FunctionName": {
+              "Fn::GetAtt": [
+                "WebhookLambdaFunction",
+                "Arn"
+              ]
+            },
+            "Action": "lambda:InvokeFunction",
+            "Principal": "apigateway.amazonaws.com",
+            "SourceArn": {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:",
+                  {
+                    "Ref": "AWS::Partition"
+                  },
+                  ":execute-api:",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ":",
+                  {
+                    "Ref": "AWS::AccountId"
+                  },
+                  ":",
+                  {
+                    "Ref": "HttpApi"
+                  },
+                  "/*"
+                ]
+              ]
+            }
+          }
+        },
+        "HttpApiIntegrationWebhook": {
+          "Type": "AWS::ApiGatewayV2::Integration",
+          "Properties": {
+            "ApiId": {
+              "Ref": "HttpApi"
+            },
+            "IntegrationType": "AWS_PROXY",
+            "IntegrationUri": {
+              "Fn::GetAtt": [
+                "WebhookLambdaFunction",
+                "Arn"
+              ]
+            },
+            "PayloadFormatVersion": "2.0",
+            "TimeoutInMillis": 30000
+          }
+        },
+        "HttpApiRouteGetWebhook": {
+          "Type": "AWS::ApiGatewayV2::Route",
+          "Properties": {
+            "ApiId": {
+              "Ref": "HttpApi"
+            },
+            "RouteKey": "GET /webhook",
+            "Target": {
+              "Fn::Join": [
+                "/",
+                [
+                  "integrations",
+                  {
+                    "Ref": "HttpApiIntegrationWebhook"
+                  }
+                ]
+              ]
+            }
+          },
+          "DependsOn": "HttpApiIntegrationWebhook"
+        },
+        "HttpApiRoutePostWebhook": {
+          "Type": "AWS::ApiGatewayV2::Route",
+          "Properties": {
+            "ApiId": {
+              "Ref": "HttpApi"
+            },
+            "RouteKey": "POST /webhook",
+            "Target": {
+              "Fn::Join": [
+                "/",
+                [
+                  "integrations",
+                  {
+                    "Ref": "HttpApiIntegrationWebhook"
+                  }
+                ]
+              ]
+            }
+          },
+          "DependsOn": "HttpApiIntegrationWebhook"
+        }
+      },
+      "Outputs": {
+        "ServerlessDeploymentBucketName": {
+          "Value": "serverless-framework-deployments-ap-south-1-e5df220b-a8ca",
+          "Export": {
+            "Name": "sls-adira-prod-ServerlessDeploymentBucketName"
+          }
+        },
+        "WebhookLambdaFunctionQualifiedArn": {
+          "Description": "Current Lambda function version",
+          "Value": {
+            "Ref": "WebhookLambdaVersionyfJaA4l2zslnMClQO6BQC8g9TA4iT4ccw4nHeZOp59Q"
+          },
+          "Export": {
+            "Name": "sls-adira-prod-WebhookLambdaFunctionQualifiedArn"
+          }
+        },
+        "WebhookLambdaFunctionUrl": {
+          "Description": "Lambda Function URL",
+          "Value": {
+            "Fn::GetAtt": [
+              "WebhookLambdaFunctionUrl",
+              "FunctionUrl"
+            ]
+          },
+          "Export": {
+            "Name": "sls-adira-prod-WebhookLambdaFunctionUrl"
+          }
+        },
+        "ProcessorLambdaFunctionQualifiedArn": {
+          "Description": "Current Lambda function version",
+          "Value": {
+            "Ref": "ProcessorLambdaVersioniDdcJ9rbvBc1hpvs4j0bIz8ZdUH7BnTxT8heVyrcY8Y"
+          },
+          "Export": {
+            "Name": "sls-adira-prod-ProcessorLambdaFunctionQualifiedArn"
+          }
+        },
+        "HttpApiId": {
+          "Description": "Id of the HTTP API",
+          "Value": {
+            "Ref": "HttpApi"
+          },
+          "Export": {
+            "Name": "sls-adira-prod-HttpApiId"
+          }
+        },
+        "HttpApiUrl": {
+          "Description": "URL of the HTTP API",
+          "Value": {
+            "Fn::Join": [
+              "",
+              [
+                "https://",
+                {
+                  "Ref": "HttpApi"
+                },
+                ".execute-api.",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ".",
+                {
+                  "Ref": "AWS::URLSuffix"
+                }
+              ]
+            ]
+          },
+          "Export": {
+            "Name": "sls-adira-prod-HttpApiUrl"
+          }
+        }
+      }
+    }
+  }
+}

@@ -121,13 +121,12 @@ async function handler(event) {
 
       // ── Handle unclear messages ──
       if (!intent.isValid) {
-        await sendButtons(
-          teacherPhone,
-          `Hi! 👋 What would you like me to create?`,
-          ["Lesson Plan", "Worksheet", "Question Paper"]
-        );
-        return { statusCode: 200, body: "ok" };
-      }
+  await sendMessage(
+    teacherPhone,
+    `Hi! 👋 What would you like me to create?\n\nSend a message like:\n_"lesson plan class 7 science chapter 3"_\n_"worksheet class 5 maths chapter 2"_\n_"question paper class 8 science chapter 1"_`
+  );
+  return { statusCode: 200, body: "ok" };
+}
 
       // ── Send processing message ──
       await sendMessage(
