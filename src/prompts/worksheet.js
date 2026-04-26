@@ -1,6 +1,6 @@
 const Anthropic = require("@anthropic-ai/sdk");
 const { getSecrets } = require("../utils/secrets");
-const { searchNCERT, buildContext } = require("../utils/qdrant");
+const { buildSyllabusContext } = require("../utils/syllabus");
 require("dotenv").config();
 
 async function generateWorksheet(intent) {
@@ -9,15 +9,9 @@ async function generateWorksheet(intent) {
     apiKey: secrets.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY,
   });
 
-  // Step 1 — Search NCERT knowledge base
-  console.log("🔍 Searching NCERT content for worksheet...");
-  const searchResults = await searchNCERT(
-    `worksheet questions ${intent.subject} chapter ${intent.chapter}`,
-    intent.class,
-    intent.subject,
-    intent.chapter
-  );
-  const ncertContext = buildContext(searchResults);
+  // Step 1 — Load syllabus config for this chapter
+  const syllabusContext = buildSyllabusContext(intent.class, intent.subject, intent.chapter);
+  console.log(`📋 Syllabus context loaded for Class ${intent.class} ${intent.subject} Ch${intent.chapter}`);
 
   // Calculate question distribution based on Bloom's Taxonomy
   // CBSE requires a mix of difficulty levels
@@ -35,11 +29,11 @@ async function generateWorksheet(intent) {
 You are an expert CBSE curriculum teacher with 20 years of experience.
 You create worksheets that perfectly match NCERT content and CBSE standards.
 
-NCERT CONTENT FOR THIS CHAPTER:
-${ncertContext}
+CBSE SYLLABUS CONTENT FOR THIS CHAPTER:
+${syllabusContext}
 
 STRICT RULES:
-1. Use ONLY concepts from the NCERT content provided above
+1. Use ONLY the topics and subtopics listed in the syllabus content above
 2. Follow EXACTLY the question distribution below
 3. Questions must cover different Bloom's Taxonomy levels
 4. All questions must be from Indian context

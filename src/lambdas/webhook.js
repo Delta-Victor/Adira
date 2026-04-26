@@ -2,6 +2,7 @@ const { SQSClient, SendMessageCommand } = require("@aws-sdk/client-sqs");
 const { DynamoDBClient, PutItemCommand, GetItemCommand } = require("@aws-sdk/client-dynamodb");
 const { sendMessage, sendButtons } = require("../utils/whatsapp");
 const { checkSubscription, getBlockMessage, getPlanStatus, sendUpgradeMessage } = require("../utils/payments");
+const { hasSyllabus, isValidChapter, listChapters } = require("../utils/syllabus");
 require("dotenv").config();
 
 const sqs = new SQSClient({ region: process.env.AWS_REGION || "ap-south-1" });
@@ -127,6 +128,21 @@ async function handler(event) {
   );
   return { statusCode: 200, body: "ok" };
 }
+
+      // ── Syllabus guard: validate chapter exists in config ──
+      // Only blocks if we have a config for this class+subject.
+      // Unknown class/subject combos pass through so Claude handles them.
+      if (intent.chapter && hasSyllabus(intent.class, intent.subject)) {
+        if (!isValidChapter(intent.class, intent.subject, intent.chapter)) {
+          const chapters = listChapters(intent.class, intent.subject);
+          const maxCh = chapters[chapters.length - 1].number;
+          await sendMessage(
+            teacherPhone,
+            `❌ *Chapter ${intent.chapter} not found*\n\nClass ${intent.class} ${intent.subject} has chapters *1–${maxCh}*.\n\nWhich chapter would you like?\nExample: _"${intent.task.toLowerCase()} class ${intent.class} ${intent.subject.toLowerCase()} chapter 5"_`
+          );
+          return { statusCode: 200, body: "ok" };
+        }
+      }
 
       // ── Send processing message ──
       await sendMessage(

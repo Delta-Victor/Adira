@@ -1,6 +1,6 @@
 const Anthropic = require("@anthropic-ai/sdk");
 const { getSecrets } = require("../utils/secrets");
-const { searchNCERT, buildContext } = require("../utils/qdrant");
+const { buildSyllabusContext } = require("../utils/syllabus");
 require("dotenv").config();
 
 async function generateQuestionPaper(intent) {
@@ -9,15 +9,9 @@ async function generateQuestionPaper(intent) {
     apiKey: secrets.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY,
   });
 
-  // Step 1 — Search NCERT knowledge base
-  console.log("🔍 Searching NCERT content for question paper...");
-  const searchResults = await searchNCERT(
-    `exam questions ${intent.subject} chapter ${intent.chapter}`,
-    intent.class,
-    intent.subject,
-    intent.chapter
-  );
-  const ncertContext = buildContext(searchResults);
+  // Step 1 — Load syllabus config for this chapter
+  const syllabusContext = buildSyllabusContext(intent.class, intent.subject, intent.chapter);
+  console.log(`📋 Syllabus context loaded for Class ${intent.class} ${intent.subject} Ch${intent.chapter}`);
 
   // CBSE official exam pattern for Classes 6-10
   const examPattern = {
@@ -37,11 +31,11 @@ async function generateQuestionPaper(intent) {
 You are a senior CBSE question paper setter with 20 years of experience.
 You create official exam papers that strictly follow CBSE guidelines.
 
-NCERT CONTENT FOR THIS CHAPTER:
-${ncertContext}
+CBSE SYLLABUS CONTENT FOR THIS CHAPTER:
+${syllabusContext}
 
 STRICT RULES:
-1. Use ONLY concepts from the NCERT content provided above
+1. Use ONLY the topics and subtopics listed in the syllabus content above
 2. Follow the OFFICIAL CBSE exam pattern exactly
 3. Questions must have proper internal choice where specified
 4. Difficulty: 30% Easy, 50% Medium, 20% Hard

@@ -1,6 +1,6 @@
 const Anthropic = require("@anthropic-ai/sdk");
 const { getSecrets } = require("../utils/secrets");
-const { searchNCERT, buildContext } = require("../utils/qdrant");
+const { buildSyllabusContext } = require("../utils/syllabus");
 require("dotenv").config();
 
 async function generateLessonPlan(intent) {
@@ -9,26 +9,20 @@ async function generateLessonPlan(intent) {
     apiKey: secrets.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY,
   });
 
-  // Step 1 — Search NCERT knowledge base for relevant content
-  console.log("🔍 Searching NCERT content for lesson plan...");
-  const searchResults = await searchNCERT(
-    `lesson plan ${intent.subject} chapter ${intent.chapter}`,
-    intent.class,
-    intent.subject,
-    intent.chapter
-  );
-  const ncertContext = buildContext(searchResults);
+  // Step 1 — Load syllabus config for this chapter
+  const syllabusContext = buildSyllabusContext(intent.class, intent.subject, intent.chapter);
+  console.log(`📋 Syllabus context loaded for Class ${intent.class} ${intent.subject} Ch${intent.chapter}`);
 
-  // Step 2 — Build the prompt with CBSE format + NCERT content
+  // Step 2 — Build the prompt with CBSE format + syllabus content
   const prompt = `
 You are an expert CBSE curriculum teacher with 20 years of experience.
 You create perfect lesson plans that principals approve immediately.
 
-NCERT CONTENT FOR THIS CHAPTER:
-${ncertContext}
+CBSE SYLLABUS CONTENT FOR THIS CHAPTER:
+${syllabusContext}
 
 STRICT RULES:
-1. Use ONLY concepts from the NCERT content provided above
+1. Use ONLY the topics and subtopics listed in the syllabus content above
 2. Follow EXACTLY the CBSE lesson plan format below
 3. Learning objectives must use Bloom's Taxonomy verbs
 4. All examples must be from Indian context
@@ -117,7 +111,7 @@ No. of students who understood: ___/___
 Re-teaching required: Yes / No
 `;
 
-  // Step 3 — Call Claude API
+  // Step 3 — Call Claude API (claude-sonnet-4-5 for content generation)
   console.log("🤖 Generating lesson plan with Claude...");
   const response = await anthropic.messages.create({
     model: "claude-sonnet-4-20250514",
