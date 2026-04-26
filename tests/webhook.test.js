@@ -231,10 +231,10 @@ describe("Step 1 — doc type selection", () => {
 
     await handler(makeEvent("📋 Worksheet", "doc_worksheet"));
 
-    // Should save step to awaiting_subject and send subject buttons
+    // Should save step to awaiting_subject and send subject list
     const updateCall = mockDynamoSend.mock.calls.find(c => c[0]._name === "UpdateItem");
     expect(updateCall).toBeDefined();
-    expect(mockSendButtons).toHaveBeenCalled();
+    expect(mockSendList).toHaveBeenCalled();
   });
 
   it("reshows doc type menu on unrecognised reply", async () => {
@@ -282,7 +282,7 @@ describe("Step 2 — subject selection", () => {
       PHONE,
       expect.stringContaining("not recognised")
     );
-    expect(mockSendButtons).toHaveBeenCalled(); // reshows subject menu
+    expect(mockSendList).toHaveBeenCalled(); // reshows subject menu
   });
 });
 
@@ -443,7 +443,7 @@ describe("Full happy path (existing teacher, trial plan)", () => {
       .mockResolvedValueOnce({ Item: makeTeacher({ conversationStep: { S: "awaiting_doc_type" } }) })
       .mockResolvedValue({});
     await handler(makeEvent("📋 Worksheet", "doc_worksheet"));
-    expect(mockSendButtons).toHaveBeenCalledTimes(1); // subject menu
+    expect(mockSendList).toHaveBeenCalledTimes(1); // subject menu
 
     jest.clearAllMocks();
 

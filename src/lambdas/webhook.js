@@ -172,17 +172,35 @@ async function handleDocTypeStep(phone, replyId, session) {
 
 // ─────────────────────────────────────────
 // STEP 2: SUBJECT SELECTION
+// Uses a list message so all subjects are visible
 // ─────────────────────────────────────────
-async function sendSubjectMenu(phone, docType) {
-  const subjects = getAvailableSubjects();
-  const buttons = subjects.slice(0, 3).map(s => ({
-    id: `subject_${s}`,
-    title: capitalize(s),
-  }));
+const SUBJECT_GROUPS = [
+  {
+    title: "Core Subjects",
+    subjects: ["science", "mathematics", "english", "social-science"],
+  },
+  {
+    title: "Higher Secondary",
+    subjects: ["physics", "chemistry", "biology", "economics", "accountancy", "business-studies"],
+  },
+];
 
-  await sendButtons(phone,
+async function sendSubjectMenu(phone, docType) {
+  const available = new Set(getAvailableSubjects());
+
+  const sections = SUBJECT_GROUPS
+    .map(group => ({
+      title: group.title,
+      rows: group.subjects
+        .filter(s => available.has(s))
+        .map(s => ({ id: `subject_${s}`, title: capitalize(s) })),
+    }))
+    .filter(section => section.rows.length > 0);
+
+  await sendList(phone,
     `Great! You're creating a *${docType}*.\n\nChoose a subject:`,
-    buttons
+    "Choose Subject",
+    sections
   );
 }
 
