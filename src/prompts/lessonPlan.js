@@ -9,117 +9,96 @@ async function generateLessonPlan(intent) {
     apiKey: secrets.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY,
   });
 
-  // Step 1 — Load syllabus config for this chapter
-  const syllabusContext = buildSyllabusContext(intent.class, intent.subject, intent.chapter);
-  console.log(`📋 Syllabus context loaded for Class ${intent.class} ${intent.subject} Ch${intent.chapter}`);
+  const { subject, topicId, difficulty, duration = 60 } = intent;
+  const syllabusContext = buildSyllabusContext(subject, topicId, difficulty);
+  console.log(`📋 Generating lesson plan: ${subject} / ${topicId} / ${difficulty}`);
 
-  // Step 2 — Build the prompt with CBSE format + syllabus content
-  const prompt = `
-You are an expert CBSE curriculum teacher with 20 years of experience.
-You create perfect lesson plans that principals approve immediately.
+  const prompt = `Generate a ${difficulty} level lesson plan based on the following curriculum context:
 
-CBSE SYLLABUS CONTENT FOR THIS CHAPTER:
 ${syllabusContext}
 
-STRICT RULES:
-1. Use ONLY the topics and subtopics listed in the syllabus content above
-2. Follow EXACTLY the CBSE lesson plan format below
-3. Learning objectives must use Bloom's Taxonomy verbs
-4. All examples must be from Indian context
-5. Language must be simple and appropriate for Class ${intent.class}
-6. Duration must be exactly ${intent.duration || 40} minutes
+LESSON PLAN STRUCTURE:
 
-Create a complete CBSE lesson plan in this EXACT format:
+**Overview**
+- Topic, subject, difficulty level, duration (${duration} minutes)
+- A one-sentence learning intention using this format: "Students will be able to [specific outcome]"
+- Success criteria: 3 measurable checkpoints students can self-assess against
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-LESSON PLAN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Subject: ${intent.subject}
-Class: ${intent.class}
-Chapter: ${intent.chapter}
-Topic: [Main topic from chapter]
-Duration: ${intent.duration || 40} minutes
-Date: _______________
+**Prior Knowledge Check (5 minutes)**
+- 2–3 quick warm-up questions linked to the prerequisites listed above
+- How to address gaps if they appear
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-LEARNING OBJECTIVES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-By the end of this lesson, students will be able to:
-1. [Remember level — Define/List/Name]
-2. [Understand level — Explain/Describe/Compare]
-3. [Apply level — Demonstrate/Solve/Use]
+**Introduction and Hook (10 minutes)**
+- An engaging real-life context from the list above to frame the lesson
+- A thought-provoking question or brief demonstration to generate curiosity
+- How to connect prior knowledge to the new topic
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PREVIOUS KNOWLEDGE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Students already know: [List prerequisites]
+**Main Teaching Sequence (${Math.round(duration * 0.5)} minutes)**
+- Break the learning outcomes into 2–3 teaching segments
+- For each segment: teacher explanation → worked example → student practice
+- Explicitly address the common misconceptions listed in the context
+- Include at least one collaborative or discussion activity
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TEACHING AIDS / TLM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[List all materials needed]
+**Guided Practice (10 minutes)**
+- 3–4 questions progressing from recall → application → analysis
+- Suggested differentiation: support scaffold for struggling students, extension task for advanced
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-LESSON DEVELOPMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**Assessment and Closing (5 minutes)**
+- Exit ticket: 1 quick question to gauge understanding of the key learning outcome
+- How to use exit ticket data to inform the next lesson
 
-INTRODUCTION (5 minutes)
-- Teacher Activity: [What teacher does]
-- Student Activity: [What students do]
-- Motivation/Hook: [How to grab attention]
+CRITICAL REQUIREMENTS:
+- Do NOT reference any specific textbook, curriculum name, or country
+- Do NOT mention grade levels, class numbers, or year groups
+- All activities must be achievable in a standard classroom
+- Timing must add up to exactly ${duration} minutes
+- All content must match the ${difficulty} difficulty level described in the context
 
-MAIN TEACHING (25 minutes)
-Teaching Point 1: [First concept]
-- Teacher Activity: [Explanation method]
-- Student Activity: [Student engagement]
-- Blackboard Work: [What to write on board]
+OUTPUT FORMAT:
+Return valid HTML suitable for DOCX conversion using this exact structure:
 
-Teaching Point 2: [Second concept]
-- Teacher Activity: [Explanation method]
-- Student Activity: [Student engagement]
-- Blackboard Work: [What to write on board]
+<div class="lesson-plan">
+  <h1>Lesson Plan: [Topic Title]</h1>
+  <p class="metadata">Subject: [Subject] | Difficulty: [Level] | Duration: ${duration} minutes</p>
 
-Teaching Point 3: [Third concept]
-- Teacher Activity: [Explanation method]
-- Student Activity: [Student engagement]
-- Blackboard Work: [What to write on board]
+  <div class="section">
+    <h2>Overview</h2>
+    <!-- Learning intention, success criteria -->
+  </div>
 
-PRACTICE & DISCUSSION (7 minutes)
-- Activity: [In-class practice]
-- Expected Student Response: [What students should say/do]
+  <div class="section">
+    <h2>Prior Knowledge Check (5 min)</h2>
+    <!-- Warm-up questions and gap-bridging strategy -->
+  </div>
 
-SUMMARY (3 minutes)
-- Key Points to Recap: [3 main takeaways]
+  <div class="section">
+    <h2>Introduction and Hook (10 min)</h2>
+    <!-- Hook activity and connection to prior knowledge -->
+  </div>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RECAPITULATION QUESTIONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. [Easy question — Remember level]
-2. [Medium question — Understand level]
-3. [Thinking question — Apply level]
+  <div class="section">
+    <h2>Main Teaching Sequence ([X] min)</h2>
+    <!-- Numbered teaching segments with explanation, example, and practice -->
+  </div>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-HOME ASSIGNMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[1-2 NCERT exercise questions with page numbers]
+  <div class="section">
+    <h2>Guided Practice (10 min)</h2>
+    <!-- Practice questions with differentiation notes -->
+  </div>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TEACHER'S REFLECTION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Was the objective achieved? _______________
-No. of students who understood: ___/___
-Re-teaching required: Yes / No
-`;
+  <div class="section">
+    <h2>Assessment and Closing (5 min)</h2>
+    <!-- Exit ticket question and how to use the data -->
+  </div>
+</div>`;
 
-  // Step 3 — Call Claude API (claude-sonnet-4-5 for content generation)
-  console.log("🤖 Generating lesson plan with Claude...");
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
-    max_tokens: 3000,
-    messages: [{ role: "user", content: prompt }]
+    model: "claude-sonnet-4-5-20251001",
+    max_tokens: 4000,
+    messages: [{ role: "user", content: prompt }],
   });
 
-  console.log("✅ Lesson plan generated successfully");
+  console.log("✅ Lesson plan generated");
   return response.content[0].text;
 }
 

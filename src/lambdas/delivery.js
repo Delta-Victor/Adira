@@ -21,7 +21,8 @@ async function sendToTeacher(teacherPhone, s3Key, intent, plan) {
       { expiresIn: 86400 }
     );
 
-    const filename = `Adira_Class${intent.class}_${intent.subject}_Ch${intent.chapter}_${intent.task.replace(/\s+/g, "")}.pdf`;
+    const topicSlug = (intent.topicId || "topic").replace(/_/g, "-");
+    const filename = `Adira_${intent.subject}_${topicSlug}_${intent.difficulty}_${intent.task.replace(/\s+/g, "")}.pdf`;
     const caption = buildCaption(intent, plan);
 
     await sendDocument(teacherPhone, downloadUrl, filename, caption);
@@ -52,11 +53,10 @@ function buildCaption(intent, plan) {
   return `${emoji} *Your ${intent.task} is Ready!*
 
 📚 *Details:*
-- Class: ${intent.class}
 - Subject: ${intent.subject}
-- Chapter: ${intent.chapter}
-${intent.task === "Worksheet" ? `• Questions: ${intent.questionCount}\n` : ""}
-✨ _CBSE aligned | NCERT based | Ready to use_
+- Topic: ${(intent.topicId || "").replace(/_/g, " ")}
+- Difficulty: ${intent.difficulty}
+✨ _Curriculum-aligned | Globally applicable_
 
 *Need changes?* Just reply:
 _"add 5 more questions"_

@@ -1,0 +1,549 @@
+{
+  "subject": "Physics",
+  "topics": [
+    {
+      "id": "kinematics_dynamics",
+      "title": "Kinematics and Dynamics",
+      "category": "Mechanics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define displacement, velocity, and acceleration with correct units",
+            "Distinguish between scalar and vector quantities",
+            "Interpret distance-time and speed-time graphs"
+          ],
+          "keyTerms": ["Displacement", "Velocity", "Acceleration", "Scalar", "Vector", "Distance-time graph", "Speed-time graph"],
+          "realLifeContexts": [
+            "Reading a car speedometer versus a GPS displacement tracker",
+            "Comparing distance run versus displacement in a circular track",
+            "Interpreting a bus journey on a distance-time graph"
+          ],
+          "prerequisites": ["Basic arithmetic", "Understanding of speed = distance ÷ time"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Speed and velocity are the same quantity",
+            "A negative velocity means the object has stopped"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply the equations of motion (SUVAT) to solve problems",
+            "Analyse projectile motion by resolving into horizontal and vertical components",
+            "Apply Newton's Laws to systems with multiple forces",
+            "Calculate resultant forces and use free-body diagrams"
+          ],
+          "keyTerms": ["SUVAT equations", "Projectile", "Free-body diagram", "Resultant force", "Newton's Laws", "Tension", "Normal reaction"],
+          "realLifeContexts": [
+            "Calculating the range of a football kicked at an angle",
+            "Designing crash barriers using force and deceleration principles",
+            "Analysing the forces on a lift (elevator) accelerating upwards",
+            "Modelling the trajectory of a basketball shot"
+          ],
+          "prerequisites": ["Scalar and vector basics", "Trigonometry", "Basic algebra"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "The horizontal and vertical components of projectile motion affect each other",
+            "A heavier projectile always travels further than a lighter one"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Derive and apply the equations of motion from calculus principles",
+            "Analyse circular motion and centripetal acceleration",
+            "Apply the impulse-momentum theorem to collision problems",
+            "Evaluate the concept of frames of reference and relative motion"
+          ],
+          "keyTerms": ["Calculus of motion", "Centripetal acceleration", "Angular velocity", "Impulse", "Momentum", "Elastic collision", "Inelastic collision", "Frame of reference"],
+          "realLifeContexts": [
+            "Satellite orbital mechanics and centripetal force",
+            "Crumple zone engineering: extending collision time to reduce force",
+            "Relativistic effects in GPS satellite time correction",
+            "Banked road design for safe high-speed cornering"
+          ],
+          "prerequisites": ["SUVAT mastery", "Calculus basics", "Momentum and impulse"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Centripetal force is a special additional force in circular systems",
+            "In an inelastic collision, momentum is not conserved"
+          ]
+        }
+      }
+    },
+    {
+      "id": "work_energy_power",
+      "title": "Work, Energy and Power",
+      "category": "Mechanics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define work done as force multiplied by displacement in the direction of the force",
+            "State the principle of conservation of energy",
+            "Calculate gravitational potential energy and kinetic energy"
+          ],
+          "keyTerms": ["Work done", "Joule", "Kinetic energy", "Potential energy", "Conservation of energy", "Power", "Watt"],
+          "realLifeContexts": [
+            "Calculating the energy needed to climb a flight of stairs",
+            "Comparing the power output of a cyclist and a car engine",
+            "Why a falling object speeds up as potential energy converts to kinetic"
+          ],
+          "prerequisites": ["Force and motion basics", "Basic algebra"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Work is done whenever a force is applied, even if no displacement occurs",
+            "Energy is destroyed when it is transferred to heat"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply the work-energy theorem to solve problems",
+            "Calculate efficiency of energy transfers",
+            "Analyse elastic and inelastic collisions using energy principles",
+            "Solve problems involving power, including variable power"
+          ],
+          "keyTerms": ["Work-energy theorem", "Efficiency", "Elastic potential energy", "Non-conservative force", "Power equation", "Energy dissipation"],
+          "realLifeContexts": [
+            "Calculating the efficiency of a car engine from fuel energy to motion",
+            "Designing regenerative braking systems in electric vehicles",
+            "Analysing a bungee jump in terms of energy transformations",
+            "Comparing the power of athletes in different sports"
+          ],
+          "prerequisites": ["KE and GPE formulas", "Newton's Laws", "Basic algebra"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "A perfectly elastic collision conserves kinetic energy and momentum equally",
+            "Efficiency can exceed 100% with a clever enough design"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the first and second laws of thermodynamics to mechanical systems",
+            "Calculate work done by variable forces using integration",
+            "Evaluate energy losses in real systems and propose improvements",
+            "Analyse gravitational potential energy in orbital mechanics"
+          ],
+          "keyTerms": ["Thermodynamic work", "Internal energy", "Entropy", "Variable force", "Integration", "Gravitational potential", "Escape velocity"],
+          "realLifeContexts": [
+            "Designing a more efficient steam turbine for a power station",
+            "Calculating the escape velocity from Earth's gravitational field",
+            "Optimising a roller coaster track for minimum energy loss",
+            "Analysing the Carnot cycle efficiency of ideal heat engines"
+          ],
+          "prerequisites": ["Intermediate energy concepts", "Calculus", "Thermodynamics basics"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Gravitational potential energy is always a positive quantity",
+            "The second law of thermodynamics only applies to heat engines"
+          ]
+        }
+      }
+    },
+    {
+      "id": "waves_and_sound",
+      "title": "Waves and Sound",
+      "category": "Waves",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Describe the properties of waves: amplitude, wavelength, frequency, and speed",
+            "Distinguish between transverse and longitudinal waves",
+            "Explain how sound travels as a longitudinal wave through a medium"
+          ],
+          "keyTerms": ["Wave", "Amplitude", "Wavelength", "Frequency", "Transverse", "Longitudinal", "Compression", "Rarefaction"],
+          "realLifeContexts": [
+            "Why sound does not travel in a vacuum (space)",
+            "How a guitar string produces sound waves in air",
+            "Why ships use sonar to map the ocean floor"
+          ],
+          "prerequisites": ["Basic understanding of vibration and energy"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "All waves require a medium to travel through",
+            "Sound waves move particles along with them permanently"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply the wave equation v = fλ to solve problems",
+            "Explain reflection, refraction, diffraction, and interference",
+            "Analyse standing waves and resonance in strings and pipes",
+            "Calculate intensity and use the decibel scale"
+          ],
+          "keyTerms": ["Wave equation", "Reflection", "Refraction", "Diffraction", "Interference", "Standing wave", "Resonance", "Decibel", "Harmonics"],
+          "realLifeContexts": [
+            "How noise-cancelling headphones use destructive interference",
+            "The design of concert halls to optimise sound resonance",
+            "How ultrasound imaging works in medical diagnostics",
+            "Why light bends around the edge of an obstacle (diffraction)"
+          ],
+          "prerequisites": ["Wave properties", "v = fλ", "Basic trigonometry"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Diffraction only occurs with light, not sound",
+            "Constructive interference always makes the wave louder"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the Doppler effect to calculate frequency shifts",
+            "Analyse thin film interference and diffraction grating patterns",
+            "Evaluate the wave model versus the particle model of light",
+            "Apply superposition principle to complex wave interactions"
+          ],
+          "keyTerms": ["Doppler effect", "Thin film interference", "Diffraction grating", "Superposition", "Path difference", "Coherence", "Phase difference"],
+          "realLifeContexts": [
+            "Police speed radar using the Doppler effect",
+            "Anti-reflection coatings on camera lenses using thin film interference",
+            "Spectroscopy: analysing starlight to determine composition",
+            "Holography and its uses in security holograms"
+          ],
+          "prerequisites": ["Intermediate wave theory", "Complex algebra", "Calculus basics"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "The Doppler effect only applies to sound waves",
+            "Coherent sources must always be in phase with each other"
+          ]
+        }
+      }
+    },
+    {
+      "id": "optics",
+      "title": "Optics — Light and Lenses",
+      "category": "Waves",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "State the laws of reflection and apply them to plane mirrors",
+            "Explain refraction using the concept of change in wave speed",
+            "Describe image formation by concave and convex lenses"
+          ],
+          "keyTerms": ["Reflection", "Refraction", "Normal", "Angle of incidence", "Refractive index", "Converging lens", "Diverging lens", "Focal length"],
+          "realLifeContexts": [
+            "How spectacles (glasses) correct vision defects",
+            "Why a straw appears bent in a glass of water",
+            "How a magnifying glass creates an enlarged image"
+          ],
+          "prerequisites": ["Wave properties of light", "Basic geometry"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Refraction and reflection are the same process",
+            "A concave lens always forms a real image"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Use the lens formula 1/f = 1/v − 1/u to locate images",
+            "Calculate magnification and relate it to object/image distances",
+            "Explain total internal reflection and its applications",
+            "Analyse dispersion of white light through a prism"
+          ],
+          "keyTerms": ["Lens formula", "Magnification", "Total internal reflection", "Critical angle", "Dispersion", "Prism", "Optical fibre", "Real image", "Virtual image"],
+          "realLifeContexts": [
+            "How optical fibres transmit data using total internal reflection",
+            "Designing a telescope or microscope using lens systems",
+            "How a camera focuses light onto a sensor",
+            "Diamond cutting to maximise internal reflection and brilliance"
+          ],
+          "prerequisites": ["Basic optics", "Snell's Law", "Algebra"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Total internal reflection can occur when light travels from any medium",
+            "A real image can always be seen without a screen"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Analyse optical instruments (telescope, microscope, eye) using ray diagrams",
+            "Apply Snell's law to multi-layer refraction problems",
+            "Evaluate the wave nature of light through polarisation and interference",
+            "Explain the limits of optical resolution (Rayleigh criterion)"
+          ],
+          "keyTerms": ["Polarisation", "Brewster's angle", "Rayleigh criterion", "Resolving power", "Chromatic aberration", "Optical path length", "Malus's Law"],
+          "realLifeContexts": [
+            "Polarised sunglasses reducing glare from reflective surfaces",
+            "Astronomy: limits on telescope resolution due to diffraction",
+            "3D cinema using polarised light",
+            "Fibre optic communication bandwidth and data capacity"
+          ],
+          "prerequisites": ["Intermediate optics", "Wave theory", "Complex algebra"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Polarisation proves light is a particle",
+            "Larger telescope aperture always gives better image quality"
+          ]
+        }
+      }
+    },
+    {
+      "id": "electrostatics",
+      "title": "Electrostatics",
+      "category": "Electricity and Magnetism",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Describe the two types of electric charge and the law of attraction/repulsion",
+            "Explain charging by friction, contact, and induction",
+            "Describe the electric field around point charges and between parallel plates"
+          ],
+          "keyTerms": ["Positive charge", "Negative charge", "Coulomb", "Electric field", "Field line", "Insulator", "Conductor", "Induction"],
+          "realLifeContexts": [
+            "Clothes clinging together from static electricity in a dryer",
+            "A Van de Graaff generator making hair stand on end",
+            "Lightning as discharge between clouds and Earth"
+          ],
+          "prerequisites": ["Basic atomic structure", "Concept of force"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Only insulators can become charged",
+            "Electric field lines show the direction of force on a negative charge"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply Coulomb's Law to calculate the force between point charges",
+            "Define and calculate electric potential and potential difference",
+            "Analyse the behaviour of conductors and insulators in electric fields",
+            "Calculate the capacitance of a parallel plate capacitor"
+          ],
+          "keyTerms": ["Coulomb's Law", "Electric potential", "Equipotential surface", "Capacitance", "Farad", "Dielectric", "Permittivity", "Electric flux"],
+          "realLifeContexts": [
+            "Touchscreen technology using capacitive sensing",
+            "Defibrillators storing and discharging electrical energy via capacitors",
+            "Electrostatic precipitators removing particles from industrial exhaust",
+            "Inkjet printer heads using electrostatic deflection"
+          ],
+          "prerequisites": ["Charge and fields", "Basic algebra", "Potential difference concept"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Electric potential and electric field are the same quantity",
+            "A capacitor stores charge permanently regardless of the circuit"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply Gauss's Law to calculate electric fields for symmetric charge distributions",
+            "Analyse energy stored in capacitors and capacitor networks",
+            "Derive the relationship between electric field and potential using calculus",
+            "Evaluate the behaviour of dielectrics and their effect on capacitance"
+          ],
+          "keyTerms": ["Gauss's Law", "Electric flux", "Gaussian surface", "Energy density", "Polarisation of dielectric", "Relative permittivity", "Capacitor network"],
+          "realLifeContexts": [
+            "DRAM memory chips using capacitors to store binary data",
+            "High-voltage power line design to manage electric fields",
+            "MRI machines using capacitor-based RF pulse generation",
+            "Supercapacitors for energy storage in rapid-charge devices"
+          ],
+          "prerequisites": ["Coulomb's Law mastery", "Calculus (integration and divergence)", "Vector fields"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Gauss's Law only applies to spherical charge distributions",
+            "Dielectrics increase capacitance by reducing the charge on the plates"
+          ]
+        }
+      }
+    },
+    {
+      "id": "electromagnetism",
+      "title": "Electromagnetism",
+      "category": "Electricity and Magnetism",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Describe the magnetic field pattern around a current-carrying wire and solenoid",
+            "State that a current-carrying conductor in a magnetic field experiences a force",
+            "Use Fleming's Left-Hand Rule to determine the direction of the force"
+          ],
+          "keyTerms": ["Magnetic field", "Solenoid", "Electromagnet", "Fleming's Left-Hand Rule", "Motor effect", "Magnetic flux density", "Tesla"],
+          "realLifeContexts": [
+            "How an electric motor converts electrical energy to rotation",
+            "How a loudspeaker uses the motor effect to produce sound",
+            "Maglev trains using electromagnetic levitation"
+          ],
+          "prerequisites": ["Electric current and circuits", "Magnetic field of a bar magnet"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "The magnetic force on a current acts in the direction of the current",
+            "Electromagnets and permanent magnets behave identically"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply F = BIL and F = Bqv to calculate magnetic forces",
+            "Explain electromagnetic induction using Faraday's and Lenz's Laws",
+            "Analyse the operation of AC and DC generators",
+            "Explain the principle and efficiency of transformers"
+          ],
+          "keyTerms": ["F = BIL", "F = Bqv", "Faraday's Law", "Lenz's Law", "EMF", "Magnetic flux", "AC generator", "Transformer", "Turns ratio"],
+          "realLifeContexts": [
+            "Power stations generating AC electricity using induction",
+            "Step-up and step-down transformers in the national grid",
+            "Induction hobs heating pots without direct flame",
+            "Wireless phone charging using electromagnetic induction"
+          ],
+          "prerequisites": ["Magnetic force basics", "Ohm's Law", "Circuit analysis"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Lenz's Law means the induced current opposes all currents in the circuit",
+            "A transformer works with DC as well as AC"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply Ampère's Law to calculate magnetic fields for symmetric current distributions",
+            "Analyse AC circuits with inductors, capacitors, and resistors (LCR circuits)",
+            "Derive and apply Maxwell's equations conceptually",
+            "Evaluate electromagnetic wave propagation and its relationship to light"
+          ],
+          "keyTerms": ["Ampère's Law", "Inductance", "LCR circuit", "Resonance frequency", "Impedance", "Maxwell's equations", "Displacement current", "Electromagnetic spectrum"],
+          "realLifeContexts": [
+            "Radio tuning circuits using LCR resonance to select frequencies",
+            "MRI machines using strong magnetic fields and RF pulses",
+            "Wireless power transmission in industrial applications",
+            "Fibre optic and microwave communication using EM wave properties"
+          ],
+          "prerequisites": ["Faraday's and Lenz's Laws mastery", "Calculus", "AC circuit analysis"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Maxwell's equations are only relevant to advanced physics research",
+            "Impedance and resistance are interchangeable in AC circuits"
+          ]
+        }
+      }
+    },
+    {
+      "id": "thermodynamics",
+      "title": "Thermodynamics",
+      "category": "Thermal Physics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define temperature, thermal energy, and heat",
+            "Describe the three methods of heat transfer: conduction, convection, and radiation",
+            "Explain thermal expansion in solids, liquids, and gases"
+          ],
+          "keyTerms": ["Temperature", "Thermal energy", "Heat", "Conduction", "Convection", "Radiation", "Thermal expansion", "Specific heat capacity"],
+          "realLifeContexts": [
+            "Why metal feels colder than wood at the same temperature",
+            "How a central heating system uses convection to warm a room",
+            "Gaps in railway tracks to allow thermal expansion"
+          ],
+          "prerequisites": ["States of matter", "Particle model"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Temperature and thermal energy (heat) are the same thing",
+            "Heat travels only upwards because hot air rises"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Calculate heat transfer using Q = mcΔT",
+            "Explain latent heat and apply it to changes of state",
+            "Apply the ideal gas laws to solve thermodynamic problems",
+            "Describe the thermodynamic processes: isothermal, adiabatic, isobaric, isochoric"
+          ],
+          "keyTerms": ["Specific heat capacity", "Latent heat", "Ideal gas", "Isothermal", "Adiabatic", "Isobaric", "Isochoric", "Internal energy", "First Law of Thermodynamics"],
+          "realLifeContexts": [
+            "Why coastal regions have milder climates than inland areas (water's high SHC)",
+            "How a refrigerator uses latent heat to cool its contents",
+            "Diesel engine cycle as an adiabatic compression process",
+            "How a pressure cooker raises the boiling point of water"
+          ],
+          "prerequisites": ["Basic thermodynamics", "Ideal gas equation", "Algebra"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "An adiabatic process has constant temperature",
+            "An ideal gas has no intermolecular forces, so no energy is stored within it"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the second law of thermodynamics and the concept of entropy",
+            "Analyse thermodynamic cycles (Carnot, Otto, diesel) for efficiency",
+            "Apply statistical mechanics to link microscopic behaviour to macroscopic properties",
+            "Evaluate real engine performance against theoretical maximum efficiency"
+          ],
+          "keyTerms": ["Second Law of Thermodynamics", "Entropy", "Carnot efficiency", "Heat engine", "Refrigerator (thermodynamic)", "Reversible process", "Statistical mechanics", "Boltzmann constant"],
+          "realLifeContexts": [
+            "Why no heat engine ever achieves 100% efficiency",
+            "Designing combined heat and power (CHP) plants to maximise useful energy output",
+            "Liquid nitrogen cooling in industrial processes and medical applications",
+            "Climate engineering proposals evaluated through thermodynamic limits"
+          ],
+          "prerequisites": ["Intermediate thermodynamics", "Calculus and integration", "Probability basics"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Entropy is a measure of disorder only, with no quantitative definition",
+            "The Carnot engine is a practical design goal rather than a theoretical limit"
+          ]
+        }
+      }
+    },
+    {
+      "id": "modern_physics",
+      "title": "Modern Physics — Quantum and Nuclear",
+      "category": "Modern Physics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Describe the structure of the atom: protons, neutrons, and electrons",
+            "Explain radioactive decay and identify alpha, beta, and gamma radiation",
+            "State the difference between fission and fusion reactions"
+          ],
+          "keyTerms": ["Nucleus", "Proton", "Neutron", "Electron", "Alpha decay", "Beta decay", "Gamma radiation", "Half-life", "Fission", "Fusion"],
+          "realLifeContexts": [
+            "Smoke detectors using alpha radiation from americium",
+            "Carbon-14 dating to determine the age of archaeological artefacts",
+            "Nuclear power stations using fission to generate electricity"
+          ],
+          "prerequisites": ["Basic atomic structure", "Types of radiation"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Radioactive materials are always dangerous to be near",
+            "Fission and fusion are opposite processes that cancel each other out"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply the photoelectric effect to explain the particle nature of light",
+            "Perform half-life calculations for radioactive decay",
+            "Explain nuclear binding energy and mass defect",
+            "Describe wave-particle duality and the de Broglie hypothesis"
+          ],
+          "keyTerms": ["Photoelectric effect", "Photon", "Work function", "Threshold frequency", "Half-life", "Binding energy", "Mass defect", "de Broglie wavelength", "Wave-particle duality"],
+          "realLifeContexts": [
+            "Solar cells converting photons to electrical energy (photoelectric principle)",
+            "Radiation therapy using targeted gamma rays to destroy tumour cells",
+            "PET scans using positron emission for medical imaging",
+            "Electron microscopes using de Broglie wavelength for nanoscale imaging"
+          ],
+          "prerequisites": ["Atomic structure", "Wave properties", "Energy and momentum"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Brighter light always causes the photoelectric effect regardless of frequency",
+            "Half-life means exactly half the atoms decay in that time period"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply Heisenberg's uncertainty principle to quantum systems",
+            "Analyse energy levels and spectral lines using the quantum model of the atom",
+            "Evaluate the principles behind nuclear reactors and fusion energy research",
+            "Apply special relativity to mass-energy equivalence (E = mc²)"
+          ],
+          "keyTerms": ["Heisenberg's uncertainty principle", "Quantum number", "Spectral line", "Laser", "Nuclear reactor", "Chain reaction", "Mass-energy equivalence", "Special relativity", "Lorentz factor"],
+          "realLifeContexts": [
+            "Laser technology in telecommunications, surgery, and manufacturing",
+            "ITER fusion reactor as a future clean energy source",
+            "GPS satellites requiring relativistic time correction",
+            "Quantum computing exploiting superposition of quantum states"
+          ],
+          "prerequisites": ["Photoelectric effect", "Nuclear physics", "Advanced mathematics"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Heisenberg's uncertainty principle is due to imprecise measurement instruments",
+            "E = mc² means any object can be converted entirely to energy easily"
+          ]
+        }
+      }
+    }
+  ]
+}

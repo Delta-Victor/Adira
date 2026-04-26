@@ -1,0 +1,341 @@
+{
+  "subject": "Accountancy",
+  "topics": {
+    "journal_and_ledger": {
+      "title": "Journal and Ledger",
+      "category": "Basic Accounting",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the accounting equation and double-entry bookkeeping",
+          "Record transactions in a journal with proper narration",
+          "Post journal entries to ledger accounts"
+        ],
+        "keyTerms": ["accounting equation", "double-entry", "journal", "ledger", "debit", "credit", "narration", "account", "transaction", "posting"],
+        "realLifeContexts": ["Why every purchase must be recorded in at least two accounts", "How a shopkeeper tracks what they owe and what is owed to them", "Why accountants must balance debits and credits"],
+        "prerequisites": ["Basic numeracy"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Debit always means money going out", "Credit is always good and debit is always bad", "The journal and ledger contain the same information in the same format"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Classify accounts: personal, real, and nominal",
+          "Apply golden rules of accounting to complex transactions",
+          "Prepare a trial balance and identify errors",
+          "Distinguish between errors of omission, commission, and principle"
+        ],
+        "keyTerms": ["personal account", "real account", "nominal account", "golden rules", "trial balance", "error of omission", "error of commission", "error of principle", "compensating error", "suspense account"],
+        "realLifeContexts": ["Why a trial balance matching doesn't guarantee no errors", "How a suspense account is used to locate accounting errors", "Why classifying salaries as assets (error of principle) distorts financial statements"],
+        "prerequisites": ["Journal entries", "Ledger posting"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["A balanced trial balance means no errors exist", "All errors affect both sides of the trial balance", "Suspense account permanently remains in books if not resolved"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Prepare journal entries for complex transactions including adjustments",
+          "Rectify errors using journal entries and suspense accounts",
+          "Apply accounting standards to recognition and measurement",
+          "Analyze the impact of accrual vs. cash basis on financial statements"
+        ],
+        "keyTerms": ["accrual basis", "cash basis", "adjusting entry", "prepaid expense", "accrued income", "deferred revenue", "rectification entry", "accounting standards", "materiality", "consistency"],
+        "realLifeContexts": ["Why a firm paying advance rent must not record it as current expense", "How accrual accounting gives a truer picture than cash-based records", "Why auditors require consistent accounting policies across years"],
+        "prerequisites": ["Trial balance", "Types of errors", "Financial statements"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Accrual basis always overstates profit", "Adjusting entries only apply to expenses", "Once posted to ledger, entries cannot be corrected"]
+      }
+    },
+    "financial_statements": {
+      "title": "Financial Statements",
+      "category": "Financial Reporting",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the purpose of a Trading and Profit & Loss Account",
+          "Describe what a Balance Sheet shows",
+          "Identify revenue and capital items"
+        ],
+        "keyTerms": ["trading account", "profit and loss account", "balance sheet", "gross profit", "net profit", "assets", "liabilities", "capital", "revenue expenditure", "capital expenditure"],
+        "realLifeContexts": ["How a small business owner knows if they made profit or loss", "Why a balance sheet is called a 'snapshot' of the business", "How banks use balance sheets to decide on loans"],
+        "prerequisites": ["Journal and ledger", "Accounting equation"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Profit equals cash in hand", "Balance sheet includes only tangible items", "Revenue expenses are always smaller than capital expenses"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Prepare final accounts with adjustments (outstanding, prepaid, depreciation, provision)",
+          "Distinguish between capital and revenue receipts and expenditure",
+          "Explain the concept of gross profit and net profit margin",
+          "Prepare a Receipts and Payments Account for non-profit organizations"
+        ],
+        "keyTerms": ["outstanding expense", "prepaid expense", "accrued income", "income received in advance", "provision for doubtful debts", "gross profit ratio", "net profit ratio", "receipts and payments account", "income and expenditure account"],
+        "realLifeContexts": ["Why school fees received in advance appear as liabilities", "How clubs prepare income and expenditure accounts instead of P&L", "Why provision for bad debts reduces profits conservatively"],
+        "prerequisites": ["Trial balance", "Types of accounts", "Adjustments"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Receipts and Payments Account is the same as Income and Expenditure Account", "Capital receipts increase profit", "All outstanding items reduce profit"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Prepare and analyze financial statements under Companies Act format",
+          "Apply Indian Accounting Standards (Ind AS) to recognition and disclosure",
+          "Evaluate the quality of earnings and creative accounting practices",
+          "Interpret notes to accounts and contingent liabilities"
+        ],
+        "keyTerms": ["Schedule III", "statement of profit and loss", "balance sheet format", "Ind AS", "IFRS", "contingent liability", "notes to accounts", "earnings quality", "window dressing", "true and fair view"],
+        "realLifeContexts": ["How Satyam Computer Services manipulated financial statements", "Why auditors check notes to accounts for hidden liabilities", "How Ind AS convergence improved comparability with global firms"],
+        "prerequisites": ["Final accounts preparation", "Company accounts basics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Companies Act format is identical to Ind AS format", "Contingent liabilities always appear on the face of the balance sheet", "True and fair view means exact precision in all financial figures"]
+      }
+    },
+    "depreciation": {
+      "title": "Depreciation",
+      "category": "Asset Accounting",
+      "beginner": {
+        "learningOutcomes": [
+          "Define depreciation and explain why it is charged",
+          "Distinguish between straight-line method and written-down value method",
+          "Calculate depreciation using both methods"
+        ],
+        "keyTerms": ["depreciation", "fixed asset", "straight-line method (SLM)", "written-down value method (WDV)", "book value", "salvage value", "useful life", "depreciable cost"],
+        "realLifeContexts": ["Why a car bought for ₹8 lakh is worth less every year", "Why computers need to be replaced even if physically working", "How depreciation reduces taxable profit"],
+        "prerequisites": ["Fixed assets", "Basic arithmetic"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Depreciation represents actual cash paid out each year", "Land is depreciated like other fixed assets", "WDV method always results in lower depreciation than SLM"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Prepare journal entries for depreciation and disposal of fixed assets",
+          "Distinguish between provisions, reserves, and accumulated depreciation",
+          "Explain depreciation fund method and insurance policy method",
+          "Account for revaluation and impairment of assets"
+        ],
+        "keyTerms": ["accumulated depreciation", "provision for depreciation account", "asset disposal account", "depreciation fund", "sinking fund", "impairment", "revaluation", "carrying amount", "profit/loss on disposal"],
+        "realLifeContexts": ["How a bus company accounts for selling old buses", "Why banks maintain provisions against non-performing assets (similar concept)", "How asset revaluation affects balance sheet values"],
+        "prerequisites": ["Depreciation calculation", "Journal entries", "Balance sheet"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Accumulated depreciation account is a liability", "Profit on sale of fixed asset is operating income", "Impairment and depreciation serve the same accounting purpose"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply component depreciation under Ind AS 16",
+          "Assess the impact of depreciation policy on profit and tax",
+          "Evaluate IFRS vs. Indian GAAP treatment of assets",
+          "Analyze deferred tax arising from temporary differences in depreciation"
+        ],
+        "keyTerms": ["component depreciation", "Ind AS 16", "fair value model", "cost model", "deferred tax liability", "temporary difference", "tax depreciation (WDV under Income Tax Act)", "investment property", "residual value revision"],
+        "realLifeContexts": ["Why a factory with multiple components depreciates each part separately", "How deferred tax arises when accounting and tax depreciation rates differ", "Why Ind AS allows fair value model for investment properties"],
+        "prerequisites": ["SLM and WDV methods", "Financial statements", "Taxation basics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Ind AS 16 only applies to manufacturing companies", "Component depreciation always reduces current year profit", "Deferred tax liability means tax is never paid"]
+      }
+    },
+    "partnership_accounts": {
+      "title": "Partnership Accounts",
+      "category": "Partnership",
+      "beginner": {
+        "learningOutcomes": [
+          "Define partnership and explain features of a partnership deed",
+          "Prepare a capital account (fixed and fluctuating)",
+          "Distribute profit among partners according to profit-sharing ratio"
+        ],
+        "keyTerms": ["partnership", "partnership deed", "fixed capital", "fluctuating capital", "profit-sharing ratio", "drawings", "interest on capital", "salary to partner", "partner's current account"],
+        "realLifeContexts": ["How two friends starting a business together should document their agreement", "Why partners who contribute more capital may receive interest as compensation", "How a working partner gets salary even if profit ratio is equal"],
+        "prerequisites": ["Basic accounting", "Financial statements"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Partners always share profit equally", "Interest on capital is an expense debited to the firm's account directly", "Partnership and company are the same type of business"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Prepare Profit & Loss Appropriation Account",
+          "Account for admission of a new partner (goodwill, revaluation, capital adjustment)",
+          "Account for retirement and death of a partner",
+          "Calculate gaining and sacrificing ratio"
+        ],
+        "keyTerms": ["P&L Appropriation Account", "goodwill", "goodwill valuation", "revaluation account", "gaining ratio", "sacrificing ratio", "reconstitution", "accumulated profits and losses", "capital deficiency"],
+        "realLifeContexts": ["How an existing business values its reputation when a new partner joins", "Why a retiring partner must be paid accumulated reserves", "How goodwill is adjusted when profit-sharing ratios change"],
+        "prerequisites": ["Partnership basics", "Capital accounts", "Journal entries"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Goodwill is always cash paid when a new partner joins", "Revaluation profit is distributed in old ratio always", "A new partner always gets a share in all existing goodwill"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Prepare accounts for dissolution of partnership firm",
+          "Apply Garner vs. Murray rule to capital deficiency",
+          "Account for piecemeal realization and maximum loss method",
+          "Evaluate conversion of partnership to a company"
+        ],
+        "keyTerms": ["dissolution", "realization account", "Garner vs. Murray rule", "insolvent partner", "piecemeal realization", "maximum loss method", "executor's account", "conversion to company", "purchase consideration"],
+        "realLifeContexts": ["How assets are sold and liabilities settled when a firm closes", "Why Garner vs. Murray affects solvent partners when one partner can't pay", "How a growing partnership firm becomes a private limited company"],
+        "prerequisites": ["Partnership reconstitution", "Revaluation", "Company accounts basics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Realization account profit equals net profit of the year of dissolution", "Garner vs. Murray applies to all partnerships regardless of agreement", "Dissolution and retirement of all partners are the same"]
+      }
+    },
+    "company_accounts": {
+      "title": "Company Accounts",
+      "category": "Corporate Accounting",
+      "beginner": {
+        "learningOutcomes": [
+          "Distinguish between a company and a partnership",
+          "Explain share capital: equity and preference shares",
+          "Describe the process of issue of shares"
+        ],
+        "keyTerms": ["company", "share", "shareholder", "equity share", "preference share", "face value", "issue price", "share capital", "allotment", "calls on shares"],
+        "realLifeContexts": ["Why Infosys shareholders receive dividends", "How companies like Zomato raise money through IPO", "Why preference shareholders get paid before equity shareholders"],
+        "prerequisites": ["Basic accounting", "Partnership vs. company"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Shares are the same as loans to a company", "Preference shareholders always receive a guaranteed fixed dividend", "Face value and market value of shares are always the same"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Account for issue of shares at par, premium, and discount",
+          "Prepare journal entries for forfeiture and reissue of shares",
+          "Account for debenture issue and redemption",
+          "Prepare a company's final accounts under Schedule III"
+        ],
+        "keyTerms": ["securities premium", "shares issued at discount", "forfeiture", "reissue of forfeited shares", "debenture", "redemption of debentures", "debenture redemption reserve", "sinking fund", "Statement of Profit and Loss", "Schedule III"],
+        "realLifeContexts": ["Why companies must maintain DRR before redeeming debentures", "How forfeited shares are reissued at a discount to attract new investors", "Why SEBI restricts issue of shares at discount"],
+        "prerequisites": ["Share capital", "Journal entries", "Balance sheet"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Securities premium is distributable as dividend", "Forfeited shares are permanently cancelled", "All debentures must be redeemed by buying back from market"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Account for buyback of shares and its regulatory requirements",
+          "Prepare consolidated financial statements (basic introduction)",
+          "Analyze ESOP accounting under Ind AS",
+          "Evaluate merger and acquisition accounting"
+        ],
+        "keyTerms": ["buyback", "capital redemption reserve", "consolidated accounts", "minority interest", "goodwill on consolidation", "ESOP", "pooling of interests", "purchase method", "business combination", "non-controlling interest"],
+        "realLifeContexts": ["Why Infosys and TCS regularly buy back their own shares", "How Tata Sons consolidates subsidiaries in group accounts", "ESOP schemes used by startups to attract and retain talent"],
+        "prerequisites": ["Share and debenture accounting", "Financial statements", "Mergers basics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Buyback always increases earnings per share", "Consolidated accounts simply add up all group company accounts", "Goodwill on consolidation is the same as goodwill in partnership"]
+      }
+    },
+    "ratio_analysis": {
+      "title": "Ratio Analysis",
+      "category": "Financial Analysis",
+      "beginner": {
+        "learningOutcomes": [
+          "Define ratio analysis and explain its purpose",
+          "Calculate basic liquidity ratios (current ratio, quick ratio)",
+          "Interpret what a ratio value indicates about financial health"
+        ],
+        "keyTerms": ["ratio analysis", "current ratio", "quick ratio", "liquidity", "current assets", "current liabilities", "liquid assets", "financial health", "benchmark ratio"],
+        "realLifeContexts": ["Why a bank checks current ratio before approving a business loan", "How investors compare two companies using ratios", "Why a current ratio below 1 signals potential cash problems"],
+        "prerequisites": ["Balance sheet", "Profit and loss account"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["A higher ratio is always better", "Current ratio and quick ratio give the same information", "Ratio analysis tells us everything about a company's future"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Calculate and interpret profitability, solvency, and activity ratios",
+          "Use DuPont analysis to decompose return on equity",
+          "Compare ratios across firms and over time",
+          "Identify limitations of ratio analysis"
+        ],
+        "keyTerms": ["gross profit ratio", "net profit ratio", "return on equity (ROE)", "debt-equity ratio", "interest coverage ratio", "inventory turnover", "debtors turnover", "DuPont analysis", "capital gearing", "working capital turnover"],
+        "realLifeContexts": ["Why Reliance and Tata Steel have different appropriate debt-equity ratios", "How DuPont analysis reveals whether ROE improvement is sustainable", "Why inventory turnover matters more for FMCG than for capital goods firms"],
+        "prerequisites": ["Financial statements", "Basic ratio calculation", "Business operations"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["A low debt-equity ratio is always safe and conservative", "Ratios are objective measures not subject to accounting policy choices", "Industry comparison of ratios is unnecessary if year-on-year trend is good"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply Altman Z-score for bankruptcy prediction",
+          "Analyze quality of earnings through accruals ratio",
+          "Evaluate off-balance-sheet items and their ratio distortions",
+          "Assess ESG metrics integration with financial ratio analysis"
+        ],
+        "keyTerms": ["Altman Z-score", "accruals ratio", "earnings quality", "off-balance-sheet", "operating lease capitalization", "EVA (Economic Value Added)", "EBITDA margin", "free cash flow", "ESG metrics", "integrated reporting"],
+        "realLifeContexts": ["How Altman Z-score predicted airline bankruptcies before COVID", "Why Amazon's low net profit margin doesn't mean poor performance (FCF analysis)", "How operating lease adjustments affect airline leverage ratios"],
+        "prerequisites": ["All financial ratios", "Financial statements analysis", "Cash flow statements"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["EBITDA is a reliable cash flow proxy", "Altman Z-score is universally applicable across all industries", "Off-balance-sheet items are always disclosed in notes to accounts"]
+      }
+    },
+    "cash_flow_statements": {
+      "title": "Cash Flow Statements",
+      "category": "Financial Reporting",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain why cash flow statement is prepared alongside P&L",
+          "Distinguish between operating, investing, and financing activities",
+          "Define cash and cash equivalents"
+        ],
+        "keyTerms": ["cash flow statement", "operating activities", "investing activities", "financing activities", "cash inflow", "cash outflow", "cash equivalents", "liquidity", "accrual vs. cash"],
+        "realLifeContexts": ["Why a profitable company can still run out of cash", "How a startup burns cash even while growing rapidly", "Why investors look at free cash flow rather than just profit"],
+        "prerequisites": ["Financial statements", "Profit and loss account"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["A profitable company never faces cash shortage", "Cash flow statement and P&L statement show the same information", "All operating activities involve cash immediately"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Prepare cash flow statement using direct and indirect method",
+          "Adjust net profit for non-cash items and working capital changes",
+          "Classify complex transactions correctly into activities",
+          "Interpret cash flow patterns to assess business health"
+        ],
+        "keyTerms": ["direct method", "indirect method", "non-cash items", "depreciation add-back", "working capital changes", "free cash flow", "cash from operations", "purchase of fixed assets", "proceeds from borrowings"],
+        "realLifeContexts": ["How Amazon's high capex shows in investing activities despite high operating cash flow", "Why depreciation is added back in indirect method", "How cash flow patterns differ between a startup and a mature firm"],
+        "prerequisites": ["Financial statements", "Depreciation", "Working capital"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Indirect method adjusts P&L profit to get cash, not actual cash receipts", "Depreciation is a cash outflow because it reduces profit", "Positive cash from financing always means the company is growing"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Reconstruct missing figures using cash flow statement analysis",
+          "Apply free cash flow to firm (FCFF) and to equity (FCFE) in valuation",
+          "Evaluate cash flow manipulation and earnings management signs",
+          "Assess capital allocation quality using cash flow metrics"
+        ],
+        "keyTerms": ["FCFF", "FCFE", "cash conversion cycle", "Beneish M-score", "earnings management", "cash flow manipulation", "sustainable growth rate", "capital allocation", "reinvestment rate", "normalized cash flow"],
+        "realLifeContexts": ["How Enron manipulated operating cash flows by securitizing receivables", "Warren Buffett's focus on owner earnings (FCF) over reported profit", "Cash conversion cycle in retail vs. capital goods sectors"],
+        "prerequisites": ["Cash flow statement preparation", "Ratio analysis", "Valuation basics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Free cash flow equals net profit minus capex always", "Companies cannot manipulate cash flow statements", "High operating cash flow always indicates a high-quality business"]
+      }
+    },
+    "inventory_valuation": {
+      "title": "Inventory Valuation",
+      "category": "Asset Accounting",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain why inventory valuation matters",
+          "Describe FIFO and LIFO methods",
+          "Calculate closing stock under each method"
+        ],
+        "keyTerms": ["inventory", "stock", "closing stock", "FIFO", "LIFO", "weighted average method", "cost of goods sold (COGS)", "opening stock", "purchases"],
+        "realLifeContexts": ["How a grocery shop prices older stock vs. newer stock", "Why inventory value affects reported profit", "How rising prices affect COGS differently under FIFO vs. LIFO"],
+        "prerequisites": ["Basic accounting", "Trading account"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["FIFO means first items produced are always sold first in practice", "LIFO is allowed under Indian GAAP and IFRS equally", "Inventory method choice doesn't affect profit significantly"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply FIFO, LIFO, and weighted average to perpetual and periodic systems",
+          "Explain the lower of cost or net realizable value (NRV) rule",
+          "Account for damaged, obsolete, and slow-moving inventory",
+          "Calculate and interpret inventory turnover ratio"
+        ],
+        "keyTerms": ["perpetual inventory", "periodic inventory", "net realizable value (NRV)", "lower of cost or NRV", "write-down", "obsolete stock", "inventory turnover", "days inventory outstanding", "AVCO"],
+        "realLifeContexts": ["Why fashion retailers must write down unsold seasonal stock", "How supermarkets use perpetual inventory via barcode scanning", "How inventory write-downs affected Yes Bank's NPA provisions (analogy)"],
+        "prerequisites": ["FIFO and LIFO basics", "Financial statements"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["NRV is always less than cost", "Periodic inventory is less accurate because it uses physical count only", "Inventory write-downs only occur in manufacturing"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply Ind AS 2 requirements for inventory recognition and measurement",
+          "Analyze the impact of inventory method changes on comparability",
+          "Evaluate inventory financing and supply chain accounting",
+          "Assess standard costing vs. actual costing for inventory management"
+        ],
+        "keyTerms": ["Ind AS 2", "cost formula", "normal capacity", "abnormal waste exclusion", "biological assets", "IAS 41", "standard cost", "variance analysis", "consignment inventory", "vendor-managed inventory"],
+        "realLifeContexts": ["Why LIFO is prohibited under Ind AS 2 and IFRS", "How agricultural companies value inventory under biological asset rules", "Why auto manufacturers use standard costing for massive production inventories"],
+        "prerequisites": ["Inventory valuation methods", "Financial statements", "Manufacturing costs"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Ind AS 2 allows management to choose any cost formula freely", "Standard costing always approximates actual cost for Ind AS 2 purposes", "Abnormal wastage is included in inventory cost under Ind AS 2"]
+      }
+    }
+  }
+}
