@@ -1,0 +1,745 @@
+{
+  "subject": "Science",
+  "topics": [
+    {
+      "id": "chemical_reactions",
+      "title": "Chemical Reactions",
+      "category": "Chemistry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define chemical reaction and distinguish from physical changes",
+            "Identify reactants and products in simple reactions",
+            "State the law of conservation of mass"
+          ],
+          "keyTerms": ["Chemical reaction", "Reactants", "Products", "Chemical change", "Physical change"],
+          "realLifeContexts": [
+            "Cooking food changes its properties permanently",
+            "Burning wood produces ash and smoke",
+            "Rusting of iron objects over time"
+          ],
+          "prerequisites": ["Basic knowledge of matter", "Understanding of elements and compounds"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Physical changes and chemical changes are the same",
+            "Mass is lost when things burn"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Write balanced chemical equations for given reactions",
+            "Classify reactions as combination, decomposition, displacement, or double displacement",
+            "Apply the law of conservation of mass to balance equations",
+            "Relate chemical reactions to everyday phenomena"
+          ],
+          "keyTerms": [
+            "Balanced equation", "Coefficient", "Combination reaction", "Decomposition reaction",
+            "Displacement reaction", "Precipitate", "Exothermic", "Endothermic"
+          ],
+          "realLifeContexts": [
+            "Photosynthesis in plants converting CO2 and water to glucose",
+            "Respiration in living organisms releasing energy",
+            "Combustion of fuels in engines",
+            "Corrosion of metals in humid environments"
+          ],
+          "prerequisites": ["Chemical symbols and formulas", "Basic understanding of elements"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Confusing coefficients with subscripts in chemical formulas",
+            "Thinking chemical equations can be balanced by changing subscripts"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Analyze oxidation-reduction reactions and assign oxidation states",
+            "Predict products of reactions using an activity series",
+            "Evaluate factors affecting reaction rates",
+            "Design experiments to investigate chemical reactions"
+          ],
+          "keyTerms": [
+            "Redox reaction", "Oxidation", "Reduction", "Oxidizing agent", "Reducing agent",
+            "Activity series", "Catalyst", "Reaction rate", "Activation energy"
+          ],
+          "realLifeContexts": [
+            "Electrochemical cells and rechargeable batteries",
+            "Industrial synthesis of ammonia (Haber process)",
+            "Acid rain formation from atmospheric reactions",
+            "Biochemical reactions in cellular metabolism"
+          ],
+          "prerequisites": ["Understanding of electron transfer", "Basic electrochemistry"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Oxidation always requires oxygen gas",
+            "All reactions proceed at the same rate regardless of conditions"
+          ]
+        }
+      }
+    },
+    {
+      "id": "photosynthesis",
+      "title": "Photosynthesis",
+      "category": "Biology",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define photosynthesis as the process plants use to make food",
+            "Identify the inputs (CO2, water, sunlight) and outputs (glucose, oxygen)",
+            "State where photosynthesis occurs in plants (chloroplasts)"
+          ],
+          "keyTerms": ["Photosynthesis", "Chlorophyll", "Glucose", "Oxygen", "Carbon dioxide"],
+          "realLifeContexts": [
+            "Why plants are green",
+            "Why plants need sunlight to grow",
+            "Why we depend on plants for the oxygen we breathe"
+          ],
+          "prerequisites": ["Basic knowledge of plants", "Understanding of living vs non-living"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Plants absorb food from the soil like animals eat food",
+            "Only leaves are capable of photosynthesis"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Explain the process of photosynthesis step-by-step",
+            "Write the chemical equation for photosynthesis",
+            "Describe the role of chlorophyll in capturing light energy",
+            "Relate photosynthesis to food chains and energy flow"
+          ],
+          "keyTerms": [
+            "Chloroplast", "Stomata", "Guard cells", "Light energy", "Chemical energy",
+            "Producer", "Autotroph"
+          ],
+          "realLifeContexts": [
+            "Why forests are called the lungs of the Earth",
+            "Impact of deforestation on atmospheric oxygen levels",
+            "How aquatic plants contribute to dissolved oxygen in water",
+            "Importance of urban trees in reducing CO2 in cities"
+          ],
+          "prerequisites": ["Plant structure and function", "Basic chemistry concepts", "Forms of energy"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Plants only perform photosynthesis during the day and stop all processes at night",
+            "Oxygen is the primary product of photosynthesis — glucose is"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Distinguish between light-dependent and light-independent reactions",
+            "Analyze factors affecting the rate of photosynthesis (light intensity, CO2 concentration, temperature)",
+            "Evaluate the importance of photosynthesis in the global carbon cycle",
+            "Design experiments to test variables affecting photosynthesis"
+          ],
+          "keyTerms": [
+            "Light reaction", "Calvin cycle", "ATP", "NADPH",
+            "Carbon fixation", "Rate-limiting factors", "Compensation point"
+          ],
+          "realLifeContexts": [
+            "Optimizing light and CO2 in commercial greenhouse farming",
+            "Climate change and declining plant productivity",
+            "Biofuel production from algae",
+            "Why C4 plants outperform C3 plants in hot, dry climates"
+          ],
+          "prerequisites": ["Chemical equations", "Energy transformations", "Enzyme function"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Light-independent reactions only occur in darkness",
+            "All plant species photosynthesize with equal efficiency"
+          ]
+        }
+      }
+    },
+    {
+      "id": "electricity_circuits",
+      "title": "Electricity and Circuits",
+      "category": "Physics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define electric current and voltage in simple terms",
+            "Identify components of a simple electric circuit",
+            "Distinguish between series and parallel circuits"
+          ],
+          "keyTerms": ["Current", "Voltage", "Resistance", "Circuit", "Battery", "Bulb", "Switch"],
+          "realLifeContexts": [
+            "How a flashlight or torch works",
+            "Home lighting systems and wall switches",
+            "Why one broken bulb in a series string darkens all others"
+          ],
+          "prerequisites": ["Basic understanding of electricity", "Awareness of electrical safety"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Electric current gets used up as it flows around a circuit",
+            "Electricity flows from both battery terminals simultaneously"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply Ohm's Law to calculate voltage, current, or resistance",
+            "Calculate total resistance in series and parallel circuits",
+            "Explain the relationship between voltage, current, and resistance",
+            "Interpret and draw simple circuit diagrams"
+          ],
+          "keyTerms": [
+            "Ohm's Law", "Series circuit", "Parallel circuit", "Ammeter", "Voltmeter",
+            "Resistor", "Conductor", "Insulator"
+          ],
+          "realLifeContexts": [
+            "Household electrical wiring using parallel circuits",
+            "Why circuit breakers trip during overloading",
+            "How mobile phone chargers regulate voltage",
+            "Dimmer switches and variable resistance"
+          ],
+          "prerequisites": ["Basic algebra", "Understanding of measurement units (volts, amps, ohms)"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Voltage and current are the same quantity",
+            "All components in a series circuit share the same voltage"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Analyze complex circuits with multiple resistors using Kirchhoff's laws",
+            "Calculate power consumption and energy use in electrical devices",
+            "Design circuits for specific current and voltage requirements",
+            "Evaluate efficiency and energy loss in real-world circuits"
+          ],
+          "keyTerms": [
+            "Kirchhoff's Current Law", "Kirchhoff's Voltage Law", "Power", "Energy consumption",
+            "Internal resistance", "EMF", "Potential divider"
+          ],
+          "realLifeContexts": [
+            "Calculating electricity bills using kWh consumption",
+            "Designing solar panel charge controller circuits",
+            "Battery management systems in electric vehicles",
+            "Smart home automation and sensor circuits"
+          ],
+          "prerequisites": ["Ohm's Law mastery", "Algebraic simultaneous equations", "Understanding of energy"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Power and energy are interchangeable terms",
+            "A battery always provides constant voltage regardless of current drawn"
+          ]
+        }
+      }
+    },
+    {
+      "id": "acids_bases",
+      "title": "Acids and Bases",
+      "category": "Chemistry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define acids and bases using common examples",
+            "Identify acids and bases using litmus paper",
+            "Describe the pH scale as a measure of acidity and alkalinity"
+          ],
+          "keyTerms": ["Acid", "Base", "Neutral", "pH", "Litmus", "Indicator", "Alkaline"],
+          "realLifeContexts": [
+            "Lemon juice and vinegar taste sour because they are acidic",
+            "Soap and baking soda feel slippery because they are basic",
+            "Antacid tablets neutralize stomach acid to relieve heartburn"
+          ],
+          "prerequisites": ["Basic knowledge of matter and substances"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "All acids are dangerous and corrosive",
+            "pH 7 means a substance is harmless"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Explain the Arrhenius and Brønsted-Lowry definitions of acids and bases",
+            "Predict the products of neutralization reactions",
+            "Calculate pH from hydrogen ion concentration",
+            "Describe the reactions of acids with metals, carbonates, and bases"
+          ],
+          "keyTerms": [
+            "Hydrogen ion (H+)", "Hydroxide ion (OH-)", "Neutralization", "Salt",
+            "Strong acid", "Weak acid", "Buffer", "Titration"
+          ],
+          "realLifeContexts": [
+            "Acid rain damaging building materials and ecosystems",
+            "Soil pH affecting agricultural crop yield",
+            "Swimming pool maintenance using pH adjustment",
+            "Tooth decay from acidic foods and bacteria"
+          ],
+          "prerequisites": ["Chemical reactions basics", "Basic algebra for pH calculations"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Strong acids are always more concentrated than weak acids",
+            "Neutralization always produces a pH 7 solution"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the Lewis acid-base theory to predict reactions",
+            "Analyze buffer systems and their role in biological systems",
+            "Evaluate acid-base equilibria using Ka and Kb values",
+            "Design a titration experiment and interpret results"
+          ],
+          "keyTerms": [
+            "Lewis acid", "Lewis base", "Conjugate acid-base pair", "Equilibrium constant",
+            "Ka", "Kb", "pKa", "Buffer capacity", "Henderson-Hasselbalch equation"
+          ],
+          "realLifeContexts": [
+            "Blood pH regulation by bicarbonate buffer system",
+            "Industrial production of sulfuric acid",
+            "Water treatment and pH control",
+            "Drug efficacy depending on body pH"
+          ],
+          "prerequisites": ["Chemical equilibrium", "Logarithms", "Ionic equations"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "All acid-base reactions reach completion",
+            "A buffer can neutralize unlimited amounts of acid or base"
+          ]
+        }
+      }
+    },
+    {
+      "id": "force_motion",
+      "title": "Force and Motion",
+      "category": "Physics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define force as a push or pull that can change an object's motion",
+            "Identify contact and non-contact forces with examples",
+            "Describe the effect of balanced and unbalanced forces on objects"
+          ],
+          "keyTerms": ["Force", "Motion", "Speed", "Direction", "Gravity", "Friction", "Balanced forces"],
+          "realLifeContexts": [
+            "Pushing a shopping trolley to make it move",
+            "Friction slowing down a sliding book on a table",
+            "Gravity pulling a ball back to the ground after being thrown"
+          ],
+          "prerequisites": ["Basic understanding of movement and rest"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "A moving object needs a continuous force to keep moving",
+            "Heavier objects always fall faster than lighter ones"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply Newton's three laws of motion to real-world scenarios",
+            "Calculate acceleration using F = ma",
+            "Analyze the relationship between speed, distance, and time",
+            "Distinguish between mass and weight"
+          ],
+          "keyTerms": [
+            "Newton's First Law", "Newton's Second Law", "Newton's Third Law",
+            "Acceleration", "Inertia", "Net force", "Mass", "Weight", "Velocity"
+          ],
+          "realLifeContexts": [
+            "Seatbelts preventing injury due to inertia in car collisions",
+            "Rocket propulsion using Newton's Third Law",
+            "Athletes using force and timing to maximise performance",
+            "Braking distances of vehicles at different speeds"
+          ],
+          "prerequisites": ["Basic algebra", "Understanding of speed and distance"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "The action and reaction forces in Newton's Third Law cancel each other out",
+            "An object with greater mass always has greater weight in all situations"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Analyze motion using velocity-time and displacement-time graphs",
+            "Apply the equations of motion to solve multi-step problems",
+            "Evaluate the role of friction, air resistance, and tension in real systems",
+            "Calculate momentum and apply the law of conservation of momentum"
+          ],
+          "keyTerms": [
+            "Momentum", "Impulse", "Conservation of momentum", "Equations of motion",
+            "Terminal velocity", "Projectile motion", "Centripetal force"
+          ],
+          "realLifeContexts": [
+            "Crumple zones in cars absorbing impact forces over longer time",
+            "Satellites maintaining orbit through centripetal force",
+            "Athletes improving performance through projectile optimization",
+            "Airbag deployment timing and impulse"
+          ],
+          "prerequisites": ["Calculus basics", "Trigonometry", "Newton's laws mastery"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Centripetal force is a separate force added to a system",
+            "Momentum and kinetic energy are always conserved together"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cell_structure",
+      "title": "Cell Structure and Function",
+      "category": "Biology",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "State that all living things are made of cells",
+            "Identify the basic parts of a cell: cell membrane, cytoplasm, nucleus",
+            "Distinguish between plant and animal cells"
+          ],
+          "keyTerms": ["Cell", "Nucleus", "Cell membrane", "Cytoplasm", "Cell wall", "Chloroplast", "Vacuole"],
+          "realLifeContexts": [
+            "Why plants are rigid — they have a cell wall",
+            "Why leaves are green — chloroplasts contain chlorophyll",
+            "How cuts heal — cells divide to replace damaged ones"
+          ],
+          "prerequisites": ["Understanding of living organisms"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "All cells look the same regardless of their function",
+            "The cell wall and cell membrane are the same structure"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Describe the structure and function of key organelles",
+            "Explain how specialised cells are adapted to their function",
+            "Compare prokaryotic and eukaryotic cells",
+            "Explain the process of cell division (mitosis) in outline"
+          ],
+          "keyTerms": [
+            "Organelle", "Mitochondria", "Ribosome", "Endoplasmic reticulum",
+            "Golgi apparatus", "Prokaryote", "Eukaryote", "Mitosis", "Specialised cell"
+          ],
+          "realLifeContexts": [
+            "Red blood cells lacking a nucleus to carry more haemoglobin",
+            "Muscle cells packed with mitochondria for energy production",
+            "Root hair cells with large surface area for water absorption",
+            "Cancer as uncontrolled cell division"
+          ],
+          "prerequisites": ["Basic cell structure", "Nutrition and respiration concepts"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Only animal cells undergo cell division",
+            "Mitochondria are only found in animal cells"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Analyze the fluid mosaic model of the cell membrane",
+            "Evaluate the role of osmosis and active transport in cells",
+            "Explain meiosis and its role in genetic variation",
+            "Assess how cell cycle regulation failures lead to cancer"
+          ],
+          "keyTerms": [
+            "Fluid mosaic model", "Phospholipid bilayer", "Osmosis", "Active transport",
+            "Meiosis", "Crossing over", "Cell cycle", "Apoptosis", "Tumour suppressor gene"
+          ],
+          "realLifeContexts": [
+            "Why red blood cells crenate in salt water and burst in fresh water",
+            "How dialysis machines mimic kidney cell membrane function",
+            "IVF technology and embryo cell division",
+            "Targeted cancer therapies that disrupt cell cycle checkpoints"
+          ],
+          "prerequisites": ["Genetics basics", "Biochemistry of proteins and lipids"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Osmosis requires a pump or energy input",
+            "Meiosis and mitosis produce identical outcomes"
+          ]
+        }
+      }
+    },
+    {
+      "id": "periodic_table",
+      "title": "The Periodic Table",
+      "category": "Chemistry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Describe the periodic table as an organised arrangement of elements",
+            "Identify periods (rows) and groups (columns) in the periodic table",
+            "State the properties of metals and non-metals from their position"
+          ],
+          "keyTerms": ["Element", "Period", "Group", "Metal", "Non-metal", "Atomic number", "Symbol"],
+          "realLifeContexts": [
+            "Aluminium foil and copper wire are metals from the periodic table",
+            "Oxygen and nitrogen are non-metals we breathe every day",
+            "Noble gases like helium are used in balloons and lighting"
+          ],
+          "prerequisites": ["Basic knowledge of elements and atoms"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "The periodic table is just a list of elements in alphabetical order",
+            "All metals are solid at room temperature"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Explain trends in atomic radius, ionization energy, and electronegativity across periods and down groups",
+            "Predict the reactivity of elements based on their group",
+            "Describe the properties of alkali metals, halogens, and noble gases",
+            "Explain how electron configuration determines an element's group"
+          ],
+          "keyTerms": [
+            "Electron configuration", "Valence electrons", "Ionization energy",
+            "Electronegativity", "Atomic radius", "Alkali metals", "Halogens", "Noble gases"
+          ],
+          "realLifeContexts": [
+            "Why alkali metals like sodium react violently with water",
+            "Why halogens are used as disinfectants in swimming pools",
+            "Why noble gases are used in inert atmospheres for food packaging",
+            "Trends exploited in designing new battery materials"
+          ],
+          "prerequisites": ["Atomic structure", "Electron shells"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Elements in the same group always have the same number of electrons",
+            "Ionization energy always decreases as you go down a group"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply quantum mechanical model to explain orbital filling and periodic trends",
+            "Analyze anomalies in periodic trends and explain their causes",
+            "Predict chemical behaviour of unfamiliar elements from their position",
+            "Evaluate the historical development of the periodic table"
+          ],
+          "keyTerms": [
+            "Orbital", "Subshell (s, p, d, f)", "Aufbau principle", "Hund's rule",
+            "Pauli exclusion principle", "Effective nuclear charge", "Shielding effect"
+          ],
+          "realLifeContexts": [
+            "Lanthanides in modern electronics and MRI machines",
+            "Transition metals as industrial catalysts",
+            "Superheavy element synthesis at research facilities",
+            "Predictive chemistry: Mendeleev predicting properties of undiscovered elements"
+          ],
+          "prerequisites": ["Quantum numbers", "Wave mechanics basics", "Advanced electron configuration"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Electron orbitals are fixed circular paths around the nucleus",
+            "All anomalies in periodic trends are errors in the data"
+          ]
+        }
+      }
+    },
+    {
+      "id": "energy",
+      "title": "Energy and Energy Transformations",
+      "category": "Physics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define energy and state that it cannot be created or destroyed",
+            "Identify common forms of energy: kinetic, potential, thermal, light, sound",
+            "Give examples of energy transformations in everyday life"
+          ],
+          "keyTerms": ["Energy", "Kinetic energy", "Potential energy", "Thermal energy", "Energy transformation", "Conservation of energy"],
+          "realLifeContexts": [
+            "A roller coaster converting potential energy to kinetic energy",
+            "A light bulb converting electrical energy to light and heat",
+            "Food providing chemical energy for the body to move"
+          ],
+          "prerequisites": ["Basic understanding of forces and motion"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Energy is used up or destroyed when it is converted",
+            "Potential energy only refers to objects held up high"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Calculate kinetic and gravitational potential energy using formulas",
+            "Apply the law of conservation of energy to solve problems",
+            "Explain what efficiency means and calculate it for energy transfers",
+            "Describe renewable and non-renewable energy sources and their trade-offs"
+          ],
+          "keyTerms": [
+            "Joule", "Work done", "Power", "Efficiency", "Watt",
+            "Renewable energy", "Non-renewable energy", "Fossil fuels"
+          ],
+          "realLifeContexts": [
+            "Hydroelectric dams converting gravitational potential energy to electricity",
+            "Why LED bulbs are more efficient than incandescent bulbs",
+            "Solar panels converting light energy to electrical energy",
+            "Fuel efficiency ratings in vehicles"
+          ],
+          "prerequisites": ["Basic algebra", "Newton's Laws of Motion"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "A 100% efficient machine is physically achievable",
+            "Renewable energy sources have no environmental impact"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the first and second laws of thermodynamics to real systems",
+            "Analyze energy losses in heat engines using Sankey diagrams",
+            "Evaluate the role of entropy in energy transformations",
+            "Assess the global energy challenge and emerging solutions"
+          ],
+          "keyTerms": [
+            "First Law of Thermodynamics", "Second Law of Thermodynamics", "Entropy",
+            "Heat engine", "Carnot efficiency", "Sankey diagram", "Energy density"
+          ],
+          "realLifeContexts": [
+            "Why no real engine achieves Carnot efficiency",
+            "Thermal power station energy flow analysis",
+            "Hydrogen fuel cells as future energy carriers",
+            "Energy storage challenges for renewable grids"
+          ],
+          "prerequisites": ["Thermodynamics fundamentals", "Calculus basics", "Statistical mechanics introduction"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "The second law of thermodynamics can be violated with clever engineering",
+            "Entropy is simply disorder with no quantitative meaning"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ecosystems",
+      "title": "Ecosystems and Food Webs",
+      "category": "Biology",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define an ecosystem as a community of living organisms interacting with their environment",
+            "Identify producers, consumers, and decomposers in an ecosystem",
+            "Construct a simple food chain from given organisms"
+          ],
+          "keyTerms": ["Ecosystem", "Producer", "Consumer", "Decomposer", "Food chain", "Habitat", "Predator", "Prey"],
+          "realLifeContexts": [
+            "A garden with plants, insects, birds, and soil bacteria",
+            "Why removing a predator like wolves changes the whole landscape",
+            "How dead leaves and animals are broken down by fungi and bacteria"
+          ],
+          "prerequisites": ["Basic knowledge of living organisms", "Understanding of nutrition"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Decomposers are not important members of ecosystems",
+            "Food chains are always simple straight lines in nature"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Explain energy flow through trophic levels using the 10% rule",
+            "Analyze a food web and predict the impact of removing a species",
+            "Describe how nutrients cycle through ecosystems (carbon and water cycles)",
+            "Distinguish between biodiversity and population size"
+          ],
+          "keyTerms": [
+            "Trophic level", "10% energy rule", "Food web", "Biomass", "Carbon cycle",
+            "Water cycle", "Biodiversity", "Keystone species"
+          ],
+          "realLifeContexts": [
+            "Why there are far fewer top predators than herbivores in any ecosystem",
+            "How deforestation affects local rainfall patterns through the water cycle",
+            "Coral bleaching as a cascade effect from ocean warming",
+            "Reintroduction of wolves in Yellowstone and ecosystem recovery"
+          ],
+          "prerequisites": ["Food chains", "Basic chemistry (carbon compounds)"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Removing one species from a food web has no effect on others",
+            "Humans are outside of and unaffected by natural ecosystems"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Evaluate the role of biogeochemical cycles in sustaining life on Earth",
+            "Analyze the impact of human activities on ecosystem stability",
+            "Apply ecological models to predict population dynamics",
+            "Assess conservation strategies using ecological principles"
+          ],
+          "keyTerms": [
+            "Biogeochemical cycle", "Nitrogen fixation", "Eutrophication", "Carrying capacity",
+            "Population dynamics", "Ecological succession", "Invasive species", "Biome"
+          ],
+          "realLifeContexts": [
+            "Fertiliser runoff causing algal blooms and dead zones in oceans",
+            "Climate change shifting biome boundaries poleward",
+            "Invasive species like cane toads disrupting native ecosystems",
+            "Marine protected areas and their measurable ecological recovery"
+          ],
+          "prerequisites": ["Chemistry of carbon and nitrogen", "Statistics for population models"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Ecosystems naturally recover from any disturbance given enough time",
+            "Conservation only matters for rare or endangered species"
+          ]
+        }
+      }
+    },
+    {
+      "id": "states_of_matter",
+      "title": "States of Matter",
+      "category": "Chemistry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Identify and describe the three main states of matter: solid, liquid, gas",
+            "Explain how heating and cooling cause changes of state",
+            "Use particle theory to describe the arrangement and movement of particles in each state"
+          ],
+          "keyTerms": ["Solid", "Liquid", "Gas", "Melting", "Freezing", "Evaporation", "Condensation", "Particle theory"],
+          "realLifeContexts": [
+            "Ice melting into water and water evaporating into steam",
+            "Dew forming on glass in the morning as condensation",
+            "Why a gas fills the entire container it is placed in"
+          ],
+          "prerequisites": ["Basic concept of matter and materials"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "There is no space between particles in a solid",
+            "Evaporation and boiling are the same process"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Explain changes of state in terms of energy and interparticle forces",
+            "Interpret heating and cooling curves, identifying plateaus",
+            "Distinguish between evaporation and boiling",
+            "Describe diffusion and explain factors that affect its rate"
+          ],
+          "keyTerms": [
+            "Melting point", "Boiling point", "Latent heat", "Sublimation",
+            "Diffusion", "Brownian motion", "Intermolecular forces"
+          ],
+          "realLifeContexts": [
+            "Why sweating cools the body through evaporative cooling",
+            "Dry ice (solid CO2) sublimating without passing through liquid state",
+            "Perfume diffusing across a room from a single source",
+            "Pressure cookers raising the boiling point of water"
+          ],
+          "prerequisites": ["Particle model", "Basic thermodynamics"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Temperature increases during a change of state",
+            "Gases have no mass because they cannot be seen"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the ideal gas laws (Boyle's, Charles's, Gay-Lussac's) to solve problems",
+            "Use the kinetic molecular theory to explain gas behaviour",
+            "Interpret phase diagrams to predict states at given conditions",
+            "Evaluate real gas deviations from ideal behaviour"
+          ],
+          "keyTerms": [
+            "Ideal gas law", "Boyle's Law", "Charles's Law", "Gay-Lussac's Law",
+            "Kinetic molecular theory", "Phase diagram", "Triple point", "Critical point", "Van der Waals forces"
+          ],
+          "realLifeContexts": [
+            "Why aerosol cans warn against high temperatures (pressure increase)",
+            "How scuba diving tanks store compressed gas safely",
+            "Liquefied natural gas (LNG) transportation at low temperature",
+            "Supercritical CO2 as a green solvent in decaffeinating coffee"
+          ],
+          "prerequisites": ["Algebra and equation manipulation", "Thermodynamics fundamentals"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "The ideal gas law applies perfectly to all real gases",
+            "Absolute zero means all molecular motion ceases entirely"
+          ]
+        }
+      }
+    }
+  ]
+}

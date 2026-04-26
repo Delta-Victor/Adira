@@ -30,7 +30,7 @@ async function handler(event) {
         const job = JSON.parse(record.body);
         await sendMessage(
           job.teacherPhone,
-          `❌ Sorry, something went wrong.\n\nPlease try again:\n_"worksheet class 7 science chapter 3"_`
+          `❌ Sorry, something went wrong. Please try again — send *"hi"* to start a new request.`
         );
       } catch(e) {
         console.error("❌ Could not send error message:", e.message);
@@ -55,7 +55,7 @@ async function processJob(job) {
   }
 
   // ── Step 2: Generate content ──
-  console.log(`🤖 Generating ${intent.task} — Class ${intent.class} ${intent.subject} Ch${intent.chapter}`);
+  console.log(`🤖 Generating ${intent.task} — ${intent.subject} / ${intent.topicId} / ${intent.difficulty}`);
   let generatedContent = "";
 
   if (intent.task === "Lesson Plan") {
@@ -71,7 +71,8 @@ async function processJob(job) {
   const pdfBytes = await createPDF(generatedContent, intent);
 
   // ── Step 4: Upload PDF to S3 with public read ──
-  const filename = `Class${intent.class}_${intent.subject}_Ch${intent.chapter}_${intent.task.replace(/\s+/g, "")}_${Date.now()}.pdf`;
+  const topicSlug = (intent.topicId || "topic").replace(/_/g, "-");
+  const filename = `${intent.subject}_${topicSlug}_${intent.difficulty}_${intent.task.replace(/\s+/g, "")}_${Date.now()}.pdf`;
   const s3Key = `outputs/${teacherPhone}/${filename}`;
 
   await s3.send(new PutObjectCommand({
@@ -118,8 +119,8 @@ function buildCaption(intent, plan, remaining) {
 
   return `${emoji} *Your ${intent.task} is Ready!*
 
-📚 Class ${intent.class} | ${intent.subject} | Chapter ${intent.chapter}
-✨ CBSE aligned | NCERT based
+📚 ${intent.subject} | ${(intent.topicId || "").replace(/_/g, " ")} | ${intent.difficulty}
+✨ Curriculum-aligned | Globally applicable
 
 📊 Generations: ${remainingText}
 
@@ -157,7 +158,7 @@ async function createPDF(content, intent) {
   y -= 20;
 
   page.drawText(
-    `Class ${intent.class} | ${intent.subject} | Chapter ${intent.chapter} | ${intent.task}`,
+    `${intent.subject} | ${(intent.topicId || "").replace(/_/g, " ")} | ${intent.difficulty} | ${intent.task}`,
     { x: margin, y: y, size: 10, font: font, color: rgb(0.4, 0.4, 0.4) }
   );
   y -= 10;

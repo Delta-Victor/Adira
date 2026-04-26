@@ -1,0 +1,341 @@
+{
+  "subject": "Social Science",
+  "topics": {
+    "democracy_and_governance": {
+      "title": "Democracy and Governance",
+      "category": "Political Science",
+      "beginner": {
+        "learningOutcomes": [
+          "Define democracy and explain its key features",
+          "Describe the structure of India's government (legislature, executive, judiciary)",
+          "Explain the role of elections in a democracy"
+        ],
+        "keyTerms": ["democracy", "legislature", "executive", "judiciary", "Parliament", "Constitution", "fundamental rights", "election", "universal adult franchise", "separation of powers"],
+        "realLifeContexts": ["How India's general elections work and why every adult gets a vote", "Why the Supreme Court can strike down laws passed by Parliament", "How local panchayati raj brings democracy to villages"],
+        "prerequisites": ["Basic civics"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Democracy means majority can do anything they want", "The President of India is the most powerful person in government", "Elections alone make a country democratic"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain federalism and centre-state relations in India",
+          "Describe the functions of the three branches of government",
+          "Analyse how constitutional amendments work",
+          "Explain the role of political parties and pressure groups"
+        ],
+        "keyTerms": ["federalism", "Union List", "State List", "Concurrent List", "Rajya Sabha", "Lok Sabha", "constitutional amendment", "political party", "pressure group", "coalition government"],
+        "realLifeContexts": ["Why education is on the Concurrent List and both central and state governments make laws on it", "How the 73rd Amendment created panchayati raj institutions", "Why coalition governments are more common since 1989"],
+        "prerequisites": ["Democracy basics", "Indian Constitution"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["India is a federal country exactly like the USA", "State governments have complete independence from the centre", "Constitutional amendments require only a simple majority always"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate challenges to Indian democracy (corruption, communalism, regionalism)",
+          "Analyse electoral reforms and their impact",
+          "Compare Indian democracy with other democratic models",
+          "Assess the role of civil society and media in democratic accountability"
+        ],
+        "keyTerms": ["electoral reforms", "EVM", "NOTA", "defection", "Anti-Defection Law", "civil society", "RTI Act", "judicial activism", "communalism", "regionalism"],
+        "realLifeContexts": ["How the RTI Act empowers citizens to hold government accountable", "Why the Anti-Defection Law was introduced after political instability", "How social media has changed political campaigns in India"],
+        "prerequisites": ["Federalism", "Constitutional structure", "Political parties"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Judicial activism always strengthens democracy", "EVMs are the only cause of electoral disputes", "Civil society organizations are politically neutral by nature"]
+      }
+    },
+    "indian_history_modern": {
+      "title": "Modern Indian History",
+      "category": "History",
+      "beginner": {
+        "learningOutcomes": [
+          "Describe the establishment of British rule in India",
+          "Explain the causes and effects of the 1857 revolt",
+          "Identify key figures of the Indian independence movement"
+        ],
+        "keyTerms": ["British East India Company", "colonial rule", "1857 revolt", "Indian National Congress", "Mahatma Gandhi", "non-cooperation", "civil disobedience", "partition", "independence"],
+        "realLifeContexts": ["Why the 1857 revolt is called India's first war of independence by some historians", "How the Salt March became a symbol of resistance against British rule", "Why partition of India in 1947 created two nations"],
+        "prerequisites": ["Basic Indian history"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["All Indians uniformly supported the independence movement", "The British only exploited India with no administrative contributions", "Partition was solely a religious division with no political causes"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Analyse the economic impact of British colonialism on India",
+          "Explain the rise of nationalism and different strands (moderate, extremist, revolutionary)",
+          "Describe the role of women and marginalised communities in the freedom struggle",
+          "Assess the reasons for and consequences of partition"
+        ],
+        "keyTerms": ["drain of wealth", "de-industrialization", "moderate nationalism", "Bal Gangadhar Tilak", "extremism", "Swadeshi movement", "Quit India Movement", "Muslim League", "communal award", "Mountbatten Plan"],
+        "realLifeContexts": ["How British textile policies destroyed Indian handloom industry", "Why Dadabhai Naoroji's 'drain of wealth' theory resonated with nationalists", "How Partition's violence shaped India-Pakistan relations for decades"],
+        "prerequisites": ["British rule establishment", "Early nationalist movements"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["The moderate nationalists achieved nothing for independence", "Partition was inevitable from the start of British rule", "Gandhi's non-violence was the only strategy used by freedom fighters"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Critically evaluate historiographical debates on Indian nationalism",
+          "Analyse how caste, class, and gender intersected in the independence movement",
+          "Assess the long-term economic and political legacies of colonialism",
+          "Evaluate subaltern and nationalist perspectives on Indian history"
+        ],
+        "keyTerms": ["subaltern history", "orientalism", "colonial discourse", "Dalit movements", "Ambedkar", "peasant movements", "workers movements", "decolonization", "neo-colonialism", "post-colonial state"],
+        "realLifeContexts": ["How Ambedkar's perspective on independence differed from Gandhi's", "Why tribal communities often had separate resistance movements from mainstream nationalism", "How colonial land revenue systems created lasting rural inequality"],
+        "prerequisites": ["Nationalist movements", "Economic history", "Social history"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Subaltern history simply reverses elite history without complexity", "Ambedkar and Gandhi were only opponents, never collaborators", "Decolonization automatically ended all colonial economic structures"]
+      }
+    },
+    "geography_resources": {
+      "title": "Geography and Natural Resources",
+      "category": "Geography",
+      "beginner": {
+        "learningOutcomes": [
+          "Identify major physical features of India (mountains, rivers, plains, coasts)",
+          "Describe types of natural resources and their distribution",
+          "Explain factors affecting climate in India"
+        ],
+        "keyTerms": ["physical features", "Himalayas", "Deccan Plateau", "Indo-Gangetic Plain", "monsoon", "natural resources", "renewable", "non-renewable", "biodiversity", "river system"],
+        "realLifeContexts": ["Why Mumbai gets more rainfall than Delhi (geography of monsoon)", "How the Himalayas affect India's climate and protect it from cold winds", "Why coal is concentrated in Jharkhand and not Tamil Nadu"],
+        "prerequisites": ["Basic geography"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["India has a uniform tropical climate everywhere", "Natural resources are unlimited if managed well", "The Himalayas are only significant as tourist destinations"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the distribution and conservation of forest and wildlife resources",
+          "Analyse water resources, scarcity, and management strategies",
+          "Describe land use patterns and soil types",
+          "Explain mineral and energy resources and their exploitation"
+        ],
+        "keyTerms": ["forest cover", "wildlife sanctuary", "water scarcity", "rainwater harvesting", "watershed management", "soil erosion", "land degradation", "mineral resources", "thermal power", "hydroelectric power", "solar energy"],
+        "realLifeContexts": ["Why Rajasthan uses traditional baoli stepwells for water conservation", "How deforestation in the Western Ghats leads to flooding and landslides", "Why India is both energy-poor and renewable energy-rich simultaneously"],
+        "prerequisites": ["Physical features", "Resource types"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Dams always solve water scarcity problems", "Forest loss only affects wildlife not human communities", "Solar energy is already cheaper and more accessible than coal everywhere in India"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate sustainable development approaches to resource management",
+          "Analyse regional disparities in resource distribution and development",
+          "Assess India's vulnerability to climate change impacts",
+          "Apply geopolitical analysis to resource conflicts (water sharing, border disputes)"
+        ],
+        "keyTerms": ["sustainable development", "SDGs", "ecological footprint", "carbon footprint", "climate vulnerability", "regional disparity", "river water disputes", "Cauvery dispute", "geopolitics of resources", "green economy"],
+        "realLifeContexts": ["How the Cauvery water dispute between Karnataka and Tamil Nadu illustrates inter-state resource conflict", "Why small island nations and coastal India face existential risk from sea-level rise", "How India's renewable energy goals link to both climate action and energy security"],
+        "prerequisites": ["Resource distribution", "Environmental geography", "Development concepts"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Sustainable development means no industrial growth", "Climate change effects are uniform across all regions of India", "Water disputes are purely technical problems solvable by engineering alone"]
+      }
+    },
+    "economics_development": {
+      "title": "Development and the Indian Economy",
+      "category": "Economics",
+      "beginner": {
+        "learningOutcomes": [
+          "Define development and explain different goals beyond income",
+          "Describe the sectors of the Indian economy",
+          "Explain the concept of GDP and per capita income"
+        ],
+        "keyTerms": ["development", "per capita income", "GDP", "primary sector", "secondary sector", "tertiary sector", "Human Development Index (HDI)", "poverty line", "NREGA", "informal sector"],
+        "realLifeContexts": ["Why Kerala scores high on HDI despite lower per capita income than some states", "How MNREGA provides rural employment as a safety net", "Why a country can grow its GDP while poverty remains high"],
+        "prerequisites": ["Basic economics concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Higher GDP always means better development", "The primary sector is unimportant in modern India", "All employment in India is in the formal sector"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the role of money and credit in development",
+          "Describe globalisation and its impact on Indian economy",
+          "Analyse consumer rights and markets",
+          "Explain food security and the public distribution system"
+        ],
+        "keyTerms": ["credit", "Self-Help Group (SHG)", "microfinance", "globalisation", "MNCs", "liberalization", "fair globalisation", "food security", "buffer stock", "PDS", "consumer rights", "Consumer Protection Act"],
+        "realLifeContexts": ["How SHGs helped rural women in Andhra Pradesh access credit without collateral", "How MNCs entering India after 1991 affected domestic industries", "Why the PDS is essential for food security during famines and droughts"],
+        "prerequisites": ["Sectors of economy", "Basic economics"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Globalisation has only benefited developing countries", "Microfinance always helps the poor without any risks", "Food security means only having enough food supply nationally"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate India's development trajectory since independence",
+          "Analyse inequality, poverty, and policy interventions",
+          "Assess the impact of liberalisation on different sectors and groups",
+          "Apply development economics frameworks to Indian case studies"
+        ],
+        "keyTerms": ["planned development", "Five Year Plans", "mixed economy", "NITI Aayog", "inclusive growth", "Gini coefficient", "social sector spending", "rural-urban divide", "demographic dividend", "jobless growth"],
+        "realLifeContexts": ["Why India's demographic dividend may become a demographic disaster without skill development", "How the shift from Five Year Plans to NITI Aayog changed India's planning approach", "Why India's growth has been called jobless growth in manufacturing"],
+        "prerequisites": ["GDP and development", "Globalisation", "Government policy"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Five Year Plans ended because they failed completely", "India's demographic dividend will automatically boost growth", "Inclusive growth and high GDP growth are always complementary"]
+      }
+    },
+    "world_history": {
+      "title": "World History",
+      "category": "History",
+      "beginner": {
+        "learningOutcomes": [
+          "Describe the causes and effects of World War I and World War II",
+          "Explain the rise of nationalism in Europe",
+          "Identify key events of the Cold War"
+        ],
+        "keyTerms": ["World War I", "World War II", "nationalism", "imperialism", "colonialism", "Treaty of Versailles", "Holocaust", "Cold War", "NATO", "United Nations"],
+        "realLifeContexts": ["How the assassination of Archduke Franz Ferdinand triggered WWI", "Why the UN was created after WWII to prevent future wars", "How the Berlin Wall symbolised Cold War division of the world"],
+        "prerequisites": ["Basic world history"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["WWI was caused only by the assassination in Sarajevo", "The Cold War involved direct military battles between USA and USSR", "The UN can always prevent wars between countries"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Analyse the causes of the rise of fascism and Nazism",
+          "Explain decolonisation movements in Asia and Africa",
+          "Describe the Russian Revolution and its global impact",
+          "Assess the economic causes of the Great Depression"
+        ],
+        "keyTerms": ["fascism", "Nazism", "Hitler", "Mussolini", "Weimar Republic", "Russian Revolution", "Bolsheviks", "decolonisation", "Non-Aligned Movement", "Great Depression", "New Deal"],
+        "realLifeContexts": ["How Germany's post-WWI economic humiliation created conditions for Hitler's rise", "How India's independence in 1947 inspired African decolonisation movements", "How the Great Depression led to Keynesian economics and government intervention"],
+        "prerequisites": ["WWI and WWII basics", "Nationalism in Europe"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Fascism was only an Italian phenomenon", "The Russian Revolution was welcomed by all Russians", "Decolonisation ended all forms of colonial influence after independence"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate historiographical interpretations of major 20th century events",
+          "Analyse the role of ideology in shaping the Cold War",
+          "Assess post-Cold War world order and new conflicts",
+          "Apply historical thinking to understand present-day geopolitical tensions"
+        ],
+        "keyTerms": ["historiography", "revisionism", "Cold War ideology", "proxy wars", "détente", "unipolar world", "globalisation backlash", "terrorism", "rise of China", "multipolar world"],
+        "realLifeContexts": ["How the Vietnam War was a Cold War proxy conflict with devastating local consequences", "Why the 2008 financial crisis was called the worst since the Great Depression", "How China's rise is reshaping the post-Cold War US-led world order"],
+        "prerequisites": ["WWII", "Cold War", "Decolonisation"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["The end of the Cold War meant the end of major ideological conflicts", "US unipolarity after 1991 was stable and permanent", "Historical revisionism means distorting facts rather than reinterpreting evidence"]
+      }
+    },
+    "social_issues_india": {
+      "title": "Social Issues in India",
+      "category": "Sociology",
+      "beginner": {
+        "learningOutcomes": [
+          "Define social inequality and identify its forms in India",
+          "Describe caste discrimination and constitutional protections against it",
+          "Explain gender inequality and its manifestations"
+        ],
+        "keyTerms": ["caste system", "untouchability", "scheduled castes", "scheduled tribes", "gender inequality", "patriarchy", "social discrimination", "Article 17", "reservation policy", "child labour"],
+        "realLifeContexts": ["Why Dr. Ambedkar fought against caste discrimination and led mass conversions", "How the girl child ratio in Haryana reflects gender discrimination at birth", "Why child labour persists despite laws against it in India"],
+        "prerequisites": ["Basic social studies"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Caste discrimination no longer exists after the Constitution banned untouchability", "Gender inequality only affects girls in rural areas", "Reservations are the complete solution to caste discrimination"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain communalism, regionalism, and casteism as challenges to national unity",
+          "Analyse poverty, its causes, and government anti-poverty programmes",
+          "Describe urbanisation challenges: slums, migration, urban poverty",
+          "Assess the role of education in social mobility"
+        ],
+        "keyTerms": ["communalism", "regionalism", "casteism", "poverty line", "BPL", "MGNREGA", "urban poverty", "slum", "migration", "social mobility", "Right to Education Act"],
+        "realLifeContexts": ["How Dharavi in Mumbai represents urban poverty despite proximity to India's financial capital", "Why inter-state migration increases during drought years", "How the Right to Education Act tried to make schooling universal in India"],
+        "prerequisites": ["Social inequality basics", "Indian Constitution"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Urban poverty is less severe than rural poverty", "Migration from villages to cities always improves migrant welfare", "Poverty is only about lack of income and not multidimensional"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Critically evaluate the effectiveness of reservation policies",
+          "Analyse intersectionality of caste, gender, and class in social exclusion",
+          "Assess impact of globalisation on social inequalities in India",
+          "Evaluate social movements and their role in policy change"
+        ],
+        "keyTerms": ["intersectionality", "Mandal Commission", "creamy layer", "social capital", "Dalit feminism", "adivasi rights", "PESA Act", "social movement", "RTI", "affirmative action"],
+        "realLifeContexts": ["How the Mandal Commission report led to the OBC reservation expansion and political upheaval", "Why Dalit women face triple discrimination based on gender, caste, and class", "How the Narmada Bachao Andolan challenged development at the cost of displacement"],
+        "prerequisites": ["Social inequality", "Constitutional provisions", "Development concepts"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Reservation policies are unchanged since 1950", "Social movements always succeed in changing government policy", "Intersectionality is a Western concept with no relevance to India"]
+      }
+    },
+    "map_skills_and_environment": {
+      "title": "Map Skills and Environment",
+      "category": "Geography",
+      "beginner": {
+        "learningOutcomes": [
+          "Read and interpret different types of maps",
+          "Explain environmental issues: pollution, deforestation, and climate change",
+          "Identify major environmental disasters and their causes"
+        ],
+        "keyTerms": ["political map", "physical map", "thematic map", "scale", "legend", "latitude", "longitude", "deforestation", "air pollution", "water pollution", "climate change", "Bhopal gas tragedy"],
+        "realLifeContexts": ["How Google Maps uses latitude and longitude to locate places", "Why Delhi's air quality index matters for public health", "How the Bhopal gas tragedy became a landmark in industrial disaster accountability"],
+        "prerequisites": ["Basic geography"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Maps always show things as they currently are", "Climate change and weather are the same phenomenon", "Environmental pollution only affects human health, not ecosystems"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Interpret topographic maps and remote sensing images",
+          "Analyse causes and consequences of major environmental problems",
+          "Explain international environmental agreements and India's role",
+          "Describe disaster management strategies"
+        ],
+        "keyTerms": ["topographic map", "contour lines", "remote sensing", "GIS", "Paris Agreement", "Kyoto Protocol", "biodiversity loss", "acid rain", "ozone depletion", "disaster management", "NDMA"],
+        "realLifeContexts": ["How ISRO uses satellite imagery for flood mapping and disaster response", "Why India's position on the Paris Agreement balances development and climate action", "How the Kerala floods of 2018 exposed gaps in disaster preparedness"],
+        "prerequisites": ["Basic map skills", "Environmental issues"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Remote sensing satellites can directly measure temperature without algorithms", "The Paris Agreement legally forces countries to meet emission targets", "Disaster management only happens after a disaster strikes"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply GIS thinking to spatial analysis of social and environmental problems",
+          "Evaluate India's environmental policy and its effectiveness",
+          "Analyse climate justice debates between developed and developing countries",
+          "Assess urban environmental challenges using case studies"
+        ],
+        "keyTerms": ["spatial analysis", "environmental impact assessment (EIA)", "climate justice", "common but differentiated responsibilities", "urban heat island", "smart cities", "green infrastructure", "carrying capacity", "ecological sensitivity"],
+        "realLifeContexts": ["Why India argues for per capita emissions as the fair climate metric, not absolute totals", "How Urban Heat Island effect makes Indian cities warmer than surrounding rural areas", "Why EIA controversies delay major infrastructure projects in India"],
+        "prerequisites": ["Map skills", "Environmental agreements", "Urban geography"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Climate justice only concerns developing countries not corporations", "Smart cities automatically solve urban environmental problems", "EIAs are independent assessments free from political pressure in all cases"]
+      }
+    },
+    "global_issues": {
+      "title": "Global Issues and International Relations",
+      "category": "Political Science",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the role and structure of the United Nations",
+          "Describe global challenges: terrorism, poverty, climate change",
+          "Identify India's position in international affairs"
+        ],
+        "keyTerms": ["United Nations", "Security Council", "General Assembly", "terrorism", "global poverty", "climate change", "SAARC", "Non-Aligned Movement", "foreign policy", "diplomacy"],
+        "realLifeContexts": ["Why India seeks a permanent seat on the UN Security Council", "How the Non-Aligned Movement was relevant during the Cold War", "Why cross-border terrorism is a persistent issue in South Asia"],
+        "prerequisites": ["Basic world affairs"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["The UN can force any country to obey its resolutions", "Non-Aligned Movement means a country has no international alliances at all", "Terrorism is only a problem for developing countries"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Analyse India's relations with neighbours (Pakistan, China, Bangladesh)",
+          "Explain the impact of globalisation on politics and culture",
+          "Describe refugee crises and human rights issues globally",
+          "Assess trade blocs and regional integration (WTO, ASEAN, EU)"
+        ],
+        "keyTerms": ["bilateral relations", "Line of Control", "McMahon Line", "Rohingya crisis", "refugee", "UNHCR", "WTO", "ASEAN", "European Union", "trade liberalisation", "cultural globalisation"],
+        "realLifeContexts": ["How India-China border tensions affect trade and strategic relations simultaneously", "Why the Rohingya refugee crisis created tensions between Myanmar, Bangladesh, and India", "How WTO dispute settlement affects India's agricultural subsidies"],
+        "prerequisites": ["UN structure", "India's foreign policy basics"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["India-Pakistan relations are only about Kashmir", "Regional integration always reduces national sovereignty", "Refugee crises are only caused by wars not economic migration"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate realist, liberal, and constructivist theories of international relations",
+          "Analyse India's strategic autonomy in a multipolar world",
+          "Assess the role of soft power in India's foreign policy",
+          "Evaluate global governance gaps in addressing climate, health, and inequality crises"]
+        ,
+        "keyTerms": ["realism", "liberalism", "constructivism", "strategic autonomy", "soft power", "QUAD", "SCO", "multilateralism", "global governance", "COVID-19 vaccine diplomacy", "BRICS"],
+        "realLifeContexts": ["How India's Vaccine Maitri initiative used vaccine supply as soft power diplomacy", "Why India joined the QUAD while maintaining ties with Russia (strategic autonomy)", "How COVID-19 exposed global governance failures in health preparedness"],
+        "prerequisites": ["International relations basics", "India's foreign policy", "Global institutions"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Soft power is less important than hard power in modern diplomacy", "India's strategic autonomy means neutrality on all global issues", "BRICS is a rival to the UN and Western institutions"]
+      }
+    }
+  }
+}

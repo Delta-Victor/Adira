@@ -1,0 +1,597 @@
+{
+  "subject": "Mathematics",
+  "topics": [
+    {
+      "id": "quadratic_equations",
+      "title": "Quadratic Equations",
+      "category": "Algebra",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Recognise a quadratic equation in the form ax² + bx + c = 0",
+            "Identify the coefficients a, b, and c in a quadratic expression",
+            "Solve simple quadratic equations by factorisation"
+          ],
+          "keyTerms": ["Quadratic equation", "Coefficient", "Factorisation", "Root", "Solution", "Parabola"],
+          "realLifeContexts": [
+            "The path of a ball thrown through the air is a parabola",
+            "Calculating when a projectile hits the ground",
+            "Finding the dimensions of a rectangular area given its size"
+          ],
+          "prerequisites": ["Algebraic expressions", "Expanding brackets", "Basic factorisation"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "A quadratic equation always has two different solutions",
+            "Factorisation only works when numbers are whole numbers"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Solve quadratic equations using the quadratic formula",
+            "Determine the nature of roots using the discriminant",
+            "Solve quadratic equations by completing the square",
+            "Relate the roots to the graph of the quadratic function"
+          ],
+          "keyTerms": [
+            "Quadratic formula", "Discriminant", "Completing the square",
+            "Vertex", "Axis of symmetry", "Real roots", "Complex roots"
+          ],
+          "realLifeContexts": [
+            "Maximising the area of a garden with a fixed perimeter",
+            "Calculating the break-even points in a profit model",
+            "Designing the shape of a satellite dish or bridge arch",
+            "Optimising the trajectory of a launched object"
+          ],
+          "prerequisites": ["Basic quadratic factorisation", "Square roots", "Coordinate geometry basics"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "The discriminant being negative means no answer exists in any number system",
+            "Completing the square only works for quadratics with even b coefficients"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Form a quadratic equation given its roots using Vieta's formulas",
+            "Solve problems involving quadratic inequalities",
+            "Analyse quadratic functions and their transformations",
+            "Apply quadratic models to optimisation problems"
+          ],
+          "keyTerms": [
+            "Vieta's formulas", "Sum and product of roots", "Quadratic inequality",
+            "Transformation", "Translation", "Stretch", "Optimisation"
+          ],
+          "realLifeContexts": [
+            "Revenue maximisation where revenue = price × quantity",
+            "Structural load calculations in engineering",
+            "Signal processing using quadratic approximations",
+            "Modelling stopping distance as a quadratic function of speed"
+          ],
+          "prerequisites": ["Quadratic formula mastery", "Function notation", "Inequalities"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Quadratic inequalities are solved the same way as quadratic equations",
+            "Transformations of quadratics change the degree of the function"
+          ]
+        }
+      }
+    },
+    {
+      "id": "linear_equations",
+      "title": "Linear Equations and Inequalities",
+      "category": "Algebra",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Solve one-step and two-step linear equations",
+            "Represent a linear relationship using a table, equation, and graph",
+            "Identify the gradient and y-intercept in y = mx + c"
+          ],
+          "keyTerms": ["Linear equation", "Variable", "Gradient", "y-intercept", "Solution", "Balance method"],
+          "realLifeContexts": [
+            "Calculating the total cost of items at a fixed price per unit",
+            "Converting between temperature scales (Celsius and Fahrenheit)",
+            "Working out how long a journey takes at constant speed"
+          ],
+          "prerequisites": ["Basic arithmetic", "Understanding of variables"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "The gradient of a line is always a positive number",
+            "You can add a number to one side of an equation without doing the same to the other"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Solve simultaneous linear equations graphically and algebraically",
+            "Solve linear inequalities and represent solutions on a number line",
+            "Write and solve linear equations from word problems",
+            "Interpret gradient as a rate of change in context"
+          ],
+          "keyTerms": [
+            "Simultaneous equations", "Substitution method", "Elimination method",
+            "Inequality", "Number line", "Rate of change", "Parallel lines", "Perpendicular lines"
+          ],
+          "realLifeContexts": [
+            "Finding the break-even point where revenue equals cost",
+            "Comparing mobile phone plans using simultaneous equations",
+            "Speed cameras using linear graphs of distance vs time",
+            "Budget planning with income and expenditure constraints"
+          ],
+          "prerequisites": ["Basic linear equations", "Coordinate geometry", "Basic graph plotting"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Simultaneous equations always have exactly one solution",
+            "When multiplying an inequality by a negative number, the direction stays the same"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Solve systems of three linear equations using matrices or elimination",
+            "Apply linear programming to optimise an objective function",
+            "Model and solve real-world problems using systems of inequalities",
+            "Interpret solutions in context and assess their validity"
+          ],
+          "keyTerms": [
+            "Matrix", "Linear programming", "Objective function", "Feasible region",
+            "Constraint", "Vertex method", "System of equations"
+          ],
+          "realLifeContexts": [
+            "Optimising a production schedule to maximise profit given resource constraints",
+            "Logistics routing problems using linear models",
+            "Nutritional planning meeting minimum daily requirements",
+            "Financial portfolio allocation under budget constraints"
+          ],
+          "prerequisites": ["Simultaneous equations", "Graphing inequalities", "Introduction to matrices"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Linear programming always yields integer solutions",
+            "Any point inside the feasible region gives the optimal solution"
+          ]
+        }
+      }
+    },
+    {
+      "id": "geometry_triangles",
+      "title": "Geometry — Triangles",
+      "category": "Geometry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Classify triangles by sides (equilateral, isosceles, scalene) and angles (acute, right, obtuse)",
+            "State that the sum of angles in a triangle is 180°",
+            "Apply the properties of triangles to find missing angles"
+          ],
+          "keyTerms": ["Equilateral", "Isosceles", "Scalene", "Acute", "Right angle", "Obtuse", "Hypotenuse"],
+          "realLifeContexts": [
+            "Triangular shapes in roof trusses and bridges for structural strength",
+            "The triangular shape of a set square used in technical drawing",
+            "Navigation using triangulation to find a position"
+          ],
+          "prerequisites": ["Basic angle types", "Properties of shapes"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "An obtuse triangle can also be a right-angled triangle",
+            "The exterior angle of a triangle equals the sum of all interior angles"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply Pythagoras' theorem to find missing sides in right-angled triangles",
+            "Use the conditions for congruence (SSS, SAS, ASA, RHS)",
+            "Identify and apply properties of similar triangles",
+            "Calculate the area of triangles using different formulas"
+          ],
+          "keyTerms": [
+            "Pythagoras' theorem", "Congruence", "Similarity", "SSS", "SAS", "ASA",
+            "Scale factor", "Area formula", "Altitude", "Median"
+          ],
+          "realLifeContexts": [
+            "Calculating the length of a ladder needed to reach a wall",
+            "Architects using similar triangles for scale drawings",
+            "Surveying land using triangulation and Pythagoras",
+            "Navigation systems computing shortest distance"
+          ],
+          "prerequisites": ["Basic triangle properties", "Square roots", "Ratio and proportion"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Pythagoras' theorem applies to all triangles, not just right-angled ones",
+            "Two triangles with the same area are always congruent"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the sine rule and cosine rule to non-right-angled triangles",
+            "Calculate the area of a triangle using (1/2)ab sin C",
+            "Prove geometric theorems involving triangles",
+            "Solve multi-step problems combining multiple triangle theorems"
+          ],
+          "keyTerms": [
+            "Sine rule", "Cosine rule", "Ambiguous case", "Circumradius",
+            "Inradius", "Geometric proof", "Centroid", "Circumcenter", "Incenter"
+          ],
+          "realLifeContexts": [
+            "GPS satellite triangulation using the cosine rule",
+            "Calculating distances across rivers or valleys using the sine rule",
+            "Aircraft navigation using bearings and triangle calculations",
+            "3D computer graphics rendering using triangle mesh geometry"
+          ],
+          "prerequisites": ["Trigonometry", "Pythagoras' theorem", "Basic proof techniques"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "The sine rule can always be used instead of the cosine rule",
+            "There is always only one possible triangle given two sides and a non-included angle"
+          ]
+        }
+      }
+    },
+    {
+      "id": "polynomials",
+      "title": "Algebra — Polynomials",
+      "category": "Algebra",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define a polynomial and identify its degree, terms, and coefficients",
+            "Add and subtract polynomials by collecting like terms",
+            "Multiply a polynomial by a monomial"
+          ],
+          "keyTerms": ["Polynomial", "Monomial", "Binomial", "Trinomial", "Degree", "Coefficient", "Like terms"],
+          "realLifeContexts": [
+            "Calculating the perimeter of a field with algebraic side lengths",
+            "Expressing the area of a shape using polynomial expressions",
+            "Modelling population growth with a polynomial formula"
+          ],
+          "prerequisites": ["Basic algebra", "Expanding single brackets"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "You can add terms with different variables or powers",
+            "The degree of a polynomial is the number of terms it has"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Expand and simplify products of two binomials",
+            "Factorise polynomials including difference of squares and perfect square trinomials",
+            "Divide a polynomial by a linear expression",
+            "Apply the remainder theorem and factor theorem"
+          ],
+          "keyTerms": [
+            "FOIL method", "Difference of squares", "Perfect square trinomial",
+            "Polynomial division", "Remainder theorem", "Factor theorem", "Root"
+          ],
+          "realLifeContexts": [
+            "Factorising to find the dimensions of a box given its volume as a polynomial",
+            "Using the factor theorem in cryptography and coding theory",
+            "Polynomial curve fitting in data analysis and forecasting",
+            "Signal processing using polynomial approximations"
+          ],
+          "prerequisites": ["Expanding brackets", "Solving linear equations", "Basic factorisation"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Every polynomial can be factorised over the integers",
+            "The remainder theorem and factor theorem are the same result"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Solve polynomial equations of degree three and four",
+            "Sketch polynomial functions and identify key features",
+            "Apply polynomial identities to simplify complex expressions",
+            "Use the rational root theorem to find exact roots"
+          ],
+          "keyTerms": [
+            "Cubic function", "Quartic function", "Rational root theorem",
+            "End behaviour", "Turning points", "Multiplicity of roots", "Polynomial identity"
+          ],
+          "realLifeContexts": [
+            "Modelling the shape of a roller coaster track using cubic polynomials",
+            "Engineering: stress and strain curves modelled by polynomials",
+            "Computer graphics using polynomial Bezier curves",
+            "Economic models using higher-degree polynomial cost functions"
+          ],
+          "prerequisites": ["Quadratic equations", "Function notation", "Graph sketching"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "A polynomial of degree n always has n distinct real roots",
+            "Turning points and roots of a polynomial always alternate"
+          ]
+        }
+      }
+    },
+    {
+      "id": "statistics_probability",
+      "title": "Statistics and Probability",
+      "category": "Statistics",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Collect and organise data into frequency tables and charts",
+            "Calculate mean, median, mode, and range for a data set",
+            "Express probability as a fraction, decimal, and percentage"
+          ],
+          "keyTerms": ["Mean", "Median", "Mode", "Range", "Frequency", "Probability", "Outcome", "Event"],
+          "realLifeContexts": [
+            "Calculating the average score of a class on a test",
+            "Weather forecasts expressed as probability of rain",
+            "Sports statistics: batting averages and scoring rates"
+          ],
+          "prerequisites": ["Basic arithmetic", "Fractions and percentages"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "The mean is always the best measure of average",
+            "A probability of 0.5 means the event will happen exactly half the time"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Construct and interpret histograms, box plots, and scatter graphs",
+            "Calculate probabilities of combined events using AND/OR rules",
+            "Distinguish between mutually exclusive and independent events",
+            "Interpret correlation from scatter graphs and calculate lines of best fit"
+          ],
+          "keyTerms": [
+            "Histogram", "Box plot", "Scatter graph", "Correlation", "Line of best fit",
+            "Mutually exclusive", "Independent events", "Tree diagram", "Venn diagram"
+          ],
+          "realLifeContexts": [
+            "Medical research using statistics to test drug effectiveness",
+            "Insurance companies calculating risk using probability",
+            "Polling and election forecasting",
+            "Quality control in manufacturing using statistical sampling"
+          ],
+          "prerequisites": ["Basic statistics and probability", "Fractions and decimals"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Correlation between two variables proves that one causes the other",
+            "If two events are not mutually exclusive they must be independent"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Apply the normal distribution to model real-world data",
+            "Use conditional probability and Bayes' theorem",
+            "Conduct hypothesis tests and interpret p-values",
+            "Evaluate the validity and reliability of statistical conclusions"
+          ],
+          "keyTerms": [
+            "Normal distribution", "Standard deviation", "Z-score", "Conditional probability",
+            "Bayes' theorem", "Hypothesis testing", "p-value", "Confidence interval", "Type I and II errors"
+          ],
+          "realLifeContexts": [
+            "Clinical trials using hypothesis testing to approve new medications",
+            "Spam email filters using Bayesian probability",
+            "Quality control using control charts and standard deviation",
+            "Financial risk modelling using normal distribution"
+          ],
+          "prerequisites": ["Intermediate statistics", "Algebra", "Basic calculus for integration"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "A small p-value proves the alternative hypothesis is true",
+            "The normal distribution applies to all naturally occurring data"
+          ]
+        }
+      }
+    },
+    {
+      "id": "coordinate_geometry",
+      "title": "Coordinate Geometry",
+      "category": "Geometry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Plot and read coordinates in all four quadrants",
+            "Calculate the distance between two points",
+            "Find the midpoint of a line segment"
+          ],
+          "keyTerms": ["Coordinate", "x-axis", "y-axis", "Quadrant", "Origin", "Distance formula", "Midpoint"],
+          "realLifeContexts": [
+            "Map reading using grid references",
+            "GPS coordinates locating places on Earth",
+            "Plotting data points in a spreadsheet chart"
+          ],
+          "prerequisites": ["Number line", "Negative numbers", "Basic graph reading"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "The distance formula only works for horizontal or vertical lines",
+            "The midpoint is always the average of just the x-coordinates"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Find the equation of a line given two points or a point and gradient",
+            "Determine whether lines are parallel or perpendicular",
+            "Calculate the area of shapes given coordinates of vertices",
+            "Solve geometric problems using coordinate methods"
+          ],
+          "keyTerms": [
+            "Gradient", "y-intercept", "Equation of a line", "Parallel", "Perpendicular",
+            "Collinear points", "Area using coordinates", "Shoelace formula"
+          ],
+          "realLifeContexts": [
+            "Urban planners using coordinates to calculate land areas",
+            "Robotics programming motion paths using coordinate equations",
+            "Computer graphics drawing lines and shapes using coordinates",
+            "Air traffic control using coordinate-based positioning"
+          ],
+          "prerequisites": ["Plotting coordinates", "Gradient and y-intercept", "Basic geometry"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Two lines with different equations always intersect at exactly one point",
+            "Perpendicular lines always have gradients that are equal and opposite"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Derive and apply the equation of a circle",
+            "Find the intersection of lines and circles algebraically",
+            "Apply transformations using coordinate methods",
+            "Prove geometric results using coordinate geometry"
+          ],
+          "keyTerms": [
+            "Circle equation", "Centre", "Radius", "Tangent to a circle",
+            "Locus", "Transformation matrix", "Translation vector", "Geometric proof"
+          ],
+          "realLifeContexts": [
+            "Radar systems detecting objects within a circular range",
+            "Designing circular roundabouts and curved road sections",
+            "Satellite orbit paths modelled as circles or ellipses",
+            "Computer game collision detection using circle equations"
+          ],
+          "prerequisites": ["Intermediate coordinate geometry", "Quadratic equations", "Trigonometry"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "A tangent to a circle intersects it at two distinct points",
+            "All circles centred at the origin have the equation x² + y² = 1"
+          ]
+        }
+      }
+    },
+    {
+      "id": "trigonometry",
+      "title": "Trigonometry",
+      "category": "Geometry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Define sine, cosine, and tangent ratios in a right-angled triangle",
+            "Use trigonometric ratios to find missing sides and angles",
+            "Recall and apply the mnemonic SOH-CAH-TOA"
+          ],
+          "keyTerms": ["Sine", "Cosine", "Tangent", "Hypotenuse", "Opposite", "Adjacent", "SOH-CAH-TOA"],
+          "realLifeContexts": [
+            "Calculating the height of a building from its shadow and angle of elevation",
+            "Finding the angle of a ramp for wheelchair accessibility",
+            "Navigation: calculating the bearing between two points"
+          ],
+          "prerequisites": ["Right-angled triangles", "Basic angle properties", "Calculator use"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Trigonometric ratios only apply to 30-60-90 and 45-45-90 triangles",
+            "sin(A + B) = sin A + sin B"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Apply trigonometry to angles greater than 90° using the unit circle",
+            "Sketch and interpret graphs of sin, cos, and tan functions",
+            "Use trigonometric identities to simplify expressions",
+            "Solve trigonometric equations within a given range"
+          ],
+          "keyTerms": [
+            "Unit circle", "Radian", "Amplitude", "Period", "Phase shift",
+            "Trigonometric identity", "Pythagorean identity", "General solution"
+          ],
+          "realLifeContexts": [
+            "Modelling tidal patterns and seasonal temperature changes",
+            "Sound waves and musical notes as sinusoidal functions",
+            "AC electricity described by a sine wave",
+            "Analysing mechanical vibrations in engineering"
+          ],
+          "prerequisites": ["Basic trigonometry", "Graph sketching", "Angle in standard position"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Radians and degrees are interchangeable without conversion",
+            "The period of any sinusoidal function is always 2π"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Prove trigonometric identities using algebraic manipulation",
+            "Apply compound angle and double angle formulas",
+            "Solve complex trigonometric equations analytically",
+            "Model real-world periodic phenomena using trigonometric functions"
+          ],
+          "keyTerms": [
+            "Compound angle formula", "Double angle formula", "Half angle formula",
+            "Factor formulae", "Inverse trigonometric functions", "Principal value"
+          ],
+          "realLifeContexts": [
+            "Fourier analysis decomposing complex signals into sine waves",
+            "Phase relationships in electrical circuits (impedance)",
+            "Modelling ocean wave interference using compound angles",
+            "Satellite dish alignment using inverse trigonometric functions"
+          ],
+          "prerequisites": ["Unit circle and radian mastery", "Trigonometric identities", "Advanced algebra"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Proving an identity means solving it like an equation",
+            "Inverse trig functions always return a unique angle for any input"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mensuration",
+      "title": "Mensuration — Area and Volume",
+      "category": "Geometry",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Calculate the area and perimeter of rectangles, triangles, and circles",
+            "Calculate the volume and surface area of cuboids",
+            "Convert between units of area and volume"
+          ],
+          "keyTerms": ["Area", "Perimeter", "Volume", "Surface area", "Radius", "Diameter", "Pi (π)", "Cuboid"],
+          "realLifeContexts": [
+            "Measuring the floor area of a room before buying carpet",
+            "Calculating the paint needed for a wall",
+            "Finding the capacity of a fish tank or storage box"
+          ],
+          "prerequisites": ["Basic multiplication and division", "Properties of 2D shapes"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Area and perimeter increase together when a shape gets larger",
+            "Volume is measured in square units like area"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Calculate the area and arc length of sectors",
+            "Find the volume and surface area of cylinders, cones, and spheres",
+            "Solve problems involving composite shapes",
+            "Apply Pythagoras' theorem in 3D mensuration problems"
+          ],
+          "keyTerms": [
+            "Sector", "Arc length", "Cylinder", "Cone", "Sphere",
+            "Composite shape", "Cross-section", "Slant height", "Net"
+          ],
+          "realLifeContexts": [
+            "Calculating how much material is needed to make a tin can",
+            "Designing packaging to minimise waste while maximising volume",
+            "Calculating the volume of a water tower or storage tank",
+            "Estimating the material needed for a conical party hat"
+          ],
+          "prerequisites": ["Basic area and volume", "Circle properties", "Pythagoras' theorem"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "The surface area and volume of a sphere use the same radius formula",
+            "Doubling all dimensions of a shape doubles its volume"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Calculate the volume and surface area of pyramids and frustums",
+            "Apply integration to find areas bounded by curves",
+            "Solve optimisation problems involving area and volume",
+            "Model real-world objects using combined 3D shapes"
+          ],
+          "keyTerms": [
+            "Frustum", "Pyramid", "Prism", "Integration", "Definite integral",
+            "Optimisation", "Constraint", "Solid of revolution"
+          ],
+          "realLifeContexts": [
+            "Designing a dam spillway using frustum volume calculations",
+            "Calculating the volume of liquid in a tilted cylindrical tank",
+            "Minimising the material cost of a tin can with fixed volume",
+            "Modelling terrain volume for construction excavation estimates"
+          ],
+          "prerequisites": ["Intermediate mensuration", "Calculus (differentiation and integration)", "Optimisation techniques"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Scaling all linear dimensions by a factor k scales the volume by k²",
+            "Integration for area always gives a positive result"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "subject": "English",
+  "topics": [
+    {
+      "id": "reading_comprehension",
+      "title": "Reading Comprehension",
+      "category": "Reading",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Identify the main idea and key details in a short passage",
+            "Answer literal questions by locating information directly in the text",
+            "Understand the meaning of unfamiliar words using context clues"
+          ],
+          "keyTerms": ["Main idea", "Supporting detail", "Context clue", "Literal meaning", "Paragraph", "Topic sentence"],
+          "realLifeContexts": [
+            "Reading a news article and summarising what happened",
+            "Following instructions in a recipe or manual",
+            "Understanding a notice or announcement at school"
+          ],
+          "prerequisites": ["Basic reading fluency", "Understanding of sentence structure"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "The main idea is always the first sentence of a passage",
+            "Every word in a passage is equally important"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Distinguish between explicit and implicit information in a text",
+            "Make inferences and draw conclusions supported by textual evidence",
+            "Identify the author's purpose and tone",
+            "Summarise a passage accurately in your own words"
+          ],
+          "keyTerms": ["Inference", "Implicit", "Explicit", "Author's purpose", "Tone", "Summarise", "Evidence", "Point of view"],
+          "realLifeContexts": [
+            "Analysing a newspaper opinion column to identify bias",
+            "Reading a product review and judging its reliability",
+            "Interpreting a job advertisement to understand requirements",
+            "Evaluating conflicting reports on the same news event"
+          ],
+          "prerequisites": ["Literal comprehension", "Basic vocabulary", "Paragraph structure"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Inferences are just guesses with no basis in the text",
+            "The author's opinion is always clearly stated"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Critically evaluate the reliability and validity of arguments in a text",
+            "Analyse how language choices create meaning and influence the reader",
+            "Compare perspectives across multiple texts on the same topic",
+            "Identify rhetorical techniques and assess their effectiveness"
+          ],
+          "keyTerms": ["Rhetorical technique", "Bias", "Credibility", "Connotation", "Denotation", "Synthesis", "Counter-argument", "Subtext"],
+          "realLifeContexts": [
+            "Evaluating the credibility of sources for an academic essay",
+            "Analysing political speeches for persuasive techniques",
+            "Comparing media coverage of a controversial event",
+            "Reading legal or contractual documents critically"
+          ],
+          "prerequisites": ["Inference skills", "Understanding of argument structure", "Awareness of persuasive techniques"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "A well-written text is always reliable and unbiased",
+            "Critical reading means finding fault with everything"
+          ]
+        }
+      }
+    },
+    {
+      "id": "essay_writing",
+      "title": "Essay Writing",
+      "category": "Writing",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Structure a short essay with an introduction, body, and conclusion",
+            "Write a clear topic sentence for each paragraph",
+            "Use basic linking words to connect ideas (firstly, however, in conclusion)"
+          ],
+          "keyTerms": ["Introduction", "Body paragraph", "Conclusion", "Topic sentence", "Linking words", "Paragraph", "Draft"],
+          "realLifeContexts": [
+            "Writing a short piece about your favourite hobby",
+            "Describing a place you have visited",
+            "Expressing an opinion about a school rule"
+          ],
+          "prerequisites": ["Basic sentence construction", "Paragraph awareness"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "An essay conclusion must introduce new ideas",
+            "Longer sentences always make writing better"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Write a well-structured argumentative or discursive essay",
+            "Use a range of cohesive devices to build coherent paragraphs",
+            "Support claims with specific evidence and examples",
+            "Adapt tone and register for different essay types (narrative, descriptive, argumentative)"
+          ],
+          "keyTerms": ["Thesis statement", "Argument", "Counterargument", "Evidence", "Cohesion", "Register", "Discursive", "Persuasive"],
+          "realLifeContexts": [
+            "Writing a persuasive letter to a local council about a community issue",
+            "Crafting a college application personal statement",
+            "Writing a review of a film or book for a school magazine",
+            "Composing a formal report on a school survey"
+          ],
+          "prerequisites": ["Basic essay structure", "Paragraph writing", "Linking words"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Persuasive essays only need one side of an argument",
+            "Using complex vocabulary always improves an essay"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Construct a nuanced argument that acknowledges complexity and ambiguity",
+            "Employ a wide range of stylistic devices to enhance clarity and impact",
+            "Integrate and cite sources accurately within an extended essay",
+            "Evaluate and refine writing through multiple drafts"
+          ],
+          "keyTerms": ["Nuance", "Rhetoric", "Synthesis", "Citation", "Stylistic device", "Voice", "Revision", "Academic register"],
+          "realLifeContexts": [
+            "Writing an extended research essay for university entry",
+            "Composing an editorial for a national newspaper",
+            "Drafting a policy proposal for a school or community organisation",
+            "Writing a critical analysis of a work of literature"
+          ],
+          "prerequisites": ["Argumentative essay skills", "Source evaluation", "Advanced grammar"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "A sophisticated essay must use formal language exclusively",
+            "Once a thesis is stated it cannot be refined during the writing process"
+          ]
+        }
+      }
+    },
+    {
+      "id": "grammar_and_usage",
+      "title": "Grammar and Language Usage",
+      "category": "Language",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Identify and use nouns, verbs, adjectives, and adverbs correctly",
+            "Construct grammatically correct simple and compound sentences",
+            "Use basic punctuation: full stops, commas, question marks, and capital letters"
+          ],
+          "keyTerms": ["Noun", "Verb", "Adjective", "Adverb", "Sentence", "Punctuation", "Subject", "Predicate"],
+          "realLifeContexts": [
+            "Correcting errors in a text message before sending",
+            "Writing a clear and accurate note to a friend",
+            "Filling out a form with correct spelling and punctuation"
+          ],
+          "prerequisites": ["Basic literacy", "Alphabet and phonics"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "A sentence must always be long to be grammatically correct",
+            "Adverbs can only modify verbs"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Use complex and compound-complex sentence structures accurately",
+            "Apply correct subject-verb agreement in varied constructions",
+            "Use tenses consistently and appropriately across a piece of writing",
+            "Identify and correct common errors: run-ons, fragments, and misplaced modifiers"
+          ],
+          "keyTerms": ["Clause", "Subordinate clause", "Subject-verb agreement", "Tense consistency", "Run-on sentence", "Fragment", "Modifier", "Conjunction"],
+          "realLifeContexts": [
+            "Proofreading a job application letter for grammatical errors",
+            "Editing a classmate's essay to improve clarity",
+            "Writing formal emails with correct grammar and tone",
+            "Analysing grammar in published newspaper articles"
+          ],
+          "prerequisites": ["Parts of speech", "Simple sentence construction", "Basic punctuation"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "You should never start a sentence with 'And' or 'But'",
+            "Passive voice is always incorrect and should be avoided"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Manipulate syntactic structures to achieve specific rhetorical effects",
+            "Analyse how grammar choices shape meaning and style in literary texts",
+            "Apply grammar rules accurately in academic and creative writing contexts",
+            "Evaluate language change and variation across dialects and registers"
+          ],
+          "keyTerms": ["Syntax", "Parallelism", "Apposition", "Anaphora", "Register variation", "Dialect", "Pragmatics", "Nominalization"],
+          "realLifeContexts": [
+            "Analysing how a politician's sentence structure builds authority",
+            "Understanding how advertising language manipulates through grammar",
+            "Adapting language register for legal, academic, and creative contexts",
+            "Studying how language evolves in social media and digital communication"
+          ],
+          "prerequisites": ["Intermediate grammar mastery", "Awareness of style and register"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Standard grammar rules are universal across all varieties of English",
+            "Grammar and style are entirely separate concerns"
+          ]
+        }
+      }
+    },
+    {
+      "id": "creative_writing",
+      "title": "Creative and Narrative Writing",
+      "category": "Writing",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Write a short story with a clear beginning, middle, and end",
+            "Create a simple character with basic physical and personality traits",
+            "Use descriptive language to bring a setting to life"
+          ],
+          "keyTerms": ["Narrative", "Character", "Setting", "Plot", "Descriptive language", "Dialogue", "Beginning-Middle-End"],
+          "realLifeContexts": [
+            "Writing a diary entry about an exciting day",
+            "Describing a dream or imagined adventure",
+            "Creating a short story inspired by a photograph"
+          ],
+          "prerequisites": ["Basic sentence construction", "Paragraph writing"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "A good story must always have a happy ending",
+            "Dialogue is just conversation written down with no special rules"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Structure a narrative with rising action, climax, and resolution",
+            "Develop a complex character whose motivations drive the plot",
+            "Use show-don't-tell techniques to convey emotion and atmosphere",
+            "Vary sentence structure and pace to create tension and interest"
+          ],
+          "keyTerms": ["Narrative arc", "Climax", "Resolution", "Show don't tell", "Atmosphere", "Tension", "Pacing", "Foreshadowing"],
+          "realLifeContexts": [
+            "Writing a short story for a school or national competition",
+            "Crafting a personal narrative for a college application",
+            "Writing a script for a short film or play",
+            "Creating a blog post that tells a compelling personal story"
+          ],
+          "prerequisites": ["Basic story structure", "Character and setting", "Descriptive techniques"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "The climax must always occur at the very end of the story",
+            "Every detail in a narrative must directly advance the plot"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Experiment with non-linear narrative structures and multiple perspectives",
+            "Use literary techniques (symbolism, motif, irony) deliberately and effectively",
+            "Craft a distinctive authorial voice through consistent stylistic choices",
+            "Critically evaluate and revise creative work using peer and self-assessment"
+          ],
+          "keyTerms": ["Non-linear narrative", "Unreliable narrator", "Symbolism", "Motif", "Irony", "Voice", "Stream of consciousness", "Subtext"],
+          "realLifeContexts": [
+            "Writing a short story for literary magazine submission",
+            "Developing the opening chapter of a novel",
+            "Writing a creative non-fiction piece on a social issue",
+            "Crafting a personal essay in the vein of published essayists"
+          ],
+          "prerequisites": ["Intermediate narrative techniques", "Wide reading across genres"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Experimental structure means the story has no rules",
+            "Voice is a fixed quality that cannot be developed with practice"
+          ]
+        }
+      }
+    },
+    {
+      "id": "poetry_analysis",
+      "title": "Poetry Analysis",
+      "category": "Literature",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Identify basic poetic features: rhyme, rhythm, and repetition",
+            "Understand the literal meaning of a poem",
+            "Describe the mood or feeling a poem creates"
+          ],
+          "keyTerms": ["Rhyme", "Rhythm", "Stanza", "Line", "Mood", "Repetition", "Verse", "Poet"],
+          "realLifeContexts": [
+            "Listening to song lyrics and identifying rhyme patterns",
+            "Reading a poem on a greeting card",
+            "Reciting a nursery rhyme and noticing its musical quality"
+          ],
+          "prerequisites": ["Reading fluency", "Basic vocabulary"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "All poems must rhyme",
+            "Poetry is only about feelings and cannot tell a story"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Identify and analyse figurative language: simile, metaphor, personification",
+            "Explain how structure and form contribute to meaning",
+            "Analyse the effect of sound devices: alliteration, assonance, onomatopoeia",
+            "Interpret the theme of a poem using textual evidence"
+          ],
+          "keyTerms": ["Simile", "Metaphor", "Personification", "Alliteration", "Assonance", "Onomatopoeia", "Theme", "Enjambment", "Caesura"],
+          "realLifeContexts": [
+            "Analysing the lyrics of a protest song for social commentary",
+            "Comparing how two poets describe the same topic differently",
+            "Writing an analysis of a war poem for Remembrance Day",
+            "Identifying metaphors in advertising slogans"
+          ],
+          "prerequisites": ["Basic poetry features", "Figurative language awareness"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Identifying a technique is enough — no explanation of effect is needed",
+            "The poet always shares the same views as the poem's speaker"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Conduct a close reading that integrates analysis of form, structure, and language",
+            "Compare how poets from different contexts approach a shared theme",
+            "Evaluate the influence of historical and cultural context on a poem's meaning",
+            "Construct a sustained, evidence-based literary argument about a poem"
+          ],
+          "keyTerms": ["Close reading", "Volta", "Dramatic monologue", "Free verse", "Iambic pentameter", "Intertextuality", "Context", "Ambiguity"],
+          "realLifeContexts": [
+            "Analysing a contemporary poem published in a literary journal",
+            "Comparing colonial and post-colonial poetry perspectives",
+            "Studying how slam poetry addresses modern social issues",
+            "Writing a comparative essay for a university entrance exam"
+          ],
+          "prerequisites": ["Intermediate poetry analysis", "Literary context awareness", "Essay writing skills"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "There is one correct interpretation of every poem",
+            "Form and structure are less important than language features"
+          ]
+        }
+      }
+    },
+    {
+      "id": "literary_devices",
+      "title": "Literary Devices and Figurative Language",
+      "category": "Literature",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Identify similes and metaphors in a text",
+            "Recognise personification and explain its effect",
+            "Understand why writers use figurative language"
+          ],
+          "keyTerms": ["Simile", "Metaphor", "Personification", "Figurative language", "Literal", "Image", "Comparison"],
+          "realLifeContexts": [
+            "Noticing similes in sports commentary ('fast as lightning')",
+            "Identifying metaphors in song lyrics",
+            "Recognising personification in children's stories"
+          ],
+          "prerequisites": ["Basic reading comprehension", "Literal vs figurative distinction"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "A simile and a metaphor mean exactly the same thing",
+            "Figurative language always makes writing harder to understand"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Analyse the effect of irony, hyperbole, and symbolism in a text",
+            "Explain how literary devices contribute to tone and atmosphere",
+            "Identify foreshadowing and flashback and explain their structural purpose",
+            "Use a range of literary devices effectively in your own writing"
+          ],
+          "keyTerms": ["Irony", "Hyperbole", "Symbolism", "Foreshadowing", "Flashback", "Tone", "Atmosphere", "Imagery"],
+          "realLifeContexts": [
+            "Recognising dramatic irony in a film or TV series",
+            "Spotting hyperbole in everyday speech ('I've told you a million times')",
+            "Analysing the symbolism of flags or colour in public life",
+            "Identifying foreshadowing in a thriller novel"
+          ],
+          "prerequisites": ["Basic figurative language", "Reading comprehension", "Story structure"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Irony simply means something is funny or coincidental",
+            "Symbols always have a single fixed meaning regardless of context"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Evaluate how writers use an extended metaphor or allegory to convey a sustained argument",
+            "Analyse the interaction of multiple literary devices within a single passage",
+            "Compare the use of literary devices across different genres and periods",
+            "Assess how literary devices shape the reader's emotional and intellectual response"
+          ],
+          "keyTerms": ["Extended metaphor", "Allegory", "Pathetic fallacy", "Juxtaposition", "Oxymoron", "Paradox", "Allusion", "Motif"],
+          "realLifeContexts": [
+            "Analysing Animal Farm as a political allegory",
+            "Studying how dystopian fiction uses allegory to comment on society",
+            "Tracing a motif (e.g. light/darkness) through an entire novel",
+            "Evaluating how advertising uses juxtaposition to sell an idea"
+          ],
+          "prerequisites": ["Intermediate literary devices", "Extended text analysis", "Contextual reading"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Every element of a text is a deliberate literary device",
+            "Identifying more devices in an analysis always produces a better answer"
+          ]
+        }
+      }
+    },
+    {
+      "id": "formal_writing",
+      "title": "Formal and Professional Writing",
+      "category": "Writing",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Distinguish between formal and informal writing styles",
+            "Write a short formal letter with correct layout and salutation",
+            "Use formal vocabulary and avoid slang or colloquialisms"
+          ],
+          "keyTerms": ["Formal register", "Informal register", "Salutation", "Valediction", "Layout", "Tone", "Audience"],
+          "realLifeContexts": [
+            "Writing a letter to a teacher requesting permission for leave",
+            "Composing a polite email to a shop to complain about a product",
+            "Filling in a formal application form correctly"
+          ],
+          "prerequisites": ["Basic writing skills", "Awareness of audience"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Formal writing must always use the longest and most complex words",
+            "Formal and polite mean exactly the same thing"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Write a formal report or proposal with appropriate sections and headings",
+            "Craft a persuasive formal letter that balances evidence and tone",
+            "Adapt writing style and vocabulary to different professional contexts",
+            "Use hedging language and cautious tone appropriately in formal writing"
+          ],
+          "keyTerms": ["Report", "Proposal", "Hedging language", "Objective tone", "Executive summary", "Recommendations", "Professional register"],
+          "realLifeContexts": [
+            "Writing a report on a school event for the headteacher",
+            "Drafting a proposal for a community project",
+            "Writing a formal complaint letter to a service provider",
+            "Composing a covering letter for a job application"
+          ],
+          "prerequisites": ["Formal letter writing", "Essay structure", "Vocabulary range"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Formal reports must use passive voice throughout",
+            "A covering letter should repeat everything already on a CV"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Produce a polished professional document tailored to a specific audience and purpose",
+            "Write abstractly and precisely about complex or technical subjects",
+            "Evaluate the effectiveness of formal writing using clear criteria",
+            "Navigate the conventions of academic, legal, and business writing registers"
+          ],
+          "keyTerms": ["Abstract", "Technical register", "Nominalization", "Passive construction", "Academic integrity", "Executive communication", "Style guide"],
+          "realLifeContexts": [
+            "Drafting a business case for investment",
+            "Writing a legal brief or memorandum",
+            "Composing an academic journal article abstract",
+            "Preparing official correspondence on behalf of an organisation"
+          ],
+          "prerequisites": ["Intermediate formal writing", "Sector-specific vocabulary", "Advanced grammar"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Formal writing cannot have personality or voice",
+            "Technical accuracy and clarity are competing goals"
+          ]
+        }
+      }
+    },
+    {
+      "id": "speech_and_debate",
+      "title": "Speech, Debate and Oral Communication",
+      "category": "Speaking",
+      "difficultyLevels": {
+        "beginner": {
+          "learningOutcomes": [
+            "Deliver a short prepared speech on a familiar topic clearly and audibly",
+            "Maintain eye contact and use appropriate body language while speaking",
+            "Listen actively and respond to a speaker's point"
+          ],
+          "keyTerms": ["Delivery", "Eye contact", "Body language", "Volume", "Pace", "Audience", "Prepared speech"],
+          "realLifeContexts": [
+            "Introducing yourself to a new class or group",
+            "Presenting a short project to the class",
+            "Speaking in a school assembly"
+          ],
+          "prerequisites": ["Basic oral communication", "Confidence to speak in front of others"],
+          "questionComplexity": "recall and basic understanding",
+          "commonMisconceptions": [
+            "Speaking fast shows confidence and intelligence",
+            "Good speakers never use notes or preparation"
+          ]
+        },
+        "intermediate": {
+          "learningOutcomes": [
+            "Structure a persuasive speech with a clear argument and supporting evidence",
+            "Use rhetorical devices (tricolon, rhetorical question, anaphora) to engage an audience",
+            "Rebut an opposing argument logically and respectfully in a debate",
+            "Adjust language and tone for different formal and informal speaking contexts"
+          ],
+          "keyTerms": ["Rhetorical question", "Tricolon", "Anaphora", "Rebuttal", "Point of information", "Proposition", "Opposition", "Impromptu"],
+          "realLifeContexts": [
+            "Debating a school policy change in a student council meeting",
+            "Delivering a TEDx-style talk on a topic you care about",
+            "Participating in a mock parliament or model United Nations",
+            "Presenting a business idea in a pitch competition"
+          ],
+          "prerequisites": ["Basic public speaking", "Persuasive writing structure"],
+          "questionComplexity": "application and analysis",
+          "commonMisconceptions": [
+            "Winning a debate means shouting the loudest or speaking the most",
+            "Rhetorical questions must always be answered by the speaker"
+          ]
+        },
+        "advanced": {
+          "learningOutcomes": [
+            "Construct and deliver a sophisticated argument that anticipates and addresses counter-arguments",
+            "Analyse the rhetorical strategies of influential public speakers",
+            "Manage a formal debate as chair or timekeeper using correct procedure",
+            "Adapt communication style in real time based on audience reaction"
+          ],
+          "keyTerms": ["Ethos", "Pathos", "Logos", "Cross-examination", "Procedural debate", "Advocacy", "Extemporaneous speech", "Deliberative rhetoric"],
+          "realLifeContexts": [
+            "Competing in a British Parliamentary or World Schools debate tournament",
+            "Delivering a valedictorian or commencement address",
+            "Advocating for a cause in a public hearing or town hall",
+            "Analysing famous speeches (Churchill, King, Obama) for rhetorical technique"
+          ],
+          "prerequisites": ["Intermediate debate skills", "Rhetoric and persuasion", "Critical reading"],
+          "questionComplexity": "evaluation and synthesis",
+          "commonMisconceptions": [
+            "Ethos, pathos, and logos must be used in equal measure in every speech",
+            "Extemporaneous speaking means speaking without any preparation"
+          ]
+        }
+      }
+    }
+  ]
+}

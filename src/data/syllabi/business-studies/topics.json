@@ -1,0 +1,341 @@
+{
+  "subject": "Business Studies",
+  "topics": {
+    "business_organisations": {
+      "title": "Business Organisations",
+      "category": "Forms of Business",
+      "beginner": {
+        "learningOutcomes": [
+          "Identify different forms of business organisations",
+          "Compare sole proprietorship, partnership, and company",
+          "Explain the concept of limited liability"
+        ],
+        "keyTerms": ["sole proprietorship", "partnership", "company", "limited liability", "unlimited liability", "Hindu Undivided Family (HUF)", "cooperative society", "memorandum of association", "articles of association"],
+        "realLifeContexts": ["Why a small tea stall is a sole proprietorship while Tata Group is a company", "How limited liability protects shareholders from personal loss", "Why cooperatives like Amul are different from private companies"],
+        "prerequisites": ["Basic business concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Private limited and public limited companies are the same", "All partnerships have unlimited liability", "Cooperative societies aim to maximize profit like companies"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the formation and winding up of companies",
+          "Compare public sector, private sector, and joint sector enterprises",
+          "Evaluate advantages and disadvantages of each form",
+          "Describe the role of Memorandum and Articles of Association"
+        ],
+        "keyTerms": ["incorporation", "certificate of commencement", "winding up", "public sector undertaking (PSU)", "disinvestment", "joint venture", "multinational corporation (MNC)", "franchise", "promoter"],
+        "realLifeContexts": ["Why ONGC and BHEL are PSUs and what challenges they face", "How McDonald's operates in India via a franchise model", "Why multinationals face host country regulations"],
+        "prerequisites": ["Forms of business", "Company basics"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Disinvestment means the government completely exits a company", "Joint ventures are only for large multinational corporations", "Franchise owners are fully independent entrepreneurs"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze corporate governance frameworks",
+          "Evaluate the role and challenges of PSUs in a liberalized economy",
+          "Assess ethical issues in corporate organization (CSR, stakeholder theory)",
+          "Compare Indian and global business organization models"
+        ],
+        "keyTerms": ["corporate governance", "board of directors", "SEBI regulations", "CSR (Companies Act 2013)", "stakeholder theory", "shareholder value", "independent director", "audit committee", "promoter holdings", "listing obligations"],
+        "realLifeContexts": ["Why the IL&FS crisis raised corporate governance concerns", "How the Companies Act 2013 mandates 2% profit CSR spending", "Satyam scandal as a corporate governance failure case study"],
+        "prerequisites": ["Company forms", "Financial statements", "Business ethics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Corporate governance is only relevant for large listed companies", "CSR spending is voluntary and unregulated in India", "Independent directors are fully independent in all circumstances"]
+      }
+    },
+    "management_principles": {
+      "title": "Management Principles",
+      "category": "Management",
+      "beginner": {
+        "learningOutcomes": [
+          "Define management and explain its importance",
+          "List and describe Henri Fayol's principles of management",
+          "Compare Fayol's and Taylor's approaches to management"
+        ],
+        "keyTerms": ["management", "planning", "organizing", "directing", "controlling", "Henri Fayol", "F.W. Taylor", "scientific management", "principles of management", "unity of command"],
+        "realLifeContexts": ["Why a school uses division of work among teachers", "How McDonald's uses scientific management principles in kitchen operations", "Why unity of command prevents confusion in organizations"],
+        "prerequisites": ["Basic business concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Management and administration are exactly the same", "Taylor's scientific management treats workers well", "Fayol's principles are rigid rules that must be followed exactly"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the functions of management in detail",
+          "Describe levels of management and their roles",
+          "Apply management principles to real business scenarios",
+          "Explain the importance of coordination as the essence of management"
+        ],
+        "keyTerms": ["top management", "middle management", "supervisory management", "coordination", "authority", "responsibility", "delegation", "decentralization", "span of control", "management by objectives (MBO)"],
+        "realLifeContexts": ["How a hospital manages three levels of management for patient care", "Why decentralization helped Infosys scale globally", "How MBO aligns individual goals with organizational goals"],
+        "prerequisites": ["Fayol's principles", "Taylor's principles", "Organizational structure"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Delegation reduces a manager's authority and responsibility", "Coordination is a separate function from other management functions", "Top management deals with day-to-day operations"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate modern management theories (systems approach, contingency theory)",
+          "Analyze leadership styles and their situational effectiveness",
+          "Apply OD (Organizational Development) interventions",
+          "Assess management challenges in VUCA environments"
+        ],
+        "keyTerms": ["systems approach", "contingency theory", "transformational leadership", "transactional leadership", "servant leadership", "organizational development (OD)", "VUCA", "agile management", "balanced scorecard", "change management"],
+        "realLifeContexts": ["Why Amazon's leadership principles embed management philosophy in culture", "How Satya Nadella's transformational leadership revived Microsoft", "Why COVID-19 forced organizations to adopt VUCA-compatible management"],
+        "prerequisites": ["Management functions", "Organizational behavior", "Leadership"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["There is one best management style for all situations", "Transformational leadership is always superior to transactional", "VUCA only applies to multinational corporations"]
+      }
+    },
+    "marketing_management": {
+      "title": "Marketing Management",
+      "category": "Marketing",
+      "beginner": {
+        "learningOutcomes": [
+          "Define marketing and distinguish it from selling",
+          "Explain the marketing mix (4Ps)",
+          "Describe different types of markets"
+        ],
+        "keyTerms": ["marketing", "marketing mix", "4Ps", "product", "price", "place", "promotion", "consumer market", "industrial market", "marketing concept", "selling concept"],
+        "realLifeContexts": ["Why Coca-Cola's marketing is different from a local kirana store's selling", "How Apple uses all 4Ps to create premium positioning", "Why Amul's marketing strategy has made it a household brand"],
+        "prerequisites": ["Basic business concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Marketing and selling are the same activity", "The product is the only important P in the marketing mix", "Marketing only applies to consumer goods companies"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain product life cycle and strategies for each stage",
+          "Describe branding, labelling, and packaging decisions",
+          "Analyze pricing strategies and their objectives",
+          "Explain channels of distribution and promotion mix"
+        ],
+        "keyTerms": ["product life cycle", "introduction growth maturity decline", "branding", "brand equity", "packaging", "labelling", "penetration pricing", "skimming pricing", "advertising", "personal selling", "sales promotion", "public relations"],
+        "realLifeContexts": ["How Jio used penetration pricing to gain market share rapidly", "Why Apple uses price skimming for iPhone launches", "How Dettol brand equity commands premium pricing despite competition"],
+        "prerequisites": ["Marketing mix basics", "Consumer behavior"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["A product in decline stage must always be discontinued", "Higher price always signals better quality to consumers", "Advertising and promotion are synonymous terms"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply STP (Segmentation, Targeting, Positioning) strategy",
+          "Evaluate digital marketing and its integration with traditional marketing",
+          "Analyze consumer behavior models",
+          "Assess ethical and social responsibility dimensions of marketing"
+        ],
+        "keyTerms": ["market segmentation", "targeting", "positioning", "perceptual mapping", "digital marketing", "SEO", "content marketing", "influencer marketing", "consumer behavior", "neuromarketing", "green marketing", "cause-related marketing"],
+        "realLifeContexts": ["How Zomato uses digital marketing and STP for hyperlocal targeting", "Why Dove's 'Real Beauty' campaign is cause-related marketing", "How FMCG companies use neuromarketing for package design"],
+        "prerequisites": ["Marketing mix", "Product and pricing strategy", "Consumer psychology"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Digital marketing has replaced traditional marketing completely", "Market segmentation means targeting only one very small group", "Green marketing is only for environmental companies"]
+      }
+    },
+    "human_resource_management": {
+      "title": "Human Resource Management",
+      "category": "HRM",
+      "beginner": {
+        "learningOutcomes": [
+          "Define HRM and explain its importance",
+          "Describe the recruitment and selection process",
+          "Explain basic concepts of training and development"
+        ],
+        "keyTerms": ["human resource management", "recruitment", "selection", "training", "development", "induction", "job analysis", "job description", "job specification", "HR planning"],
+        "realLifeContexts": ["How Infosys recruits thousands of engineers each year", "Why TCS invests heavily in training new hires", "Why a good job description reduces hiring mismatches"],
+        "prerequisites": ["Basic management concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["HRM is only about hiring and firing employees", "Training and development are the same activity", "Small businesses don't need formal HRM practices"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain performance appraisal methods and their limitations",
+          "Describe compensation and benefits management",
+          "Analyze employee motivation theories (Maslow, Herzberg)",
+          "Explain industrial relations and grievance handling"
+        ],
+        "keyTerms": ["performance appraisal", "360-degree feedback", "KRA", "KPI", "compensation", "incentives", "Maslow's hierarchy", "Herzberg's two-factor theory", "industrial relations", "grievance", "collective bargaining", "trade union"],
+        "realLifeContexts": ["How Google uses OKRs (similar to KRA/KPI) for performance management", "Why Herzberg found salary alone doesn't motivate long-term", "How trade unions negotiate wage settlements in manufacturing"],
+        "prerequisites": ["Recruitment and training", "Motivation basics"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Higher salary always motivates employees the most", "Performance appraisal is only done annually", "360-degree feedback is free from biases"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate strategic HRM and its alignment with business strategy",
+          "Apply talent management frameworks for succession planning",
+          "Analyze diversity and inclusion as business imperatives",
+          "Assess HR analytics and people data-driven decision making"
+        ],
+        "keyTerms": ["strategic HRM", "talent management", "succession planning", "employer branding", "diversity and inclusion", "HR analytics", "people analytics", "employee experience", "gig economy", "future of work"],
+        "realLifeContexts": ["How Tata Group's talent management produces future leaders", "Why Infosys and Wipro invest in employer branding to attract top talent", "How HR analytics predicts attrition risk before it happens"],
+        "prerequisites": ["HRM fundamentals", "Performance management", "Organizational behavior"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Strategic HRM is the same as traditional personnel management", "Diversity initiatives are only about gender representation", "HR analytics can predict human behavior with certainty"]
+      }
+    },
+    "financial_management": {
+      "title": "Financial Management",
+      "category": "Finance",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the objectives of financial management",
+          "Distinguish between fixed capital and working capital",
+          "Describe sources of short-term and long-term finance"
+        ],
+        "keyTerms": ["financial management", "wealth maximization", "profit maximization", "fixed capital", "working capital", "equity", "debt", "retained earnings", "debentures", "commercial paper"],
+        "realLifeContexts": ["Why a factory needs both long-term finance for machinery and short-term for raw materials", "How Reliance raises capital through bonds and equity simultaneously", "Why startups often rely on retained earnings initially"],
+        "prerequisites": ["Accounting basics", "Business organizations"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Profit maximization is always the best financial objective", "Working capital is only needed in manufacturing", "Debt financing is always riskier than equity financing"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain capital structure decisions and optimal capital mix",
+          "Apply financial leverage and its effect on EPS",
+          "Describe dividend policy and its theories",
+          "Analyze working capital management: cash, debtors, inventory"]
+        ,
+        "keyTerms": ["capital structure", "financial leverage", "operating leverage", "combined leverage", "EPS", "EBIT", "dividend policy", "Walter's model", "Gordon's model", "Modigliani-Miller theorem", "cash management", "debtors management"],
+        "realLifeContexts": ["How Tata Motors' high debt increased financial risk during the 2008 recession", "Why IT companies like TCS pay high dividends (excess cash, low capex)", "How e-commerce firms manage negative cash conversion cycles"],
+        "prerequisites": ["Capital and finance sources", "Profit and EPS calculation"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Higher financial leverage always leads to higher profitability", "Companies should always pay maximum dividends to shareholders", "Working capital management only matters in retail businesses"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply capital budgeting techniques (NPV, IRR, Payback Period)",
+          "Evaluate Modigliani-Miller propositions on capital structure",
+          "Analyze cost of capital (WACC) and its use in investment decisions",
+          "Assess financial risk management using derivatives"
+        ],
+        "keyTerms": ["NPV", "IRR", "payback period", "profitability index", "WACC", "cost of equity (CAPM)", "cost of debt", "Modigliani-Miller", "beta", "financial derivatives", "hedging", "options", "futures"],
+        "realLifeContexts": ["How Indian airlines hedge fuel price risk using futures contracts", "Why WACC is used as the discount rate in DCF valuation", "How Infosys uses CAPM to estimate cost of equity for project evaluation"],
+        "prerequisites": ["Capital structure", "Leverage", "Time value of money"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["IRR and NPV always give the same investment decision", "WACC is always the right discount rate for all projects", "Hedging eliminates all financial risk completely"]
+      }
+    },
+    "business_environment": {
+      "title": "Business Environment",
+      "category": "Business Context",
+      "beginner": {
+        "learningOutcomes": [
+          "Define business environment and its components",
+          "Distinguish between micro and macro environment",
+          "Explain how environmental changes affect business decisions"
+        ],
+        "keyTerms": ["business environment", "micro environment", "macro environment", "PEST analysis", "political environment", "economic environment", "social environment", "technological environment", "competition", "suppliers"],
+        "realLifeContexts": ["How demonetization (political change) disrupted businesses overnight", "Why e-commerce grew rapidly due to technological environment changes", "How changing demographics (social environment) created demand for baby products"],
+        "prerequisites": ["Basic business concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Business environment only refers to economic conditions", "Micro environment factors are always controllable", "Environmental analysis is only done by large corporations"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply SWOT and PESTLE analysis to a business",
+          "Explain LPG (Liberalization, Privatization, Globalization) reforms",
+          "Analyze the impact of government policies on business",
+          "Describe the role of competition in the business environment"
+        ],
+        "keyTerms": ["SWOT analysis", "PESTLE analysis", "liberalization", "privatization", "globalization", "FDI", "FII", "GST", "SEZ", "EXIM policy", "competitive environment"],
+        "realLifeContexts": ["How 1991 LPG reforms transformed Indian industry", "How GST changed the tax environment for businesses", "Why FDI in retail created political controversy (PESTLE interaction)"],
+        "prerequisites": ["Business environment basics", "Government and business"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Liberalization means no government role in the economy", "SWOT analysis is sufficient without PESTLE analysis", "Globalization always benefits developing countries equally"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze industry dynamics using Porter's Five Forces",
+          "Evaluate strategic responses to environmental uncertainty",
+          "Assess sustainability and ESG as emerging business environment factors",
+          "Analyze digital disruption as a technological environment force"
+        ],
+        "keyTerms": ["Porter's Five Forces", "competitive rivalry", "threat of new entrants", "bargaining power", "substitutes", "scenario planning", "ESG", "sustainability reporting", "digital disruption", "platform business model"],
+        "realLifeContexts": ["How Jio's entry disrupted telecom using Porter's Five Forces perspective", "Why Uber's platform model disrupted the taxi industry globally", "How ESG factors now affect Nifty 50 company valuations"],
+        "prerequisites": ["PESTLE analysis", "Strategy basics", "Industry analysis"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Porter's Five Forces is static and doesn't account for dynamic markets", "ESG reporting is only relevant for listed companies", "Digital disruption only affects technology companies"]
+      }
+    },
+    "entrepreneurship": {
+      "title": "Entrepreneurship",
+      "category": "Entrepreneurship",
+      "beginner": {
+        "learningOutcomes": [
+          "Define entrepreneurship and distinguish it from employment",
+          "Identify qualities and skills of a successful entrepreneur",
+          "Describe the basic steps in starting a business"
+        ],
+        "keyTerms": ["entrepreneurship", "entrepreneur", "innovation", "risk-taking", "opportunity recognition", "startup", "venture", "self-employment", "business plan", "intrapreneurship"],
+        "realLifeContexts": ["How Flipkart was started by two IIT graduates in a garage", "Why Amul's Verghese Kurien is called a social entrepreneur", "How an intrepreneur at 3M invented Post-it Notes"],
+        "prerequisites": ["Basic business concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Entrepreneurs are only risk-takers not risk managers", "Innovation always means inventing something completely new", "All startups are entrepreneurial and all entrepreneurs start startups"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Develop a business plan with key components",
+          "Explain funding options for startups (bootstrapping, angel, VC, IPO)",
+          "Describe the entrepreneurial process from idea to venture",
+          "Analyze the role of government in supporting entrepreneurship (Startup India)"
+        ],
+        "keyTerms": ["business plan", "executive summary", "feasibility study", "bootstrapping", "angel investor", "venture capital", "seed funding", "Series A B C funding", "unicorn", "Startup India", "Mudra scheme"],
+        "realLifeContexts": ["How Zepto raised VC funding and became a unicorn in 2 years", "Why the Startup India scheme offers tax exemptions for recognized startups", "How Boat bootstrapped profitably before raising external funding"],
+        "prerequisites": ["Entrepreneurship basics", "Business organizations", "Finance basics"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["All successful startups raise VC funding", "A business plan is only needed for bank loans", "Unicorn status means the company is profitable"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate lean startup methodology and pivoting strategies",
+          "Analyze social entrepreneurship and impact measurement",
+          "Assess entrepreneurship ecosystem components",
+          "Apply design thinking to entrepreneurial problem solving"
+        ],
+        "keyTerms": ["lean startup", "MVP (minimum viable product)", "pivot", "product-market fit", "social entrepreneurship", "impact investing", "B-corp", "entrepreneurship ecosystem", "incubator", "accelerator", "design thinking", "customer discovery"],
+        "realLifeContexts": ["How Instagram pivoted from a location app (Burbn) to a photo app", "How Aravind Eye Care is a social entrepreneurship model for healthcare", "Why IIT and IIM incubators are key ecosystem components in India"],
+        "prerequisites": ["Business plan development", "Startup funding", "Innovation"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["MVP means a low-quality incomplete product", "Social entrepreneurs don't need to be financially sustainable", "Pivoting always means failing at the original idea"]
+      }
+    },
+    "consumer_protection": {
+      "title": "Consumer Protection",
+      "category": "Business and Law",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the need for consumer protection",
+          "List consumer rights under the Consumer Protection Act",
+          "Describe how a consumer can file a complaint"
+        ],
+        "keyTerms": ["consumer", "consumer protection", "Consumer Protection Act 2019", "consumer rights", "right to information", "right to safety", "consumer forum", "unfair trade practice", "defective goods", "deficient services"],
+        "realLifeContexts": ["What a consumer can do if they buy a defective refrigerator", "Why food companies must disclose ingredients (right to information)", "How online shopping complaints can be filed under the new Consumer Protection Act"],
+        "prerequisites": ["Basic business concepts", "Legal awareness"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Consumer protection laws only apply to expensive products", "Only courts can resolve consumer complaints", "Consumer rights are the same as consumer responsibilities"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Distinguish between district, state, and national consumer forums",
+          "Explain remedies available to consumers",
+          "Describe the role of non-governmental consumer organizations",
+          "Analyze the features of the Consumer Protection Act 2019"
+        ],
+        "keyTerms": ["District Consumer Disputes Redressal Commission", "State Consumer Disputes Redressal Commission", "National Consumer Disputes Redressal Commission", "e-commerce consumer protection", "product liability", "mediation", "class action", "consumer awareness", "COPRA 1986 vs. CPA 2019"],
+        "realLifeContexts": ["How Amazon India must comply with e-commerce provisions of CPA 2019", "Why product liability under CPA 2019 is stricter than earlier law", "How NGOs like Consumer Voice educate and represent consumers"],
+        "prerequisites": ["Consumer rights basics", "Legal framework"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["National Commission handles only government cases against companies", "Mediation under CPA 2019 replaces all court hearings", "E-commerce platforms have no liability under consumer protection law"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Evaluate the effectiveness of consumer protection enforcement in India",
+          "Analyze consumer protection in digital markets (data privacy, dark patterns)",
+          "Assess international consumer protection frameworks",
+          "Apply consumer law principles to complex multi-party transactions"
+        ],
+        "keyTerms": ["dark patterns", "digital consumer rights", "data protection", "DPDP Act 2023", "greenwashing", "subscription traps", "cross-border e-commerce", "product recall", "class action suit", "consumer redressal pendency"],
+        "realLifeContexts": ["How ASCI regulates misleading advertisements in India", "Why Amazon and Flipkart face scrutiny for dark patterns in checkout flows", "How greenwashing claims lead to consumer complaints against FMCG brands"],
+        "prerequisites": ["Consumer Protection Act 2019", "Digital commerce", "Business ethics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Data privacy and consumer protection are entirely separate domains", "Greenwashing only affects environmental organizations not regular consumers", "Consumer redressal in India is as efficient as developed country systems"]
+      }
+    }
+  }
+}

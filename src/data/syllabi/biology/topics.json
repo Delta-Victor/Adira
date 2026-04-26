@@ -1,0 +1,341 @@
+{
+  "subject": "Biology",
+  "topics": {
+    "genetics_and_heredity": {
+      "title": "Genetics and Heredity",
+      "category": "Genetics",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain Mendel's laws of inheritance",
+          "Distinguish between dominant and recessive traits",
+          "Construct and interpret simple Punnett squares"
+        ],
+        "keyTerms": ["gene", "allele", "dominant", "recessive", "genotype", "phenotype", "Punnett square", "homozygous", "heterozygous", "Mendel"],
+        "realLifeContexts": ["Why children don't always look like their parents", "Predicting blood type inheritance", "Why some traits skip generations"],
+        "prerequisites": ["Cell biology basics", "Chromosomes"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Dominant traits are always more common in a population", "Offspring are always a blend of parent traits", "One gene always controls one trait"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply dihybrid cross and the law of independent assortment",
+          "Explain codominance, incomplete dominance, and multiple alleles",
+          "Understand sex-linked inheritance and X-linked traits",
+          "Interpret pedigree charts"
+        ],
+        "keyTerms": ["dihybrid cross", "independent assortment", "codominance", "incomplete dominance", "multiple alleles", "sex-linked", "X-linked", "pedigree chart", "carrier", "autosomal"],
+        "realLifeContexts": ["ABO blood group system as multiple alleles and codominance", "Why colorblindness is more common in males (X-linked)", "Genetic counseling using pedigree analysis"],
+        "prerequisites": ["Mendel's laws", "Punnett squares", "Meiosis"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Sex-linked traits are only passed from father to son", "Codominance and incomplete dominance are the same", "A carrier always shows some symptoms of a recessive condition"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Explain chromosomal theory of inheritance and linkage",
+          "Analyze mutation types and their effects",
+          "Understand chromosomal abnormalities (Down syndrome, Turner syndrome)",
+          "Apply Hardy-Weinberg equilibrium to population genetics"
+        ],
+        "keyTerms": ["chromosomal linkage", "crossing over", "recombination frequency", "gene mapping", "mutation", "chromosomal abnormality", "trisomy", "monosomy", "Hardy-Weinberg equilibrium", "genetic drift"],
+        "realLifeContexts": ["Genetic testing for chromosomal abnormalities in prenatal diagnosis", "Population genetics in conservation biology", "How gene mapping led to discovery of disease genes"],
+        "prerequisites": ["Dihybrid crosses", "Meiosis", "Chromosomes"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Linked genes never separate", "All mutations are harmful", "Hardy-Weinberg equilibrium describes real evolving populations"]
+      }
+    },
+    "human_physiology": {
+      "title": "Human Physiology",
+      "category": "Human Biology",
+      "beginner": {
+        "learningOutcomes": [
+          "Describe the structure and function of major organ systems",
+          "Explain digestion, circulation, and respiration at a basic level",
+          "Identify major organs and their roles"
+        ],
+        "keyTerms": ["organ system", "digestion", "circulation", "respiration", "excretion", "nervous system", "hormone", "homeostasis", "heart", "lung", "kidney"],
+        "realLifeContexts": ["Why we breathe faster during exercise", "How food is broken down and nutrients absorbed", "Why kidneys are vital for survival"],
+        "prerequisites": ["Basic cell biology", "Tissues and organs"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Blood is blue inside the body", "The heart pumps blood only to the lungs", "Digestion starts in the stomach"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain mechanisms of gas exchange, nerve impulse transmission, and hormonal regulation",
+          "Describe the cardiac cycle and blood pressure regulation",
+          "Explain kidney filtration and urine formation",
+          "Understand immune response and vaccination"
+        ],
+        "keyTerms": ["alveoli", "diffusion gradient", "action potential", "synapse", "cardiac cycle", "glomerular filtration", "nephron", "antigen", "antibody", "immunity", "endocrine system"],
+        "realLifeContexts": ["How vaccines create immunity without causing disease", "Why altitude affects breathing (reduced O2 partial pressure)", "How diabetes results from insulin dysregulation"],
+        "prerequisites": ["Basic physiology", "Cell membranes", "Osmosis"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Arteries always carry oxygenated blood", "The brain controls all functions consciously", "More urine always means healthier kidneys"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze feedback mechanisms in homeostasis",
+          "Explain the molecular basis of nerve conduction and muscle contraction",
+          "Evaluate the interplay between nervous and endocrine systems",
+          "Assess physiological responses to disease and stress"
+        ],
+        "keyTerms": ["negative feedback", "positive feedback", "resting potential", "depolarization", "repolarization", "sliding filament model", "neurotransmitter", "HPA axis", "blood-brain barrier", "autoimmune response"],
+        "realLifeContexts": ["How anesthesia works at the molecular level", "Why autoimmune diseases occur (self vs. non-self recognition failure)", "Physiological basis of stress and cortisol"],
+        "prerequisites": ["Nervous system", "Endocrine system", "Homeostasis"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Nerve impulses travel as electrical current like in wires", "Hormones only affect target organs and have no side effects", "Negative feedback always means decreasing a response"]
+      }
+    },
+    "plant_physiology": {
+      "title": "Plant Physiology",
+      "category": "Botany",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain photosynthesis and respiration in plants",
+          "Describe how water and minerals are absorbed and transported",
+          "Identify the role of leaves, roots, and stems"
+        ],
+        "keyTerms": ["photosynthesis", "chlorophyll", "stomata", "transpiration", "xylem", "phloem", "osmosis", "root hair", "turgor pressure"],
+        "realLifeContexts": ["Why plants need sunlight and water to grow", "Why leaves wilt when plants are dehydrated", "How forests affect local rainfall (transpiration)"],
+        "prerequisites": ["Cell structure", "Diffusion and osmosis"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Plants only perform photosynthesis, not respiration", "Plants get food from the soil", "All water movement in plants is upward"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the light and dark reactions of photosynthesis",
+          "Describe mineral nutrition and deficiency symptoms",
+          "Understand plant growth regulators and their roles",
+          "Explain mechanisms of transpiration and water potential"
+        ],
+        "keyTerms": ["Calvin cycle", "light reactions", "ATP synthesis", "water potential", "mineral deficiency", "auxin", "gibberellin", "cytokinin", "abscisic acid", "ethylene", "apoplast", "symplast"],
+        "realLifeContexts": ["How ripening is controlled commercially using ethylene", "Why nitrogen deficiency causes yellowing leaves", "How herbicides work by blocking photosynthesis pathways"],
+        "prerequisites": ["Basic photosynthesis", "Cell organelles", "Osmosis"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["The Calvin cycle requires light", "Auxins always promote growth in all plant parts", "Transpiration is wasteful and serves no function"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Compare C3, C4, and CAM photosynthetic pathways",
+          "Analyze the molecular mechanisms of signal transduction in plants",
+          "Evaluate adaptations to stress (drought, salinity, cold)",
+          "Explain nitrogen fixation and its ecological significance"
+        ],
+        "keyTerms": ["C3 pathway", "C4 pathway", "CAM", "photorespiration", "Rubisco", "nitrogen fixation", "nitrogenase", "phytochrome", "cryptochrome", "signal transduction"],
+        "realLifeContexts": ["Why C4 crops (maize, sugarcane) are more efficient in hot climates", "How drought-resistant crops are engineered using ABA signaling", "Rhizobium symbiosis reducing need for synthetic fertilizers"],
+        "prerequisites": ["Calvin cycle", "Plant hormones", "Water potential"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["C4 plants don't perform the Calvin cycle", "Nitrogen fixation can be done by all microorganisms", "Photorespiration is only wasteful with no adaptive value"]
+      }
+    },
+    "evolution": {
+      "title": "Evolution",
+      "category": "Evolutionary Biology",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain Darwin's theory of natural selection",
+          "Define adaptation and give examples",
+          "Understand the concept of common ancestry"
+        ],
+        "keyTerms": ["natural selection", "adaptation", "variation", "survival of the fittest", "common ancestry", "fossil record", "species", "evolution"],
+        "realLifeContexts": ["Why bacteria become resistant to antibiotics", "How the peppered moth changed color during industrialization", "Why humans and chimps share similar DNA"],
+        "prerequisites": ["Genetics basics", "Biodiversity"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Evolution means humans came from monkeys", "Organisms evolve to survive — it is not intentional", "Evolution always produces more complex organisms"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Distinguish between different types of natural selection",
+          "Explain mechanisms of speciation (allopatric, sympatric)",
+          "Interpret evidence for evolution from fossils, anatomy, and molecular biology",
+          "Describe genetic drift, gene flow, and mutation as evolutionary forces"
+        ],
+        "keyTerms": ["directional selection", "stabilizing selection", "disruptive selection", "allopatric speciation", "sympatric speciation", "reproductive isolation", "homologous structures", "vestigial organs", "genetic drift", "bottleneck effect"],
+        "realLifeContexts": ["Galápagos finch beak variation as speciation evidence", "How island populations diverge rapidly", "Vestigial structures in humans (coccyx, wisdom teeth)"],
+        "prerequisites": ["Natural selection", "Genetics", "Population variation"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Genetic drift is the same as natural selection", "Speciation always takes millions of years", "Homologous structures prove the same function in different organisms"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply Hardy-Weinberg equilibrium to test for evolution",
+          "Analyze phylogenetic trees and molecular clocks",
+          "Evaluate competing theories of evolution (gradualism vs. punctuated equilibrium)",
+          "Discuss co-evolution, sexual selection, and kin selection"
+        ],
+        "keyTerms": ["Hardy-Weinberg equilibrium", "phylogenetic tree", "molecular clock", "clade", "synapomorphy", "punctuated equilibrium", "co-evolution", "sexual selection", "kin selection", "inclusive fitness"],
+        "realLifeContexts": ["How molecular clocks date divergence of HIV strains for epidemiology", "Predator-prey co-evolution arms races", "Sexual selection in bird-of-paradise plumage"],
+        "prerequisites": ["Population genetics", "Speciation", "Natural selection mechanisms"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Molecular clocks are perfectly accurate", "Phylogenetic trees show who evolved from whom directly", "Sexual selection always opposes natural selection"]
+      }
+    },
+    "biotechnology": {
+      "title": "Biotechnology",
+      "category": "Applied Biology",
+      "beginner": {
+        "learningOutcomes": [
+          "Define biotechnology and give everyday examples",
+          "Explain what DNA is and why it is used in biotechnology",
+          "Describe basic applications: fermentation, vaccines, and GM crops"
+        ],
+        "keyTerms": ["biotechnology", "DNA", "genetic modification", "GMO", "fermentation", "vaccine", "cloning", "restriction enzyme", "plasmid"],
+        "realLifeContexts": ["How insulin is produced using bacteria (GM bacteria)", "Why GM crops can resist pests", "How fermentation makes yogurt, cheese, and bread"],
+        "prerequisites": ["Cell biology", "DNA basics"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["GMO foods contain active foreign DNA that changes the human genome", "Cloning means making an exact personality copy", "All fermentation produces alcohol"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain recombinant DNA technology step-by-step",
+          "Describe PCR and gel electrophoresis and their applications",
+          "Understand gene expression systems in biotechnology",
+          "Evaluate ethical issues around GMOs and cloning"
+        ],
+        "keyTerms": ["recombinant DNA", "restriction enzyme", "ligase", "vector", "PCR", "gel electrophoresis", "gene expression", "transgenic organism", "CRISPR", "bioreactor"],
+        "realLifeContexts": ["Forensic DNA fingerprinting in crime investigation", "CRISPR editing to cure sickle cell disease", "Production of hepatitis B vaccine in yeast"],
+        "prerequisites": ["DNA structure and replication", "Transcription and translation"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["PCR amplifies only the gene of interest without errors", "CRISPR can be used to edit any gene without off-target effects", "Recombinant proteins are always identical to natural proteins"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze gene therapy strategies and delivery challenges",
+          "Evaluate CRISPR-Cas9 mechanism, applications, and ethical concerns",
+          "Explain stem cell technology and regenerative medicine",
+          "Assess bioinformatics tools in genomics and proteomics"
+        ],
+        "keyTerms": ["gene therapy", "viral vector", "CRISPR-Cas9", "guide RNA", "homologous recombination", "stem cells", "iPSC", "proteomics", "bioinformatics", "metagenomics", "synthetic biology"],
+        "realLifeContexts": ["CRISPR trials to cure beta-thalassemia in humans", "Stem cell therapy for Parkinson's and spinal cord injury", "Bioinformatics in COVID-19 vaccine development"],
+        "prerequisites": ["Recombinant DNA", "Gene expression", "Cell signaling"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Gene therapy permanently cures all genetic diseases", "iPSCs are ethically uncontroversial because they don't use embryos", "CRISPR edits are always permanent and heritable"]
+      }
+    },
+    "ecology": {
+      "title": "Ecology",
+      "category": "Ecology and Environment",
+      "beginner": {
+        "learningOutcomes": [
+          "Define ecosystem, biotic, and abiotic components",
+          "Explain food chains and food webs",
+          "Describe the role of producers, consumers, and decomposers"
+        ],
+        "keyTerms": ["ecosystem", "biotic", "abiotic", "food chain", "food web", "producer", "consumer", "decomposer", "habitat", "niche", "population"],
+        "realLifeContexts": ["Why removing wolves from Yellowstone changed the river course (trophic cascade)", "How deforestation affects water cycles", "Why bees are essential for food production"],
+        "prerequisites": ["Basic biology", "Photosynthesis"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Food chains are straight lines in nature", "Decomposers are not important to ecosystems", "Humans are at the top of all food chains"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain energy flow through trophic levels and ecological efficiency",
+          "Describe biogeochemical cycles (carbon, nitrogen, water)",
+          "Understand population dynamics and carrying capacity",
+          "Explain ecological succession and climax community"
+        ],
+        "keyTerms": ["trophic level", "ecological efficiency", "10% rule", "biogeochemical cycle", "carbon cycle", "nitrogen cycle", "carrying capacity", "logistic growth", "ecological succession", "pioneer species", "climax community"],
+        "realLifeContexts": ["Why eating lower on the food chain is more energy-efficient", "How deforestation contributes to climate change (carbon cycle)", "Rewilding projects restoring ecological succession"],
+        "prerequisites": ["Food webs", "Energy in ecosystems", "Nutrient cycles"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["The 10% rule means exactly 10% always transfers", "Carrying capacity is a fixed number for any species", "Climax communities are the end of all succession everywhere"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze ecosystem services and their economic valuation",
+          "Evaluate biodiversity indices and conservation strategies",
+          "Apply metapopulation theory to habitat fragmentation",
+          "Assess the impact of climate change on ecosystem structure"
+        ],
+        "keyTerms": ["ecosystem services", "biodiversity index", "Simpson's index", "Shannon index", "keystone species", "metapopulation", "habitat fragmentation", "island biogeography", "trophic cascade", "resilience"],
+        "realLifeContexts": ["REDD+ carbon credit programs for forest conservation", "How habitat corridors help tiger conservation in India", "Ocean acidification effects on coral reef biodiversity"],
+        "prerequisites": ["Energy flow", "Population dynamics", "Biodiversity"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Higher biodiversity always means more stable ecosystems", "Keystone species are always predators", "Island biogeography only applies to actual islands"]
+      }
+    },
+    "cell_biology": {
+      "title": "Cell Biology",
+      "category": "Cell Biology",
+      "beginner": {
+        "learningOutcomes": [
+          "Compare prokaryotic and eukaryotic cells",
+          "Identify cell organelles and their functions",
+          "Explain cell membrane structure and transport"
+        ],
+        "keyTerms": ["prokaryote", "eukaryote", "cell membrane", "nucleus", "mitochondria", "chloroplast", "ribosome", "endoplasmic reticulum", "Golgi apparatus", "vacuole", "diffusion", "osmosis"],
+        "realLifeContexts": ["Why bacteria are easier to kill with antibiotics than viruses", "How cancer cells differ from normal cells", "Why plant cells have cell walls and animal cells don't"],
+        "prerequisites": ["Basic biology"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["All cells have a nucleus", "The cell membrane is a rigid barrier", "Mitochondria only produce energy with no other functions"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the cell cycle, mitosis, and meiosis in detail",
+          "Describe protein synthesis (transcription and translation)",
+          "Understand active transport, endocytosis, and exocytosis",
+          "Explain cell signaling and signal transduction pathways"
+        ],
+        "keyTerms": ["cell cycle", "mitosis", "meiosis", "G1 S G2 M phases", "transcription", "translation", "mRNA", "tRNA", "ribosome", "active transport", "endocytosis", "signal transduction", "receptor"],
+        "realLifeContexts": ["How cancer develops from uncontrolled mitosis", "How HIV infects cells using receptor-mediated endocytosis", "How nerve cells use signal transduction to respond to stimuli"],
+        "prerequisites": ["Cell organelles", "DNA structure"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Meiosis only occurs in sex organs", "mRNA is the same as DNA", "Signal transduction always results in gene expression changes"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze mechanisms of cell cycle regulation and checkpoints",
+          "Explain apoptosis and its role in development and disease",
+          "Evaluate the role of post-translational modification",
+          "Assess stem cell differentiation and epigenetics"
+        ],
+        "keyTerms": ["cell cycle checkpoint", "p53", "cyclin", "CDK", "apoptosis", "caspase", "post-translational modification", "ubiquitination", "epigenetics", "methylation", "histone", "chromatin remodeling"],
+        "realLifeContexts": ["How p53 mutations lead to cancer development", "How epigenetic changes in development are transmitted across generations", "Targeted cancer therapy using CDK inhibitors"],
+        "prerequisites": ["Cell cycle", "Protein synthesis", "Signal transduction"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["p53 directly kills cancer cells", "Apoptosis and necrosis are both forms of cell death with the same outcome", "Epigenetic changes never affect the DNA sequence but always change gene expression"]
+      }
+    },
+    "reproduction": {
+      "title": "Reproduction",
+      "category": "Reproductive Biology",
+      "beginner": {
+        "learningOutcomes": [
+          "Distinguish between sexual and asexual reproduction",
+          "Describe the human reproductive system",
+          "Explain fertilization and early development"
+        ],
+        "keyTerms": ["sexual reproduction", "asexual reproduction", "gamete", "fertilization", "zygote", "embryo", "reproductive system", "menstrual cycle", "sperm", "ovum"],
+        "realLifeContexts": ["Why sexual reproduction produces more variation than asexual", "How IVF helps couples with infertility", "Why identical twins share the same DNA"],
+        "prerequisites": ["Cell biology", "Meiosis basics"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Identical twins are always the same in every way", "Asexual reproduction is only found in plants", "Fertilization always occurs in the uterus"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the hormonal control of the menstrual cycle",
+          "Describe gametogenesis (spermatogenesis and oogenesis)",
+          "Understand implantation, placental function, and parturition",
+          "Compare reproductive strategies across different organisms"
+        ],
+        "keyTerms": ["FSH", "LH", "estrogen", "progesterone", "spermatogenesis", "oogenesis", "implantation", "placenta", "parturition", "ovulation", "capacitation"],
+        "realLifeContexts": ["How contraceptives work by disrupting hormonal cycles", "How the placenta provides fetal nutrition and immunity", "Differences in reproductive strategies: r vs. K selection"],
+        "prerequisites": ["Reproductive system anatomy", "Meiosis", "Hormones"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Ovulation always occurs on day 14 of the cycle", "The placenta is part of the fetus", "Hormonal contraceptives cause infertility long-term"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze the molecular signals controlling implantation and pregnancy",
+          "Evaluate assisted reproductive technologies and their limitations",
+          "Explain parthenogenesis and polyploidy in plants",
+          "Assess the evolutionary advantages of sexual vs. asexual reproduction"
+        ],
+        "keyTerms": ["HCG", "trophoblast", "gastrulation", "neurulation", "parthenogenesis", "polyploidy", "epigenetic reprogramming", "ART", "ICSI", "surrogacy", "genomic imprinting"],
+        "realLifeContexts": ["How pregnancy tests detect HCG", "Polyploidy in crop plants (wheat having 6 genome copies)", "Evolutionary benefits of sex in rapidly changing environments"],
+        "prerequisites": ["Gametogenesis", "Hormonal control", "Genetics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["HCG is produced by the embryo immediately after fertilization", "Polyploidy always results in larger, healthier organisms", "Parthenogenesis only occurs in insects"]
+      }
+    }
+  }
+}

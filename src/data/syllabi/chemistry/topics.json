@@ -1,0 +1,341 @@
+{
+  "subject": "Chemistry",
+  "topics": {
+    "atomic_structure": {
+      "title": "Atomic Structure",
+      "category": "Physical Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Describe the structure of an atom including protons, neutrons, and electrons",
+          "Explain atomic number, mass number, and isotopes",
+          "Understand electron shells and basic electron configuration"
+        ],
+        "keyTerms": ["atom", "proton", "neutron", "electron", "atomic number", "mass number", "isotope", "electron shell", "nucleus"],
+        "realLifeContexts": ["Why different elements have different properties", "How radioactive isotopes are used in medicine", "Why noble gases are unreactive"],
+        "prerequisites": ["Basic matter and elements"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Atoms are mostly empty space — not a solid sphere", "Isotopes of the same element have the same chemical properties", "Electrons orbit in fixed circular paths"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain Bohr's model and its limitations",
+          "Write electron configurations using subshells (s, p, d, f)",
+          "Define quantum numbers and their significance",
+          "Understand the aufbau principle, Hund's rule, and Pauli exclusion principle"
+        ],
+        "keyTerms": ["Bohr model", "quantum number", "orbital", "subshell", "aufbau principle", "Hund's rule", "Pauli exclusion principle", "electron configuration", "ground state", "excited state"],
+        "realLifeContexts": ["How atomic emission spectra work in neon signs and fireworks", "Why laser technology relies on electron excitation", "How spectroscopy identifies elements in distant stars"],
+        "prerequisites": ["Basic atomic structure", "Energy levels"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Orbitals are fixed paths, not probability regions", "Higher atomic number always means higher energy electrons fill first", "d-block elements always have predictable configurations"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply quantum mechanical model to describe electron behavior",
+          "Interpret atomic spectra using energy level transitions",
+          "Solve problems on ionization energy trends using atomic structure",
+          "Explain anomalous electron configurations of Cr and Cu"
+        ],
+        "keyTerms": ["wave function", "Schrödinger equation", "probability density", "quantum mechanical model", "ionization energy", "electron affinity", "shielding effect", "effective nuclear charge"],
+        "realLifeContexts": ["MRI machines using nuclear spin (NMR)", "Photoelectron spectroscopy in materials science", "Semiconductor design based on electron configuration"],
+        "prerequisites": ["Bohr model", "Quantum numbers", "Periodic trends"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Ionization energy always increases across a period without exceptions", "All electron transitions emit visible light", "Effective nuclear charge equals atomic number"]
+      }
+    },
+    "chemical_bonding": {
+      "title": "Chemical Bonding",
+      "category": "Physical Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Distinguish between ionic and covalent bonds",
+          "Explain why atoms form bonds using the octet rule",
+          "Draw simple Lewis dot structures"
+        ],
+        "keyTerms": ["ionic bond", "covalent bond", "octet rule", "Lewis structure", "electronegativity", "valence electron", "chemical formula"],
+        "realLifeContexts": ["Why table salt (NaCl) dissolves in water", "How water molecules stick together", "Why metals conduct electricity"],
+        "prerequisites": ["Atomic structure", "Valence electrons"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Covalent bonds are always weaker than ionic bonds", "All atoms obey the octet rule", "Ionic compounds are always soluble in water"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply VSEPR theory to predict molecular geometry",
+          "Differentiate sigma and pi bonds",
+          "Explain hybridization (sp, sp2, sp3)",
+          "Understand metallic bonding and its properties"
+        ],
+        "keyTerms": ["VSEPR theory", "molecular geometry", "sigma bond", "pi bond", "hybridization", "sp3", "sp2", "sp", "polar bond", "dipole moment", "metallic bond"],
+        "realLifeContexts": ["Why CO2 is linear but H2O is bent — greenhouse vs. solvent properties", "How graphite conducts electricity (pi bonds)", "Why diamond is hard (sp3 network)"],
+        "prerequisites": ["Lewis structures", "Electronegativity", "Atomic orbitals"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["All molecules with polar bonds are polar", "Hybridization changes the energy of the atom", "More bonds always means stronger molecule"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply Molecular Orbital theory to explain bonding in diatomic molecules",
+          "Calculate bond order from MO diagrams",
+          "Explain resonance structures and formal charge",
+          "Relate bond properties to reactivity"
+        ],
+        "keyTerms": ["molecular orbital theory", "bonding orbital", "antibonding orbital", "bond order", "resonance", "formal charge", "delocalized electrons", "HOMO", "LUMO"],
+        "realLifeContexts": ["Why O2 is paramagnetic (MO theory explains it, Lewis doesn't)", "Benzene's exceptional stability from delocalization", "Drug-receptor binding based on molecular orbital interactions"],
+        "prerequisites": ["Hybridization", "Lewis structures", "Quantum model"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Resonance structures exist at different times", "Bond order must be a whole number", "MO theory and VB theory always give the same predictions"]
+      }
+    },
+    "organic_chemistry_basics": {
+      "title": "Organic Chemistry Basics",
+      "category": "Organic Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Identify organic compounds and carbon's unique bonding ability",
+          "Name simple alkanes, alkenes, and alkynes",
+          "Recognize functional groups: hydroxyl, carboxyl, amino, carbonyl"
+        ],
+        "keyTerms": ["organic compound", "carbon", "hydrocarbon", "alkane", "alkene", "alkyne", "functional group", "homologous series", "isomer"],
+        "realLifeContexts": ["Why carbon forms the basis of life", "Petroleum products in daily life (petrol, plastics)", "How soaps and detergents clean (organic chemistry)"],
+        "prerequisites": ["Chemical bonding", "Covalent bonds"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["All organic compounds contain only carbon and hydrogen", "Isomers have the same properties", "Organic chemistry only applies to living things"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply IUPAC nomenclature to branched and functional group compounds",
+          "Predict properties from functional groups",
+          "Understand addition, substitution, and elimination reactions",
+          "Explain structural and stereoisomerism"
+        ],
+        "keyTerms": ["IUPAC nomenclature", "substituent", "stereoisomer", "enantiomer", "addition reaction", "substitution reaction", "elimination reaction", "electrophile", "nucleophile"],
+        "realLifeContexts": ["Chiral drugs — why thalidomide caused birth defects (stereoisomers)", "How polymers are made (addition polymerization)", "Fermentation and ethanol production"],
+        "prerequisites": ["Functional groups", "Basic organic naming", "Types of reactions"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Structural isomers always have similar properties", "Chiral molecules always rotate plane-polarized light in the same direction", "Elimination always requires a strong base"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Propose reaction mechanisms (SN1, SN2, E1, E2)",
+          "Predict products of named reactions (Grignard, Aldol, etc.)",
+          "Analyze reaction pathways using carbocation stability",
+          "Apply spectroscopic data (IR, NMR) to identify organic compounds"
+        ],
+        "keyTerms": ["reaction mechanism", "carbocation", "SN1", "SN2", "E1", "E2", "Markovnikov's rule", "Grignard reagent", "Aldol condensation", "IR spectroscopy", "NMR"],
+        "realLifeContexts": ["Pharmaceutical synthesis requiring specific stereochemistry", "How retrosynthesis is used in drug design", "Polymer chemistry for biodegradable plastics"],
+        "prerequisites": ["Functional groups", "Isomerism", "Reaction types"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["SN2 always favors primary substrates without exceptions", "Carbocation rearrangements only occur in specific reactions", "NMR chemical shift values are universal across solvents"]
+      }
+    },
+    "chemical_equilibrium": {
+      "title": "Chemical Equilibrium",
+      "category": "Physical Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the concept of reversible reactions and dynamic equilibrium",
+          "State Le Chatelier's Principle",
+          "Identify factors that shift equilibrium position"
+        ],
+        "keyTerms": ["reversible reaction", "dynamic equilibrium", "Le Chatelier's Principle", "equilibrium constant", "forward reaction", "reverse reaction", "concentration", "pressure"],
+        "realLifeContexts": ["How the Haber process makes fertilizers", "Why increasing pressure on gases affects yield", "Carbonate equilibrium in blood pH regulation"],
+        "prerequisites": ["Reaction rates", "Chemical reactions"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["At equilibrium, concentrations of reactants and products are equal", "A catalyst shifts equilibrium position", "Equilibrium means the reaction has stopped"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Write expressions for Kc and Kp",
+          "Calculate equilibrium concentrations from Kc",
+          "Apply Le Chatelier's Principle to industrial processes",
+          "Distinguish between Kc and Kp and convert between them"
+        ],
+        "keyTerms": ["Kc", "Kp", "equilibrium expression", "reaction quotient (Q)", "ICE table", "degree of dissociation", "homogeneous equilibrium", "heterogeneous equilibrium"],
+        "realLifeContexts": ["Optimizing the Contact process for sulfuric acid", "How blood buffers maintain pH using carbonate equilibrium", "Industrial ammonia production conditions"],
+        "prerequisites": ["Reversible reactions", "Molar concentrations", "Gas laws"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["A large K always means a fast reaction", "Temperature and catalyst both shift K", "Q > K means forward reaction is favored"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Solve multi-step equilibrium problems with small x approximation",
+          "Apply equilibrium to acid-base, solubility, and redox systems",
+          "Relate Gibbs free energy to equilibrium constant",
+          "Analyze coupled equilibria in biological and industrial systems"
+        ],
+        "keyTerms": ["Gibbs free energy", "ΔG°", "van't Hoff equation", "activity", "solubility product (Ksp)", "common ion effect", "buffer capacity", "coupled equilibria"],
+        "realLifeContexts": ["Why proteins denature at specific temperatures (thermodynamic equilibrium)", "Solubility equilibria in kidney stone formation", "Free energy and ATP hydrolysis in metabolism"],
+        "prerequisites": ["Kc, Kp calculations", "Thermodynamics basics", "Acid-base chemistry"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["ΔG° = 0 means no reaction occurs", "Ksp is always small for sparingly soluble salts", "Buffer pH is always between 6 and 8"]
+      }
+    },
+    "electrochemistry": {
+      "title": "Electrochemistry",
+      "category": "Physical Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain oxidation and reduction in terms of electron transfer",
+          "Identify oxidizing and reducing agents",
+          "Describe the basic structure of an electrochemical cell"
+        ],
+        "keyTerms": ["oxidation", "reduction", "redox reaction", "oxidizing agent", "reducing agent", "electrode", "electrolyte", "anode", "cathode", "half-reaction"],
+        "realLifeContexts": ["How batteries power devices", "Rusting of iron as a redox process", "Electroplating jewelry and coins"],
+        "prerequisites": ["Electron transfer", "Ionic compounds"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Oxidation always involves oxygen", "The anode is always positive", "Reduction gains atoms, not electrons"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Calculate cell potential using standard electrode potentials",
+          "Apply Faraday's laws to electrolysis calculations",
+          "Distinguish between galvanic and electrolytic cells",
+          "Balance redox equations using half-reaction method"
+        ],
+        "keyTerms": ["standard electrode potential", "EMF", "Faraday's laws", "galvanic cell", "electrolytic cell", "salt bridge", "Daniel cell", "electrolysis", "mole of electrons"],
+        "realLifeContexts": ["How rechargeable lithium-ion batteries work", "Electroplating in manufacturing", "Chlor-alkali process for PVC production"],
+        "prerequisites": ["Redox basics", "Mole concept", "Ionic equations"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Electrolysis and electrolytic cells require AC current", "Salt bridge allows electrons to flow", "More positive E° always means faster reaction"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply the Nernst equation to non-standard conditions",
+          "Relate cell potential to Gibbs free energy and equilibrium constant",
+          "Analyze corrosion mechanisms and prevention strategies",
+          "Evaluate fuel cell and battery technologies"
+        ],
+        "keyTerms": ["Nernst equation", "concentration cell", "corrosion", "cathodic protection", "fuel cell", "specific conductance", "molar conductance", "Kohlrausch's law"],
+        "realLifeContexts": ["Hydrogen fuel cells in electric vehicles", "Sacrificial anode in ship hull protection", "pH meters using concentration cells"],
+        "prerequisites": ["Standard electrode potentials", "Faraday's laws", "Gibbs free energy"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Nernst equation only applies at 25°C", "Fuel cells are just better batteries", "Corrosion only occurs in metals near seawater"]
+      }
+    },
+    "chemical_kinetics": {
+      "title": "Chemical Kinetics",
+      "category": "Physical Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Define reaction rate and explain factors affecting it",
+          "Describe the role of a catalyst",
+          "Explain collision theory"
+        ],
+        "keyTerms": ["reaction rate", "catalyst", "activation energy", "collision theory", "concentration", "temperature", "surface area", "inhibitor"],
+        "realLifeContexts": ["Why food spoils faster at room temperature", "How enzymes speed up digestion", "Why grinding coal dust can cause explosions"],
+        "prerequisites": ["Chemical reactions", "Energy in reactions"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Catalysts are consumed in the reaction", "Higher temperature always increases rate without exception", "All collisions between reactants lead to products"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Write and use rate laws and rate expressions",
+          "Determine order of reaction from experimental data",
+          "Calculate rate constants and half-lives",
+          "Explain the Arrhenius equation"
+        ],
+        "keyTerms": ["rate law", "rate constant (k)", "reaction order", "half-life", "first order", "second order", "Arrhenius equation", "activation energy", "frequency factor", "integrated rate law"],
+        "realLifeContexts": ["Radioactive decay as first-order kinetics", "Drug metabolism and dosage calculations", "Industrial reactor design using rate laws"],
+        "prerequisites": ["Rates basics", "Logarithms", "Collision theory"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Reaction order equals stoichiometric coefficient", "Half-life is the same for all reaction orders", "A reaction with higher activation energy is always slower"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Derive integrated rate laws and apply to complex data",
+          "Propose reaction mechanisms consistent with rate laws",
+          "Explain steady-state approximation and rate-determining step",
+          "Analyze enzyme kinetics using Michaelis-Menten equation"
+        ],
+        "keyTerms": ["reaction mechanism", "elementary step", "rate-determining step", "steady-state approximation", "pre-equilibrium", "Michaelis-Menten", "turnover number", "chain reaction"],
+        "realLifeContexts": ["How enzyme inhibitors work as drugs (competitive vs. non-competitive)", "Ozone depletion as a chain reaction mechanism", "Catalytic converters and surface kinetics"],
+        "prerequisites": ["Rate laws", "Arrhenius equation", "Equilibrium"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["The rate-determining step is always the first step", "Steady-state means concentration doesn't change at all", "Pre-equilibrium requires the equilibrium step to be fast only"]
+      }
+    },
+    "thermochemistry": {
+      "title": "Thermochemistry",
+      "category": "Physical Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Distinguish between exothermic and endothermic reactions",
+          "Define enthalpy change (ΔH) and its sign convention",
+          "Explain specific heat capacity and heat calculations"
+        ],
+        "keyTerms": ["enthalpy", "exothermic", "endothermic", "ΔH", "specific heat capacity", "heat energy", "system", "surroundings", "calorimeter"],
+        "realLifeContexts": ["Why hand warmers release heat (exothermic)", "How instant ice packs work (endothermic)", "Calorie content of food"],
+        "prerequisites": ["Energy concepts", "States of matter"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Exothermic reactions are always combustion", "ΔH positive means product is stable", "Temperature and heat are the same thing"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply Hess's Law to calculate enthalpy changes",
+          "Use standard enthalpy of formation data",
+          "Calculate bond enthalpy from bond energy tables",
+          "Distinguish between ΔH and ΔU"
+        ],
+        "keyTerms": ["Hess's Law", "standard enthalpy of formation", "bond enthalpy", "Born-Haber cycle", "ΔH combustion", "ΔH neutralization", "ΔU", "work done by gas"],
+        "realLifeContexts": ["Rocket fuel energy calculations", "How Born-Haber cycle explains ionic compound stability", "Calorimetry in food science"],
+        "prerequisites": ["ΔH basics", "Mole concept", "Chemical equations"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Hess's Law only works for specific types of reactions", "Bond enthalpy values are always exact", "ΔH = ΔU always"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply the laws of thermodynamics to chemical systems",
+          "Calculate ΔS, ΔG, and predict spontaneity",
+          "Use the Gibbs-Helmholtz equation",
+          "Explain entropy changes in chemical and physical processes"
+        ],
+        "keyTerms": ["entropy (ΔS)", "Gibbs free energy (ΔG)", "spontaneity", "second law of thermodynamics", "third law", "Gibbs-Helmholtz equation", "standard free energy", "thermodynamic cycle"],
+        "realLifeContexts": ["Why ice melts spontaneously above 0°C (entropy drives it)", "ATP synthesis as a thermodynamically unfavorable coupled reaction", "Refrigerators and Carnot efficiency"],
+        "prerequisites": ["Hess's Law", "Enthalpy", "Equilibrium constants"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["All spontaneous reactions are fast", "ΔG < 0 means the reaction will definitely occur", "Entropy always increases in chemical reactions"]
+      }
+    },
+    "coordination_compounds": {
+      "title": "Coordination Compounds",
+      "category": "Inorganic Chemistry",
+      "beginner": {
+        "learningOutcomes": [
+          "Define coordination compounds and ligands",
+          "Identify central metal atom and ligands in coordination compounds",
+          "Write formulas and names of simple coordination compounds"
+        ],
+        "keyTerms": ["coordination compound", "ligand", "central metal atom", "coordination number", "complex ion", "monodentate", "bidentate", "coordination sphere"],
+        "realLifeContexts": ["Hemoglobin as a coordination compound with iron", "Why some gemstones are colored (metal complexes)", "Cisplatin as a cancer drug"],
+        "prerequisites": ["Chemical bonding", "Transition metals"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Coordination number equals valency of the metal", "All ligands are negatively charged", "Coordination compounds are the same as ionic compounds"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply IUPAC nomenclature to coordination compounds",
+          "Explain isomerism in coordination compounds",
+          "Describe crystal field theory and d-orbital splitting",
+          "Relate color and magnetic properties to crystal field splitting"
+        ],
+        "keyTerms": ["IUPAC nomenclature", "geometric isomerism", "optical isomerism", "crystal field theory", "d-orbital splitting", "strong field ligand", "weak field ligand", "spectrochemical series", "high spin", "low spin"],
+        "realLifeContexts": ["Why copper sulfate solution is blue (d-d transition)", "Cisplatin vs. transplatin activity difference (isomerism)", "MRI contrast agents using gadolinium complexes"],
+        "prerequisites": ["Basic coordination chemistry", "Electron configuration", "Magnetism"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Geometric isomers always have cis and trans forms", "Crystal field theory explains all properties of complexes", "Stronger field ligands always cause greater splitting in all geometries"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply valence bond theory and MO theory to coordination compounds",
+          "Predict geometry from electron configuration and CFSE",
+          "Analyze spectroscopic and magnetic data of coordination compounds",
+          "Evaluate stability constants and chelate effect"
+        ],
+        "keyTerms": ["valence bond theory", "inner orbital complex", "outer orbital complex", "CFSE", "Jahn-Teller distortion", "stability constant", "chelate effect", "trans influence", "pi backbonding"],
+        "realLifeContexts": ["Design of chelation therapy drugs for heavy metal poisoning", "Homogeneous catalysis using Wilkinson's catalyst", "Photosensitizers in photodynamic cancer therapy"],
+        "prerequisites": ["Crystal field theory", "MO theory", "Isomerism"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Chelate effect is purely entropic with no enthalpic component", "Inner orbital complexes are always low spin", "Trans influence and trans effect are the same phenomenon"]
+      }
+    }
+  }
+}

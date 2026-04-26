@@ -1,0 +1,341 @@
+{
+  "subject": "Economics",
+  "topics": {
+    "demand_and_supply": {
+      "title": "Demand and Supply",
+      "category": "Microeconomics",
+      "beginner": {
+        "learningOutcomes": [
+          "Define demand and supply and explain the law of demand and supply",
+          "Identify factors that shift demand and supply curves",
+          "Explain how prices are determined in a market"
+        ],
+        "keyTerms": ["demand", "supply", "law of demand", "law of supply", "demand curve", "supply curve", "equilibrium price", "quantity demanded", "quantity supplied", "ceteris paribus"],
+        "realLifeContexts": ["Why petrol prices rise when crude oil supply falls", "Why umbrellas get expensive during monsoon", "How farmer income is affected by a bumper crop"],
+        "prerequisites": ["Basic economics concepts"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["A rise in price causes demand to fall — demand curve shift vs. movement along curve", "Supply and quantity supplied are the same", "Equilibrium means both buyers and sellers are completely happy"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Calculate and interpret price elasticity of demand and supply",
+          "Distinguish between elastic, inelastic, and unit elastic demand",
+          "Explain cross elasticity and income elasticity of demand",
+          "Analyze consumer and producer surplus"
+        ],
+        "keyTerms": ["price elasticity of demand (PED)", "price elasticity of supply (PES)", "elastic", "inelastic", "unit elastic", "income elasticity", "cross elasticity", "consumer surplus", "producer surplus", "total revenue test"],
+        "realLifeContexts": ["Why taxing cigarettes raises revenue but taxing luxury goods does not (inelastic vs. elastic)", "How airlines price seats differently using elasticity", "Why farmers benefit from inelastic food demand even with supply shocks"],
+        "prerequisites": ["Demand and supply curves", "Percentage change calculations"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Steeper demand curve always means more inelastic", "Necessities are always perfectly inelastic", "PED is always negative so it is meaningless"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Derive demand from indifference curve analysis",
+          "Analyze market failure due to externalities and public goods",
+          "Evaluate government interventions: price floors, ceilings, taxes, and subsidies",
+          "Apply demand-supply analysis to factor markets"
+        ],
+        "keyTerms": ["indifference curve", "budget constraint", "consumer equilibrium", "externality", "public good", "market failure", "price floor", "price ceiling", "deadweight loss", "Pigouvian tax", "factor market"],
+        "realLifeContexts": ["Minimum wage as a price floor and its employment effects", "Carbon tax as a Pigouvian tax for pollution externality", "Rent control in cities creating housing shortages"],
+        "prerequisites": ["Elasticity", "Consumer theory", "Market equilibrium"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Subsidies always help consumers without any cost to efficiency", "A price ceiling below equilibrium always helps all buyers", "Externalities are only negative — positive externalities are less important"]
+      }
+    },
+    "market_structures": {
+      "title": "Market Structures",
+      "category": "Microeconomics",
+      "beginner": {
+        "learningOutcomes": [
+          "Identify the four main market structures",
+          "Explain features of perfect competition and monopoly",
+          "Describe how firms make output and pricing decisions"
+        ],
+        "keyTerms": ["perfect competition", "monopoly", "oligopoly", "monopolistic competition", "price taker", "price maker", "market power", "barriers to entry", "profit"],
+        "realLifeContexts": ["Why electricity is a natural monopoly in most countries", "How a local market with many similar shops resembles perfect competition", "Why tech giants like Google and Meta behave like oligopolies"],
+        "prerequisites": ["Demand and supply", "Firms and production"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Perfect competition is the most common market structure in reality", "Monopolies always earn profit", "All oligopolies collude with each other"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Use marginal revenue and marginal cost to find profit-maximizing output",
+          "Compare long-run and short-run equilibrium across market structures",
+          "Explain price discrimination and conditions required",
+          "Analyze the kinked demand curve model in oligopoly"
+        ],
+        "keyTerms": ["marginal revenue (MR)", "marginal cost (MC)", "profit maximization (MR=MC)", "normal profit", "supernormal profit", "price discrimination", "kinked demand curve", "game theory", "Nash equilibrium", "cartel"],
+        "realLifeContexts": ["Why airlines charge different prices for the same seat (price discrimination)", "OPEC as a cartel controlling oil prices", "How dominant firms in tech use predatory pricing"],
+        "prerequisites": ["Revenue and cost concepts", "Supply and demand curves"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["MR = price for all market structures", "Price discrimination is always illegal", "Long-run equilibrium in perfect competition means no firms make any money"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply game theory to strategic firm behavior",
+          "Evaluate welfare effects of monopoly vs. perfect competition",
+          "Analyze contestable markets and natural monopoly regulation",
+          "Assess merger policy and antitrust economics"
+        ],
+        "keyTerms": ["prisoner's dilemma", "dominant strategy", "Bertrand competition", "Cournot competition", "Stackelberg model", "contestable market", "sunk cost", "natural monopoly", "RPI-X regulation", "welfare loss"],
+        "realLifeContexts": ["Why Facebook acquired WhatsApp and Instagram — antitrust concerns", "UK water utility regulation using RPI-X", "Bertrand paradox in telecom pricing wars"],
+        "prerequisites": ["Profit maximization", "Market structures overview", "Welfare economics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Contestable markets require many firms to be competitive", "Natural monopolies should always be nationalized", "Game theory always predicts collusion in oligopolies"]
+      }
+    },
+    "national_income": {
+      "title": "National Income",
+      "category": "Macroeconomics",
+      "beginner": {
+        "learningOutcomes": [
+          "Define GDP and explain its significance",
+          "Distinguish between GDP, GNP, and NNP",
+          "Explain the circular flow of income"
+        ],
+        "keyTerms": ["GDP", "GNP", "NNP", "national income", "circular flow", "household", "firm", "government", "factor income", "value added"],
+        "realLifeContexts": ["Why India's GDP growth rate matters for jobs and investment", "Why per capita GDP is a better measure of living standards than total GDP", "How COVID-19 reduced India's GDP"],
+        "prerequisites": ["Basic economics"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["GDP measures happiness and well-being directly", "GDP and GNP are always the same", "Higher GDP always means better quality of life"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Calculate national income using expenditure, income, and output methods",
+          "Explain the multiplier effect",
+          "Distinguish between nominal and real GDP",
+          "Analyze injections and leakages in the circular flow"
+        ],
+        "keyTerms": ["expenditure method", "income method", "output method", "multiplier", "marginal propensity to consume (MPC)", "injection", "leakage", "nominal GDP", "real GDP", "GDP deflator"],
+        "realLifeContexts": ["Why government spending during recession multiplies through the economy", "How inflation distorts GDP comparisons over time", "Why exports are injections and imports are leakages"],
+        "prerequisites": ["GDP basics", "Consumption and saving"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["The multiplier effect is always greater than 1", "Nominal GDP always rises, so real GDP must also rise", "All three methods of calculating GDP give the same result in practice without adjustments"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Analyze limitations of GDP as a welfare measure",
+          "Apply the Keynesian model to explain output gaps",
+          "Evaluate alternative welfare measures (HDI, Genuine Progress Indicator)",
+          "Assess the relationship between inequality and national income distribution"
+        ],
+        "keyTerms": ["output gap", "inflationary gap", "deflationary gap", "Keynesian cross", "HDI", "Gini coefficient", "Lorenz curve", "Green GDP", "transfer payments", "underground economy"],
+        "realLifeContexts": ["Why India ranks low on HDI despite high GDP growth", "How income inequality is measured using Gini coefficient", "Why illegal activity and household work are excluded from GDP"],
+        "prerequisites": ["GDP calculation methods", "Multiplier", "Macroeconomic equilibrium"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["HDI is always a better measure than GDP for all purposes", "A Gini coefficient of 0 is always desirable", "Increasing national income always reduces poverty"]
+      }
+    },
+    "money_and_banking": {
+      "title": "Money and Banking",
+      "category": "Macroeconomics",
+      "beginner": {
+        "learningOutcomes": [
+          "Define money and explain its functions",
+          "Describe the structure of the banking system",
+          "Explain how banks create credit"
+        ],
+        "keyTerms": ["money", "medium of exchange", "store of value", "unit of account", "commercial bank", "central bank", "deposit", "loan", "credit creation", "reserve ratio"],
+        "realLifeContexts": ["Why a barter system is inefficient compared to money", "How a savings account in a bank helps the economy grow", "Why RBI controls how much banks can lend"],
+        "prerequisites": ["Basic economics"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Banks lend out exactly the deposits they receive", "The central bank controls all money in circulation directly", "Digital money is not real money"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the money multiplier and credit creation process",
+          "Describe tools of monetary policy (repo rate, CRR, SLR, OMO)",
+          "Distinguish between M1, M2, and M3 money supply",
+          "Analyze the relationship between money supply and inflation"
+        ],
+        "keyTerms": ["money multiplier", "credit multiplier", "repo rate", "reverse repo rate", "CRR", "SLR", "OMO", "M1 M2 M3", "quantity theory of money (MV=PT)", "liquidity preference"],
+        "realLifeContexts": ["How RBI raising repo rate reduces inflation in India", "Why printing money excessively causes hyperinflation (Zimbabwe example)", "How demonetization affected the money supply"],
+        "prerequisites": ["Money basics", "Banking system", "Inflation"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Raising repo rate directly reduces money supply immediately", "Central banks can perfectly control inflation using interest rates", "CRR and SLR are the same instrument"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply the IS-LM model to analyze monetary and fiscal policy interactions",
+          "Evaluate inflation targeting as a monetary policy framework",
+          "Analyze unconventional monetary policies (QE, negative interest rates)",
+          "Assess the role of financial markets in transmitting monetary policy"
+        ],
+        "keyTerms": ["IS curve", "LM curve", "IS-LM model", "inflation targeting", "quantitative easing (QE)", "transmission mechanism", "liquidity trap", "zero lower bound", "forward guidance", "Taylor rule"],
+        "realLifeContexts": ["How US Federal Reserve QE after 2008 crisis stabilized the economy", "Why Japan struggled with deflation despite zero interest rates (liquidity trap)", "India's shift to inflation targeting framework under RBI"],
+        "prerequisites": ["Monetary policy tools", "Macroeconomic equilibrium", "Interest rates"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["The IS-LM model is adequate for all macroeconomic analysis", "QE always causes hyperinflation", "Negative interest rates incentivize all banks to lend more"]
+      }
+    },
+    "fiscal_policy": {
+      "title": "Fiscal Policy",
+      "category": "Macroeconomics",
+      "beginner": {
+        "learningOutcomes": [
+          "Define fiscal policy and distinguish between taxation and government spending",
+          "Explain the government budget: surplus, deficit, and balance",
+          "Describe how fiscal policy can be used to stabilize the economy"
+        ],
+        "keyTerms": ["fiscal policy", "government spending", "taxation", "budget deficit", "budget surplus", "balanced budget", "expansionary fiscal policy", "contractionary fiscal policy", "public debt"],
+        "realLifeContexts": ["How government spending on infrastructure creates jobs", "Why India's Union Budget matters for economic growth", "How tax cuts affect consumption and investment"],
+        "prerequisites": ["National income basics", "Role of government"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Government must always have a balanced budget", "Tax cuts always increase government revenue (Laffer curve oversimplification)", "Fiscal deficit is always harmful to the economy"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Explain the fiscal multiplier and its determinants",
+          "Distinguish between discretionary and automatic stabilizers",
+          "Analyze the crowding out effect of government borrowing",
+          "Evaluate the impact of fiscal policy on AD-AS model"
+        ],
+        "keyTerms": ["fiscal multiplier", "automatic stabilizers", "discretionary fiscal policy", "crowding out effect", "aggregate demand (AD)", "aggregate supply (AS)", "Ricardian equivalence", "structural deficit", "cyclical deficit"],
+        "realLifeContexts": ["How unemployment benefits act as automatic stabilizers", "Why India's MGNREGA acts as a fiscal stabilizer", "Crowding out in India's capital market from high government borrowing"],
+        "prerequisites": ["Multiplier effect", "AD-AS model", "Interest rates"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Automatic stabilizers require government decision each time they activate", "Crowding out always completely offsets fiscal stimulus", "A larger fiscal multiplier always means better fiscal policy effectiveness"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply debt sustainability analysis to government borrowing",
+          "Evaluate the Laffer curve and optimal taxation theory",
+          "Assess fiscal consolidation strategies and their trade-offs",
+          "Analyze inter-generational equity and long-run fiscal implications"
+        ],
+        "keyTerms": ["debt-to-GDP ratio", "debt sustainability", "Laffer curve", "optimal tax theory", "fiscal consolidation", "primary deficit", "interest burden", "FRBM Act", "intergenerational equity", "tax incidence"],
+        "realLifeContexts": ["Why Greece's debt crisis offers lessons for fiscal sustainability", "India's FRBM targets and fiscal consolidation challenges", "How pension obligations create long-run fiscal risks"],
+        "prerequisites": ["Budget deficits", "Multiplier and crowding out", "Monetary-fiscal interactions"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["The Laffer curve always has a peak at 50% tax rate", "Debt-to-GDP ratio is the only measure of fiscal sustainability", "Fiscal consolidation always reduces growth in the short run"]
+      }
+    },
+    "international_trade": {
+      "title": "International Trade",
+      "category": "International Economics",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain why countries trade with each other",
+          "Define absolute advantage and comparative advantage",
+          "Describe the basic components of the balance of payments"
+        ],
+        "keyTerms": ["international trade", "absolute advantage", "comparative advantage", "exports", "imports", "balance of trade", "balance of payments", "trade surplus", "trade deficit", "tariff"],
+        "realLifeContexts": ["Why India exports software services while importing crude oil", "Why even a highly productive country benefits from trade", "How trade deficit affects India's currency"],
+        "prerequisites": ["Demand and supply", "Opportunity cost"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["A trade deficit is always harmful to an economy", "Countries with absolute advantage in everything should produce everything themselves", "Free trade benefits all citizens equally"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Analyze the terms of trade and their effects on welfare",
+          "Evaluate trade policy instruments: tariffs, quotas, and subsidies",
+          "Explain exchange rate determination and purchasing power parity",
+          "Describe the WTO and regional trade agreements"
+        ],
+        "keyTerms": ["terms of trade", "tariff", "quota", "export subsidy", "non-tariff barrier", "exchange rate", "purchasing power parity (PPP)", "current account", "capital account", "WTO", "free trade area"],
+        "realLifeContexts": ["How US tariffs on Chinese goods affected global supply chains", "Why the rupee's depreciation makes exports cheaper and imports costlier", "India's FTA with ASEAN and its trade effects"],
+        "prerequisites": ["Comparative advantage", "Balance of payments basics"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Tariffs always protect domestic jobs without any economic cost", "PPP exchange rate equals the market exchange rate", "Trade liberalization always increases inequality"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply Heckscher-Ohlin theory and evaluate its limitations",
+          "Analyze the J-curve effect on trade balance after devaluation",
+          "Evaluate strategic trade policy arguments",
+          "Assess global value chains and their trade implications"
+        ],
+        "keyTerms": ["Heckscher-Ohlin theorem", "factor endowment", "Stolper-Samuelson theorem", "J-curve effect", "Marshall-Lerner condition", "strategic trade policy", "infant industry argument", "global value chain", "trade in value added", "dumping"],
+        "realLifeContexts": ["Why Bangladesh exports garments (labor-abundant country — H-O theorem)", "J-curve effect seen after India's rupee depreciation episodes", "Apple's global value chain involving 40+ countries"],
+        "prerequisites": ["Comparative advantage", "Exchange rates", "Trade policy"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Heckscher-Ohlin perfectly predicts trade patterns in all cases (Leontief paradox)", "Devaluation immediately improves the trade balance", "Strategic trade policy has no risks of retaliation"]
+      }
+    },
+    "consumer_theory": {
+      "title": "Consumer Theory",
+      "category": "Microeconomics",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the concept of utility and marginal utility",
+          "State the law of diminishing marginal utility",
+          "Describe how a consumer achieves equilibrium"
+        ],
+        "keyTerms": ["utility", "marginal utility", "total utility", "law of diminishing marginal utility", "consumer equilibrium", "budget constraint", "consumer preference"],
+        "realLifeContexts": ["Why eating the 5th slice of pizza gives less satisfaction than the 1st", "How a student decides to allocate pocket money between different goods", "Why water is essential but cheap while diamonds are not essential but expensive (diamond-water paradox)"],
+        "prerequisites": ["Basic economics"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["Marginal utility can never be negative", "Total utility keeps rising as long as marginal utility is positive", "Consumer equilibrium means the consumer is spending all income on one good"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Use indifference curves and budget lines to find consumer equilibrium",
+          "Explain income and substitution effects",
+          "Distinguish normal, inferior, and Giffen goods",
+          "Derive a demand curve from consumer equilibrium"
+        ],
+        "keyTerms": ["indifference curve", "marginal rate of substitution (MRS)", "budget line", "income effect", "substitution effect", "normal good", "inferior good", "Giffen good", "Engel curve"],
+        "realLifeContexts": ["Why a price fall in a normal good increases quantity demanded via both effects", "How rice consumption in poor rural areas behaves as a Giffen good", "Income effect of a wage rise on leisure vs. work choice"],
+        "prerequisites": ["Utility", "Demand curves", "Budget constraints"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["Indifference curves can intersect without any logical problem", "All inferior goods are Giffen goods", "The substitution effect alone explains the downward slope of the demand curve"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Apply revealed preference theory",
+          "Analyze consumer behavior under uncertainty (expected utility theory)",
+          "Evaluate behavioral economics departures from rational choice",
+          "Apply the Slutsky equation to decompose price effects"
+        ],
+        "keyTerms": ["revealed preference", "Slutsky equation", "compensated demand", "Hicksian demand", "expected utility", "risk aversion", "prospect theory", "loss aversion", "nudge theory", "bounded rationality"],
+        "realLifeContexts": ["How insurance markets reflect risk aversion", "Why people prefer guaranteed ₹100 over 50% chance of ₹250 (expected utility)", "How supermarket layout nudges consumer choices (behavioral economics)"],
+        "prerequisites": ["Indifference curves", "Income and substitution effects", "Probability basics"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Rational consumers always maximize utility with perfect information", "Risk-neutral behavior is the most common in practice", "Behavioral economics invalidates all of standard consumer theory"]
+      }
+    },
+    "production_and_costs": {
+      "title": "Production and Costs",
+      "category": "Microeconomics",
+      "beginner": {
+        "learningOutcomes": [
+          "Explain the factors of production",
+          "Define fixed and variable costs",
+          "Describe the short run and long run in production"
+        ],
+        "keyTerms": ["factors of production", "land", "labour", "capital", "entrepreneur", "fixed cost", "variable cost", "total cost", "short run", "long run", "production"],
+        "realLifeContexts": ["Why a restaurant has fixed rent regardless of customers", "How a factory decides to hire more workers vs. buy more machines", "Why a new business may make losses initially"],
+        "prerequisites": ["Basic economics"],
+        "questionComplexity": "define-and-describe",
+        "commonMisconceptions": ["In the short run, all costs are fixed", "The long run is always exactly one year", "Profit equals total revenue minus only variable costs"]
+      },
+      "intermediate": {
+        "learningOutcomes": [
+          "Apply the law of diminishing returns",
+          "Calculate and graph average and marginal cost curves",
+          "Explain economies and diseconomies of scale",
+          "Relate isoquants and isocosts to producer equilibrium"
+        ],
+        "keyTerms": ["law of diminishing returns", "average fixed cost (AFC)", "average variable cost (AVC)", "average total cost (ATC)", "marginal cost (MC)", "economies of scale", "diseconomies of scale", "minimum efficient scale", "isoquant", "isocost"],
+        "realLifeContexts": ["Why call centers have U-shaped ATC curves at different output levels", "How Amazon achieves economies of scale in logistics", "Why small farms often have higher average costs than large agribusinesses"],
+        "prerequisites": ["Fixed and variable costs", "Production function"],
+        "questionComplexity": "explain-and-apply",
+        "commonMisconceptions": ["MC curve intersects ATC at the minimum of MC", "Economies of scale continue indefinitely", "Long-run AC curve is always below short-run AC at every output level"]
+      },
+      "advanced": {
+        "learningOutcomes": [
+          "Derive cost functions from production functions mathematically",
+          "Apply the envelope theorem to long-run cost curves",
+          "Analyze multi-product cost functions and economies of scope",
+          "Evaluate X-inefficiency and principal-agent problems in production"
+        ],
+        "keyTerms": ["Cobb-Douglas production function", "returns to scale", "envelope theorem", "economies of scope", "X-inefficiency", "principal-agent problem", "transaction costs", "Leibenstein", "total factor productivity"],
+        "realLifeContexts": ["Why banks offer both insurance and loans (economies of scope)", "How X-inefficiency explains poor performance of state-owned enterprises", "Total factor productivity as a measure of innovation and efficiency growth"],
+        "prerequisites": ["Cost curves", "Production functions", "Profit maximization"],
+        "questionComplexity": "analyze-and-solve",
+        "commonMisconceptions": ["Economies of scope and economies of scale are the same phenomenon", "X-inefficiency only occurs in monopolies", "Returns to scale and returns to a factor are the same concept"]
+      }
+    }
+  }
+}

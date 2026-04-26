@@ -208,8 +208,7 @@ async function activatePlan(teacherPhone, plan) {
 📅 Valid till: ${expiryStr}
 📄 Formats: PDF + Word
 
-What would you like to create?
-Try: _"worksheet class 7 science chapter 3"_`
+Send *"hi"* to create your first document!`
 
       : `🎉 *Pro Plan Activated!*
 
